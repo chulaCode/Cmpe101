@@ -90,11 +90,11 @@
                         <div id="profileimage"><img src="{{ $user->profileImage() }}" class="rounded-circle w-50 pb-2 mx-lg-5 mx-md-4" alt=""/></div>
                         <div class=" h4 mx-lg-5 px-lg-5 mx-md-4" id="username">  {{$user->username}}  </div>
 
-                        <div id="edit"> <a href="/profile/{{$user->id}}/edit"><button class="btn btn-danger mb-3 mx-lg-5 px-lg-4 mx-md-4">Edit Your Profile</button></a> </div>
+                        <div id="edit"> <a href="/profile/{{$user->id}}/edit"><button class="btn btn-primary mb-3 mx-lg-5 px-lg-4 mx-md-4">Edit Your Profile</button></a> </div>
                         
                         <hr>
                         <p> Click on the play binary game to play game so you can earn points and badges Tips button is a guide to how</p>
-                        <div><a href="/game/{{$user->id}}"><button class="btn btn-danger mx-lg-5 px-lg-3 mx-md-4 my-4">Play Binary Game</button></a> </div>
+                        <div><a href="/game/{{$user->id}}"><button class="btn btn-primary mx-lg-5 px-lg-3 mx-md-4 my-4">Play Binary Game</button></a> </div>
                      </div>
           <!-- end of col-3 -->
                    </div>
@@ -102,7 +102,7 @@
               </div>
                  
           <!-- beginning of column 9 -->
-          <div class=" right col-md-9  col-sm-12">
+          <div class=" right-profile col-md-9  col-sm-12">
              
                <div class="row"> 
                   <div class="col-md-9 col-9 col-sm-10">
@@ -112,17 +112,21 @@
                    <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
              @endif
-                       <h4 ml-4><a href="/profile/create">Add New Post</a></h4>
+                       <!--<h4 ml-4><a href="/profile/create">Add New Post</a></h4>-->
                     </div>
                   </div>
                   <div>
                     <div class="notes my-3"> 
-                       lectures here
-                        
-                   
+                       @foreach($lecture1 as $post)
+                           <img src="/uploads/{{$post->image }}" class="img-fluid" alt="image">
+                          @endforeach
+                          <div class="row">
+                            <div class="col-12 d-flex justify-content-center my-2">
+                             {{ $lecture1->links() }}
+                            </div>   
+                         </div>
                     </div>
                  </div>
-              </div>
          
           <!-- end of col-9   -->
       </div>

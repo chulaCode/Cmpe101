@@ -26,7 +26,7 @@ canvas{
   opacity:0.8;
   padding:2em;
   position: absolute;
-  top:60px;
+  top:70px;
   left:10px;
 }
 .right{
@@ -34,9 +34,34 @@ canvas{
   padding-top:2em;
   padding-left: 0px;
   position: absolute;
-  top:30px;
-  right: 0px;
-  left:350px;
+  top:40px;
+  right: 3px;
+  left:500px;
+}
+.right-profile{
+  
+  padding-top:2em;
+  padding-left: 0px;
+  position: absolute;
+  top:23px;
+  right: 3px;
+  left:430px;
+}
+.last{
+  padding-top:2em;
+  padding-left: 10px;
+  position: absolute;
+  top:90px;
+  right: 3px;
+  left:980px;
+}
+.center{
+  padding-top:2em;
+  padding-left: 10px;
+  position: absolute;
+  top:34px;
+  right: 3px;
+  left:400px;
 }
 
 /* ---- particles.js container #b61924;---- 3e64ff*/
@@ -44,7 +69,7 @@ canvas{
 #particles-js{
   width: 100%;
   height: 100%;
-  background-color: #b61924;
+  background-color: #3700B3;
   background-image: url('');
   background-size: cover;
   background-position: 50% 50%;
@@ -61,10 +86,38 @@ a:hover {
    font-size: 1.4em!important;
 }
 */
+#clockdiv{
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div{
+  padding: 10px;
+  border-radius: 3px;
+  background: #5066D8;
+  display: inline-block;
+}
+
+#clockdiv div > span{
+  padding: 15px;
+  border-radius: 3px;
+  background: #3700B3;
+  display: inline-block;
+}
 .center-form{
   margin-left: 100px!important;
-
-
+}
+.progress {
+  margin: 2px;
+  width: 750px;
+}
+#badge{
+  margin-bottom: 10pxpx;
+  
 }
 
   h5{

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Intervention\Image\Facades\Image;
-use App\lectureones;
+use App\lectures;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -32,7 +32,7 @@ class PostController extends Controller
             $imag=uniqid().$file->getClientOriginalName();
             if($file->move('uploads',$imag))
             {
-                $img=new lectureones();
+                $img=new lectures();
                 $img->image=$imag;
                 $img->name= $data['name'];
                 $img->save();

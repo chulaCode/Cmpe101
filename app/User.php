@@ -43,9 +43,14 @@ public function profileImage()
     $imagePath = ($this->image) ? $this->image : 'no_image.png';
     return '/images/' . $imagePath;
 }
-    public function points()
+public function badge()
+{
+    $imagePath = ($this->image) ? $this->image : 'badge.png';
+    return '/images/' . $imagePath;
+}
+    public function badges()
     {
-        return $this->hasOne(points::class);
+        return $this->hasOne(badges::class);
     }
     public function enrol()
     {
