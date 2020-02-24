@@ -98,7 +98,7 @@
     <aside id="colorlib-hero">
         <div class="flexslider">
             <ul class="slides">
-               <li class="img-fluid" style="background-image: url(/images/img_bg_1.jpg);">
+               <li class="img-fluid" style="background-image: url(/images/b3.jpeg);">
           
                    <div class="overlay"></div>
                    <div class="container-fluid">

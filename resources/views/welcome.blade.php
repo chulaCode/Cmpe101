@@ -66,7 +66,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <div id="colorlib-logo"><a href="index.html">
+                        <div id="colorlib-logo"><a href="/">
                         Introduction To Computing Gamified</a></div>
                     </div>
                     <div class="col-md-6 text-right">
@@ -95,28 +95,8 @@
     <aside id="colorlib-hero">
         <div class="flexslider">
             <ul class="slides">
-               <li class="img-fluid" style="background-image: url(images/game2.jpg);">
-                   <div class="overlay"></div>
-                   <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner">
-                                   <div class="desc">
-                                       <h2>You only have to know one thing</h2>
-                                      <h1>Only fun and fun </h1>
-                                      <form action="/enrol" method="get">
-                                         @csrf
-                                       <p><button type="submit" name="submit" value="enrol" class="btn btn-primary btn-lg">
-                                       
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
-                                       </form>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </li>
-               <li class="img-fluid" style="background-image: url(images/img_bg_5.jpg);">
+              
+               <li class="img-fluid" style="background-image: url(images/b2.jpg);">
                    <div class="overlay"></div>
                    <div class="container-fluid">
                        <div class="row">
@@ -137,7 +117,7 @@
                        </div>
                    </div>
                </li>
-               <li class="img-fluid" style="background-image: url(images/game1.jpeg); ">
+               <li class="img-fluid" style="background-image: url(images/b1.jpg); ">
                    <div class="overlay"></div>
                    <div class="container-fluid">
                        <div class="row">
@@ -145,7 +125,7 @@
                                <div class="slider-text-inner">
                                    <div class="desc">
                                        <h2>You only have to know one thing</h2>
-                                       <h1>Education is a Key to Success</h1>
+                                       <h1><span>Education is a Key to Success</span></h1>
                                        <form action="/enrol" method="get">
                                          @csrf
                                        <p><button type="submit" name="submit" value="enrol" class="btn btn-primary btn-lg">
@@ -158,23 +138,7 @@
                        </div>
                    </div>
                </li>
-               <li class="img-fluid" style="background-image: url(images/img_bg_1.jpg);">
-                   <div class="overlay"></div>
-                   <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner">
-                                   <div class="desc">
-                                       <h2>You only have to know one thing</h2>
-                                       <h1>Gamify learning is fun</h1>
-                                       <p><button class="btn btn-primary btn-lg">
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </li>	
+              
               </ul>
           </div>
     </aside>

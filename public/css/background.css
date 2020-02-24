@@ -14,7 +14,7 @@ body{
   /*font:normal 75% Arial, Helvetica, sans-serif;*/
 }
 hr{
-  background: #b61924;
+  background: #3700B3;
 }
 
 canvas{
@@ -30,22 +30,23 @@ canvas{
   left:10px;
 }
 .right{
+  padding-left: 0px;
+  position: absolute;
+  top:55px;
+  right: 3px;
+  left:430px;
+}
+.right-game{
   
   padding-top:2em;
   padding-left: 0px;
   position: absolute;
   top:40px;
   right: 3px;
-  left:500px;
-}
-.right-profile{
-  
-  padding-top:2em;
-  padding-left: 0px;
-  position: absolute;
-  top:23px;
-  right: 3px;
   left:430px;
+}
+.middle{
+  left:35px;
 }
 .last{
   padding-top:2em;
@@ -53,7 +54,7 @@ canvas{
   position: absolute;
   top:90px;
   right: 3px;
-  left:980px;
+  left:520px;
 }
 .center{
   padding-top:2em;
@@ -119,6 +120,13 @@ a:hover {
   margin-bottom: 10pxpx;
   
 }
+.replay{
+  background-color: #d48f56!important;
+}
+#badge>img{
+  width:135px;
+  height: 135px;
+}
 
   h5{
     color:#b61924; ;
@@ -165,69 +173,70 @@ a:hover {
     
   }*/
  
-
-@media screen and (max-width: 767px) {
-   #username,#profileimage, #edit{
-      postion:absolute;
-      margin-left: 10px;
-      margin-right: 10px;
-      padding-left:20px;
-      padding-right:20px
-   }
-}
-
-@media screen and (max-width: 479px) {
-    #profileimage{
-      postion:absolute;
-      margin-left: 50px;
-      padding-left:40px;
+  @media screen and (min-width : 768px) and (max-width : 1024px) {
+    .right{
+     top:10px!important;
+     margin-left:-300px!important;
+     position: relative;
     }
+   .sidebar{
+     display:none;
+   }
+   .right-game{
+    padding-top:2em;
+    padding-left: 0px;
+    position: absolute;
+    top:30px;
+    right: 3px;
+    left:40px;
+  }
+  .last{
+    margin-top: 20px!important;
+  }
+  
 }
 
+@media screen and (min-width : 320px) and (max-width : 480px) {
 
-@media screen and (max-width: 479px) {
-   #username, #edit{
-     /* float: center;
-      width: auto;
-      height: auto;*/
-      postion:absolute;
-      margin-left: 50px;
-      
-      padding-left:40px;
-   }
-      
-   }
-  
 
-   @media screen and (max-width: 479px){
-   #username{
-     /* float: center;
-      width: auto;
-      height: auto;*/
-      postion:absolute;
-      margin-left: 60px;
-      
-      padding-left:40px;
+  .right{ 
+      top:5px!important;
+      margin-left:-417px!important;
+      position: relative;
      }
-   }
-   @media screen and (max-width: 479px){
-   #middle{
-  
-      margin-left:75px;
-      margin-right:75px
+     .bar{
+       display: none;
      }
-   }
-   @media screen and (max-width: 479px){
-   #badge{
-  
-      margin-left:70px;
-      margin-right:70px;
-     }
-   }
-   @media screen and (max-width: 479px){
-   #buttons{
-  
-      margin-left:20px;
-      margin-right:20px
-     }
+    .sidebar{
+      display:none;
+    }
+    .last{
+      display: none;
+    }
+    .edit{
+
+    }
+    .right-game{
+      margin-top: 140px!important;
+      padding-top:2em;
+      padding-left: 0px;
+      position: relative;
+      top:-160px;
+      right: 3px;
+      left:3px;
+    }
+   
+    .middle{
+      left:5px;
+    }
+    .last{
+      padding-top:2em;
+      padding-left: 5px;
+      position: relative;
+      top:20px;
+      right: 3px;
+      left:50px;
+    }
+
+     
    }
