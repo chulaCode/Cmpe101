@@ -112,7 +112,7 @@
                         <div class="modal-footer">
                         <span class="modal-text text-dark" style="margin-right:30px;">You successfully got all the badges.</span>
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
+                            <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal"></button>
                             
                         </div>
                         </div>
