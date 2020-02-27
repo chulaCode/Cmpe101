@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Str;
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-$host = $url["host"];
-$username = $url["user"];
-$password = $url["pass"];
-$database = substr($url["path"], 1);
+/*
+$url = parse_url(getenv('DATABASE_URL'));
+$host=$url["host"];
+$user=$url["user"];
+$password=$url["pass"];
+$database=substr($url["path"]);
+*/
 return [
 
     /*
@@ -49,25 +50,17 @@ return [
         ],
 
         'mysql' => [
-            /*'driver' => 'mysql',
+            'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'egames'),
+            'username' => env('DB_USERNAME', 'b2b70cf1db2b80'),
+            'password' => env('DB_PASSWORD', 'eb69f575'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
-            'prefix' => '',*/
-            'driver'    => 'mysql',
-            'host'      => $host,
-            'database'  => $database,
-            'username'  => $username,
-            'password'  => $password,
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
+            'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
