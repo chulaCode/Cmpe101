@@ -134,7 +134,7 @@
                         </div>
                         <div class="modal-footer">
                         <span class="modal-text text-dark text-bold" style="margin-right:70px;">Click on replay button to play again.</span>
-                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal">Replay</button>
+                            <button type="button" id="close" class="btn btn-secondary" data-dismiss="modal"></button>
                             
                         </div>
                         </div>
