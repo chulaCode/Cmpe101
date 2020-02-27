@@ -54,7 +54,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'us-cdbr-iron-east-04.cleardb.net'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'egames'),
+            'database' => env('DB_DATABASE', 'heroku_5cf817fc0f679e5'),
             'username' => env('DB_USERNAME', 'b2b70cf1db2b80'),
             'password' => env('DB_PASSWORD', 'eb69f575'),
             'unix_socket' => env('DB_SOCKET', ''),
