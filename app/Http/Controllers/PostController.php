@@ -45,7 +45,7 @@ class PostController extends Controller
             'image'=>$imag,]);
 */
         
-        return redirect('/profile/1');
+        return redirect('/profile/2');
     
         }
        
