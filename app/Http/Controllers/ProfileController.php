@@ -30,9 +30,7 @@ class ProfileController extends Controller
     public function index( $user,Request $request)
     {
        $user=User::findOrfail($user);
-      // $lecture1=lectureones::all();
-      //$lecture1=DB::table('lectures')->get();
-      $lecture1=lectures::paginate(1);
+       $lecture1=lectures::paginate(1);
       //retrieving question
       
        $userA = Auth::user();

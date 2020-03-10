@@ -30,7 +30,7 @@ class PostController extends Controller
         {
             //$img = Image::make(public_path("/uploads/".$file))->fit(1000,1000);
             $imag=uniqid().$file->getClientOriginalName();
-            if($file->move('uploads',$imag))
+            if($file->move('uploads',$imag,'s3'))
             {
                 $img=new lectures();
                 $img->image=$imag;
