@@ -39,12 +39,6 @@ class PostController extends Controller
                 $img->save();
             }
         }
-        /*
-        Lesson1::create([
-            'name'=>$data['name'],
-        
-            'image'=>$imag,]);
-*/
         
         return redirect('/profile/2');
     
