@@ -39,7 +39,7 @@
                   <div>
                     <div class="notes my-3"> 
                        @foreach($lecture1 as $post)
-                       <img src="{{$post->image}}" alt="First">
+                      {{$post->name}}
                       <!--<img src="{{asset('$post->image)}}" class="img-fluid" alt="image">-->
 
                           @endforeach
