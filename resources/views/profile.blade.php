@@ -39,7 +39,9 @@
                   <div>
                     <div class="notes my-3"> 
                        @foreach($lecture1 as $post)
-                       <img src="{{Storage::disk('s3')->url($post->image)}}">
+                       <!--<img src="{{Storage::disk('s3')->url($post->image)}}">-->
+                       <img src="{{asset('$post->image)}}" class="img-fluid" alt="image">
+
                           @endforeach
                           <div class="row">
                           <div class="col-12 d-flex justify-content-center mt-2">
