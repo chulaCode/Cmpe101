@@ -38,19 +38,7 @@
                   </div>
                   <div>
                     <div class="notes my-3"> 
-                       @foreach($lecture1 as $post)
-                       <!--<img src="{{Storage::disk('s3')->url($post->image)}}">-->
-                       <img src="{{asset('$post->image)}}" class="img-fluid" alt="image">
-
-                          @endforeach
-                          <div class="row">
-                          <div class="col-12 d-flex justify-content-center mt-2">
-                             {{ $lecture1->links() }}
-                            </div> 
-                          <div class="d-lg-none col-12 d-flex justify-content-center mt-1"><a href="/game/{{$user->id}}">
-                              <button class="btn btn-primary ">Play Binary Game</button>
-                               </a> </div>
-                    
+                   
                               
                          </div>
                     </div>
