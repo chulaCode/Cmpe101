@@ -30,8 +30,8 @@ class PostController extends Controller
         {
             //$img = Image::make(public_path("/uploads/".$file))->fit(1000,1000);
             $imag=uniqid().$file->getClientOriginalName();
-            if(\Storage::disk('s3')->put($imag, file_get_contents($file),'public'))
-            //if($file->store('my-file',$imag,'s3'))
+           // if(\Storage::disk('s3')->put($imag, file_get_contents($file),'public'))
+            if($file->store('my-file',$imag,'s3'))
             {
                 $img=new lectures();
                 $img->image=$imag;
