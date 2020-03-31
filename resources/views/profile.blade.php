@@ -33,7 +33,7 @@
                            <button type="button" class="close" data-dismiss="alert">&times;</button>
                         </div>
                      @endif
-                     <h5 ml-4><a href="/profile/create">Add New Post</a></h5>
+                    <!-- <h5 ml-4><a href="/profile/create">Add New Post</a></h5>-->
                   </div>
                </div>
                <div>
