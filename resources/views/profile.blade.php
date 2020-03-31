@@ -55,6 +55,9 @@
                               <h3 class="my-3">
                               4) After studying lecture notes you can proceed to play game
                               </h3>
+                              <h3 class="my-3">
+                              5) Checkout game rules on game page before starting game GOOD LUCK!
+                              </h3>
                              
                            </div>
                               <div class="d-lg-none col-12 d-flex justify-content-center mt-1">
