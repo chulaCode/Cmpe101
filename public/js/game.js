@@ -878,6 +878,6 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
             
             }
         
-    }, 1000*60);
+    }, 1000*40);
 
 //}
