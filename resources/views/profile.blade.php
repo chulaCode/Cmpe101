@@ -11,7 +11,7 @@
                         <div id="profileimage"><img src="{{ $user->profileImage() }}" class="rounded-circle w-50 pb-2 mx-lg-5 mx-md-4" alt=""/></div>
                         <div class=" h4 mx-lg-5 px-lg-5 mx-md-4" id="username">  {{$user->username}}  </div>
 
-                        <div id="edit"> <a href="/profile/{{$user->id}}/edit"><button class="btn btn-primary mb-3 mx-lg-5 px-lg-4 mx-md-4">Edit Your Profile</button></a> </div>
+                        <div id="edit"> <a href="#"><button class="btn btn-primary mb-3 mx-lg-5 px-lg-4 mx-md-4">Static Profile Image</button></a> </div>
                         
                         <hr>
                         <p> Click on the play binary game to play game so you can earn points and badges Tips button is a guide to how</p>
