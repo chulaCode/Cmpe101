@@ -38,8 +38,8 @@
                </div>
                     <div class="notes my-2"> 
 
-                        <div class="instruction" style="">
-                              <h2 class="text-white inst" style="">INSTRUCTIONS</h2>
+                        <div class="instruction mr-lg-5 pr-lg-5" style="">
+                              <h2 class="text-white inst  mr-lg-5 pr-lg-5" style="">INSTRUCTIONS</h2>
                               <hr class="bg-white ">
                               <div class="mt-4 text-white">
                                  <h3 class=""> 
