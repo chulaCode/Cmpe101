@@ -269,10 +269,10 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
            if(b8==1)
                btn8=($(value16).val()); 
 
-         // console.log(output)
+         //console.log($(input).val(),'out')
           num1=parseInt(btn1);num2=parseInt(btn2);num3=parseInt(btn3);num4=parseInt(btn4);
           num5=parseInt(btn5);num6=parseInt(btn6);num7=parseInt(btn7);num8=parseInt(btn8);
-          num9=parseInt(output);
+          num9=parseInt($(input).val());
           let total=num1+num2+num3+num4+num5+num6+num7+num8;
          if(total==num9){
             console.log("yes correct") 
@@ -878,6 +878,6 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
             
             }
         
-    }, 1000*40);
+    }, 1000*15);
 
 //}
