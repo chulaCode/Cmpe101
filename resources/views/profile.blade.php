@@ -39,7 +39,7 @@
                     <div class="notes my-2"> 
 
                         <div class="instruction" style="">
-                              <h2 class="text-white inst" style="margin-left:16rem">INSTRUCTIONS</h2>
+                              <h2 class="text-white inst" style="">INSTRUCTIONS</h2>
                               <hr class="bg-white ">
                               <div class="mt-4 text-white">
                                  <h3 class=""> 
