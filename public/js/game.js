@@ -211,17 +211,17 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
             num1=0,num2=0,num3=0,num4=0,num5=0,num6=0,num7=0,num8=0,num9=0,total=0
             point+=10;
             if((point>20)&&(point<50)){
-            $(".message").html("You just won a bronze badge");
+            $(".message").html("You won a bronze badge");
             bronze("#badge");
             $(".img_badge").html("Bronze badge");
             }
             else if((point>50)&&(point<90)){
-            $(".message").html("You just won a silver badge");
+            $(".message").html("You won a silver badge");
             silver("#badge");
             $(".img_badge").html("Silver badge");
             }
             else if(point>90){
-            $(".message").html("You just won a gold badge");
+            $(".message").html("You won a gold badge");
             gold("#badge");
             $(".img_badge").html("Gold badge");
             $( "#exampleModal" ).modal("show");
@@ -280,17 +280,17 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
             //num1=0,num2=0,num3=0,num4=0,num5=0,num6=0,num7=0,num8=0,num9=0,total=0
             point+=10;
             if((point>20)&&(point<50)){
-                $(".message").html("You just won a bronze badge");
+                $(".message").html("You won a bronze badge");
                 bronze("#badge");
                 $(".img_badge").html("Bronze badge");
                 }
                 else if((point>50)&&(point<90)){
-                $(".message").html("You just won a silver badge");
+                $(".message").html("You won a silver badge");
                 silver("#badge");
                 $(".img_badge").html("Silver badge");
                 }
                 else if(point>90){
-                $(".message").html("You just won a gold badge");
+                $(".message").html("You won a gold badge");
                 gold("#badge");
                 $(".img_badge").html("Gold badge");
                 $( "#exampleModal" ).modal("show");

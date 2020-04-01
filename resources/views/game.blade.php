@@ -158,9 +158,13 @@
                         <strong><h4>2)</h4></strong> You have 40 seconds for each question 
                         <strong><h4>3)</h4></strong> You need to wait for 40 second for game to start
                         <strong><h4>4)</h4></strong> You can only toogle button once to change your answer
+                        <strong><h4>5)</h4></strong> If you see decimal number on the right, click the bits to make the binary number match
+                        <strong><h4>6)</h4></strong> If you see binary number, enter the decimal value in the text box
                         <strong><h4>5)</h4></strong> To win game you must clear all lines i.e you must answer 10 question correctly
                         <strong><h4>6)</h4></strong> Rewards - you earn a bronze badge when you get 30 points, silver when you get 60points
                         gold when you get 90 points and you win game when you get 100 points.
+                        <h4><a href="https://www.youtube.com/watch?v=2Z0Z2hy739E">Video link on how to play</a></h4>
+                        <h4><a href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw">web link on how to play</a></h4>
                         <strong>Enjoy your game.</strong> 
                     </div>
                     <div class="modal-footer">
