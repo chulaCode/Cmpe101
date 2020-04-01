@@ -217,6 +217,11 @@ a:hover {
     .sidebar{
       display:none;
     }
+    .notes{
+      margin-right: 1rem!important;
+      margin-left: 1rem!important;
+      margin-top: 3rem!important;
+    }
     .instruction{
       margin-left: 1rem!important;
     }
