@@ -30,7 +30,7 @@ canvas{
   left:10px;
 }
 .right{
-  padding-left: 0px;
+  padding-left: -13px!important;
   position: absolute;
   top:55px;
   right: 20px!important;
