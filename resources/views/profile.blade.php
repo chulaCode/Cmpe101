@@ -36,9 +36,9 @@
                     <!-- <h5 ml-4><a href="/profile/create">Add New Post</a></h5>-->
                   </div>
                </div>
-                    <div class="notes"> 
+                    <div class="notes my-2"> 
 
-                        <div class="instruction" style="margin-right:13rem">
+                        <div class="instruction" style="">
                               <h2 class="text-white inst" style="margin-left:16rem">INSTRUCTIONS</h2>
                               <hr class="bg-white ">
                               <div class="mt-4 text-white">
