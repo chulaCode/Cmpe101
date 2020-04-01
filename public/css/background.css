@@ -218,11 +218,11 @@ a:hover {
       display:none;
     }
     .instruction{
-      margin-right: 1rem!important;
+      margin-left: 1rem!important;
     }
     .instruction >h2{
-        margin-left: 2rem!important;
-        margin-top: 2px!important;
+        margin-left: 0rem!important;
+        margin-top: 4px!important;
     }
     .last{
       display: none;
