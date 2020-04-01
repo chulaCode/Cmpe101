@@ -163,8 +163,8 @@
                         <strong><h4>5)</h4></strong> To win game you must clear all lines i.e you must answer 10 question correctly
                         <strong><h4>6)</h4></strong> Rewards - you earn a bronze badge when you get 30 points, silver when you get 60points
                         gold when you get 90 points and you win game when you get 100 points.
-                        <h4><a href="https://www.youtube.com/watch?v=2Z0Z2hy739E">Video link on how to play</a></h4>
-                        <h4><a href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw">web link on how to play</a></h4>
+                        <h4><a href="https://www.youtube.com/watch?v=2Z0Z2hy739E" target="_blank">Video link on how to play</a></h4>
+                        <h4><a href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw" target="_blank">web link on how to play</a></h4>
                         <strong>Enjoy your game.</strong> 
                     </div>
                     <div class="modal-footer">
