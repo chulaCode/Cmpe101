@@ -65,10 +65,10 @@ canvas{
   left:400px;
 }
 .instruction{
-  margin-right:13rem
+  margin-right:13rem!important;
 }
 .instruction >h2{
-  margin-left:16rem
+  margin-left:16rem!important;
 }
 /* ---- particles.js container #b61924;---- 3e64ff*/
 
