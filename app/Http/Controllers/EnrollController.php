@@ -10,21 +10,19 @@ use Illuminate\Http\Request;
 class EnrollController extends Controller
 {
     
-    public function index(Request $request)
+    public function index(Request $request, User $user)
     {
-        if($request->submit == "course")
+        if(($request->submit == "enrol")&&(!Auth::user()))
         {
-        
-           return view('home');
-         // return redirect("/login")->with('warning', 'you need to login to enrol.');
-          //echo "<script>alert(' you must login first!!')</script>";   
+       
+          return redirect("/login")->with('warning', 'you need to login to enrol.');
+          echo "<script>alert(' you must login first!!')</script>";   
 
-        }// if(($request->submit == "enrol")&&(!Auth::user()))
-       /* else{
-        
-            return redirect('/home/' . auth()->user()->id);
+        }
+        else{
+            return redirect('/home/'.auth()->user()->id);
             
-        }*/
+        }
     }
 }
 

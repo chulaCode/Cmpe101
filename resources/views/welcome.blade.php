@@ -105,12 +105,12 @@
                                    <div class="desc">
                                        <h2>You only have to know one thing</h2>
                                        <h1>Learn and have fun</h1>
-                                       <form action="/enrol" method="get">
-                                         @csrf
-                                       <p><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
+                                      <!-- <form action="/enrol" method="get">
+                                         @csrf-->
+                                         <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
                                        
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
-                                       </form>
+                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></a></p>
+                                      <!-- </form>-->
                                    </div>
                                </div>
                            </div>
@@ -126,12 +126,12 @@
                                    <div class="desc">
                                        <h2>You only have to know one thing</h2>
                                        <h1><span>Education is a Key to Success</span></h1>
-                                       <form action="/enrol" method="get">
-                                         @csrf
-                                       <p><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
+                                       <!--<form action="/enrol" method="get">
+                                         @csrf-->
+                                       <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
                                        
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
-                                       </form>
+                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></a></p>
+                                       <!--</form>-->
                                    </div>
                                </div>
                            </div>
