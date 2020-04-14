@@ -107,28 +107,7 @@
                                        <h1>Learn and have fun</h1>
                                        <form action="/enrol" method="get">
                                          @csrf
-                                       <p><button type="submit" name="submit" value="enrol" class="btn btn-primary btn-lg">
-                                       
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
-                                       </form>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </li>
-               <li class="img-fluid" style="background-image: url(images/b4.jpg); ">
-                   <div class="overlay"></div>
-                   <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner">
-                                   <div class="desc">
-                                       <h2>You only have to know one thing</h2>
-                                       <h1><span>Education is a Key to Success</span></h1>
-                                       <form action="/enrol" method="get">
-                                         @csrf
-                                       <p><button type="submit" name="submit" value="enrol" class="btn btn-primary btn-lg">
+                                       <p><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
                                        
                                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
                                        </form>
@@ -145,10 +124,11 @@
                            <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
                                <div class="slider-text-inner">
                                    <div class="desc">
-                                     
+                                       <h2>You only have to know one thing</h2>
+                                       <h1><span>Education is a Key to Success</span></h1>
                                        <form action="/enrol" method="get">
                                          @csrf
-                                       <p><button type="submit" name="submit" value="enrol" class="btn btn-primary btn-lg">
+                                       <p><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
                                        
                                        <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></p>
                                        </form>
@@ -158,6 +138,7 @@
                        </div>
                    </div>
                </li>
+              
               
               </ul>
           </div>
