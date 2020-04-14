@@ -15,14 +15,13 @@ class EnrollController extends Controller
         if($request->submit == "course")
         {
         
-           $id=1;
-           return view('home',compact('id'));
+           return view('home');
          // return redirect("/login")->with('warning', 'you need to login to enrol.');
           //echo "<script>alert(' you must login first!!')</script>";   
 
-        }
+        }// if(($request->submit == "enrol")&&(!Auth::user()))
        /* else{
-           if(($request->submit == "enrol")&&(!Auth::user()))
+        
             return redirect('/home/' . auth()->user()->id);
             
         }*/
