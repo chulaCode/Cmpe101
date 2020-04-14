@@ -14,7 +14,8 @@ class EnrollController extends Controller
     {
         if($request->submit == "course")
         {
-            return redirect('/home/1');
+            dd("here man");
+           // return redirect('/home/1');
          // return redirect("/login")->with('warning', 'you need to login to enrol.');
           //echo "<script>alert(' you must login first!!')</script>";   
 
