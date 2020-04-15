@@ -49,7 +49,7 @@
                                  2) Focus on just binary to decimal conversion because the survey and questions is just on binary to decimal conversion
                                  </h3>
                                  <h3>
-                                 3) You have 40 seconds for each game question
+                                 3) You have 80 seconds for each game question
                                  </h3>
                                  <h3 class="my-3">
                                  4) After studying lecture notes you can proceed to play game

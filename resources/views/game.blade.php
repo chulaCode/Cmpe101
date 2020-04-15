@@ -154,9 +154,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <strong><h4>1)</h4></strong> You have to wait for 40seconds after loading game page for game to start
-                        <strong><h4>2)</h4></strong> You have 40 seconds for each question 
-                        <strong><h4>3)</h4></strong> You need to wait for 40 second for game to start
+                        <strong><h4>1)</h4></strong> You have to wait for 80seconds after loading game page for game to start
+                        <strong><h4>2)</h4></strong> You have 80 seconds for each question 
+                        <strong><h4>3)</h4></strong> You need to wait for 80 second for game to start
                         <strong><h4>4)</h4></strong> You can only toogle button once to change your answer
                         <strong><h4>5)</h4></strong> If you see decimal number on the right, click the bits to make the binary number match
                         <strong><h4>6)</h4></strong> If you see binary number, enter the decimal value in the text box
