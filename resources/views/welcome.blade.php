@@ -69,6 +69,7 @@
                         <div id="colorlib-logo"><a href="/">
                         Introduction To Computing Gamified</a></div>
                     </div>
+                    <!--
                     <div class="col-md-6 text-right">
                     
                         <ul >
@@ -86,6 +87,7 @@
                         
                        
                     </div>
+                    -->
                     
                      
                 </div>
@@ -105,12 +107,12 @@
                                    <div class="desc">
                                        <h2>You only have to know one thing</h2>
                                        <h1>Learn and have fun</h1>
-                                      <!-- <form action="/enrol" method="get">
-                                         @csrf-->
-                                         <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
+                                      <form action="/enrol" method="get">
+                                         @csrf
+                                         <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
                                        
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></a></p>
-                                      <!-- </form>-->
+                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></a></p>
+                                      </form>
                                    </div>
                                </div>
                            </div>
@@ -126,12 +128,12 @@
                                    <div class="desc">
                                        <h2>You only have to know one thing</h2>
                                        <h1><span>Education is a Key to Success</span></h1>
-                                       <!--<form action="/enrol" method="get">
-                                         @csrf-->
-                                       <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-primary btn-lg">
+                                       <form action="/enrol" method="get">
+                                         @csrf
+                                       <p><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
                                        
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>Course</button></a></p>
-                                       <!--</form>-->
+                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></p>
+                                       </form>
                                    </div>
                                </div>
                            </div>

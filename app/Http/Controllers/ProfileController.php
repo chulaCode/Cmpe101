@@ -19,7 +19,7 @@ class ProfileController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('auth');
+       // $this->middleware('auth');
     }
 
     /**
@@ -33,13 +33,13 @@ class ProfileController extends Controller
        $lecture1=lectures::paginate(1);
       //retrieving question
       
-       $userA = Auth::user();
-       if($user==$userA) 
+       //$userA = Auth::user();
+       //if($user==$userA) 
        
          return view('profile',compact
          ('user','lecture1'));
-      else
-      return  redirect("/");
+     // else
+      //return  redirect("/");
     }
     public function edit(User $user)
     {

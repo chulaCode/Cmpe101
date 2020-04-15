@@ -12,7 +12,7 @@
                             <div id="profileimage"><img src="{{ $user->profileImage() }}" class="rounded-circle w-50 pb-2 mx-lg-5 mx-md-4" alt=""/></div>
                             <div class=" h4 mx-lg-5 px-lg-5 mx-md-4" id="username">  {{$user->username}}  </div>
 
-                            <div id="edit"> <a href="/profile/{{$user->id}}"><button class="btn btn-primary mb-2 mx-lg-2 px-lg-5 mx-md-4">Go Back to Profile</button></a> </div>
+                            <div id="edit"> <a href="/profile/{{$user->id}}"><button class="btn btn-secondary mb-2 mx-lg-2 px-lg-5 mx-md-4">Go Back to Profile</button></a> </div>
                             <hr style="background:#5066D8;">
                             <div class="h5 my-2 ml-lg-5 pl-3" >
                               <i class="fa fa-trophy" aria-hidden="true"><span class="">  Recent Badge</span></i>
@@ -20,7 +20,7 @@
                             <div class="img ml-lg-5 " id="badge"></div>
                             <div class="img_badge my-1 ml-lg-5 pl-4 mb-3"></div>
                             <div class="mt-2">
-                            <button type="button" class="btn btn-primary  my-4 ml-lg-4 px-lg-5 mx-md-4" data-toggle="modal" data-target="#rule">
+                            <button type="button" class="btn btn-secondary  my-4 ml-lg-4 px-lg-5 mx-md-4" data-toggle="modal" data-target="#rule">
                                 Game rules
                             </button>
                                            
@@ -31,11 +31,11 @@
                    </div>  
                <!-- beginning of column 9 -->
                <div class="right-game col-lg-9 col-md-12 col-sm-12">
-                    <div id="edit"> <a href="/profile/{{$user->id}}"><button class="btn btn-primary d-lg-none">Go Back to Profile</button></a> </div>
+                    <div id="edit"> <a href="/profile/{{$user->id}}"><button class="btn btn-danger d-lg-none">Go Back to Profile</button></a> </div>
                         <div class="bar">
                             <span class="text-white">Running progress bar to track game progress from 0% to 100% </span>
                             <div class="progress">
-                                <div id="dynamic" class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                <div id="dynamic" class="progress-bar progress-bar-secondary progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%, background-color:black;">
                                     <span id="current-progress"></span>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <strong><h4>1)</h4></strong> You have 10 guestions each correct matched answer you get 10 points
+                        <strong><h4>1)</h4></strong> You have to wait for 40seconds after loading game page for game to start
                         <strong><h4>2)</h4></strong> You have 40 seconds for each question 
                         <strong><h4>3)</h4></strong> You need to wait for 40 second for game to start
                         <strong><h4>4)</h4></strong> You can only toogle button once to change your answer
@@ -163,8 +163,6 @@
                         <strong><h4>5)</h4></strong> To win game you must clear all lines i.e you must answer 10 question correctly
                         <strong><h4>6)</h4></strong> Rewards - you earn a bronze badge when you get 30 points, silver when you get 60points
                         gold when you get 90 points and you win game when you get 100 points.
-                        <h4><a href="https://www.youtube.com/watch?v=2Z0Z2hy739E" target="_blank">Video link on how to play</a></h4>
-                        <h4><a href="https://studio.code.org/projects/applab/iukLbcDnzqgoxuu810unLw" target="_blank">web link on how to play</a></h4>
                         <strong>Enjoy your game.</strong> 
                     </div>
                     <div class="modal-footer">
