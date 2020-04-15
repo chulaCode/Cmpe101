@@ -109,9 +109,9 @@
                                        <h1>Learn and have fun</h1>
                                       <form action="/enrol" method="get">
                                          @csrf
-                                         <p><a href="/home/1"><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
+                                         <p><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
                                        
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></a></p>
+                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></p>
                                       </form>
                                    </div>
                                </div>

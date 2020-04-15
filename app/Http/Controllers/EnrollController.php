@@ -14,7 +14,7 @@ class EnrollController extends Controller
     {
         if(($request->submit == "course")&&(!Auth::user()))
         {
-            $user=User::findOrfail(1);
+            $user=User::findOrfail(2);
             return redirect('/profile/'.$user->id);
          /* return redirect("/login")->with('warning', 'you need to login to enrol.');
           echo "<script>alert(' you must login first!!')</script>";   */
