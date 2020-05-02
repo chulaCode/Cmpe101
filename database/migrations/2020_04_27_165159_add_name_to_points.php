@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePointsTable extends Migration
+class AddNameToPoints extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreatePointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('points', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('score');
-            $table->timestamps();
-
+        Schema::table('points', function (Blueprint $table) {
+            $table->string('name');
         });
     }
 
@@ -28,6 +25,8 @@ class CreatePointsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('points');
+        Schema::table('points', function (Blueprint $table) {
+            //
+        });
     }
 }

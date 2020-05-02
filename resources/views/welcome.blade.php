@@ -25,7 +25,8 @@
     <link href="{{ asset('css/bootstrap.css.map') }}" rel="stylesheet">
  
 	<!-- Theme style  -->
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
     </head>
@@ -67,7 +68,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div id="colorlib-logo"><a href="/">
-                        Introduction To Computing Gamified</a></div>
+                        <span class="">Introduction To Computing Gamified</span></a></div>
                     </div>
                     <!--
                     <div class="col-md-6 text-right">
@@ -76,11 +77,11 @@
                         @if(Route::has('login'))
                         <div class="top-right links">
                          @auth
-                        <p style="color:white; font-weight: bold;">You're logged in click on course button to go to course homepage</p>
+                        <p style="color:white; font-weight: bold;">You're logged in click Acces system to proceed thanks!</p>
                         
                          @else
                             <li> <a href="{{ route('register') }}">Register</a></li>
-                            <li class="btn-cta"> <a href="{{ route('login') }}"><span>Login</span></a></li>
+                            <li class="btn-cta"> <a href="{{ route('login') }}"><span style="background:black">Login</span></a></li>
                             @endif
                             @endauth
                         </ul>
@@ -98,28 +99,38 @@
         <div class="flexslider">
             <ul class="slides">
               
-               <li class="img-fluid" style="background-image: url(images/b2.jpg);">
+               <li class="img-fluid" style="background-image: url(images/game3.jpg);">
                    <div class="overlay"></div>
                    <div class="container-fluid">
                        <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner">
-                                   <div class="desc">
-                                       <h2>You only have to know one thing</h2>
-                                       <h1>Learn and have fun</h1>
-                                      <form action="/enrol" method="get">
-                                         @csrf
-                                         <p><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
-                                       
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></p>
-                                      </form>
+                           <div class="col-md-8 col-sm-12 col-md-offset-3 col-xs-12 col-md-pull-1 slider-text">
+                               <div class="slider-text-inner" style="">
+                                   <div class="desc" style="padding:7px;margin-bottom:14px; background-color:black; opacity:0.7">
+                                       <h1>This study is aimed at investigating whether or not students taking introduction to computing
+                                        can be motivated and angaged more with a gamified experience added to their course.</h1>
+                                      
                                    </div>
-                               </div>
+                                  
+                                   <form action="/survey" method="get">
+                                         @csrf
+                                         <!--
+                                         <div class="form-group col-md-9 px-lg-5 mx-sm-3 my-4">
+                                            <label for="inputPassword2" class="sr-only">Password</label>
+                                            <input type="text" class="form-control" id="std" name="stdno" placeholder="Enter student number and click submit to access the system">
+                                        </div>
+                                        <button type="submit" name="submit" value="course" class="btn btn-dark btn-lg ">Submit Form</button>
+                                      -->
+                                         <button type="submit" name="submit"  class="btn btn-dark btn-lg ">Please fill survey & proceed</button>
+                             
+                                      </form>
+                                      
+                                       </div>
                            </div>
                        </div>
                    </div>
                </li>
-               <li class="img-fluid" style="background-image: url(images/b5.jpg); ">
+               <!--
+               <li class="img-fluid" style="background-image: url(images/game1.jpg); ">
                    <div class="overlay"></div>
                    <div class="container-fluid">
                        <div class="row">
@@ -140,7 +151,7 @@
                        </div>
                    </div>
                </li>
-              
+              -->
               
               </ul>
           </div>
@@ -150,8 +161,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
-						<h1 class="heading-big">Learn and learn that's the way to go! Keep Pushing</h1>
-						<h2>Learn and learn that's the way to go! Keep Pushing.</h2>
+						<h1 class="heading-big">Gamification in learning</h1>
+						<h2>Gamification in learning</h2>
 					</div>
 				</div>
             </div>	
