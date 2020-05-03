@@ -125,7 +125,7 @@
                             </ul>
                          @endforeach
                          <!--<button type="button" name="submit" value="Submit Answer"  id="submit" class="btn btn-lg btn-block btn-primary ml-4">Submit Answer</button>-->
-                         <input type="submit" name="submit" value="Submit Answer" id="submit-btn" class="submit-btn"/>
+                         <input type="submit" name="submit" value="Submit Answer" id="submit-btn"/>
                             
                      </form>
                 </div>

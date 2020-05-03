@@ -129,7 +129,7 @@ canvas{
 #submit-btn {
   color: #fff !important;
   text-transform: uppercase;
-  background: #0275d8;
+  background: #0275d8!important;
   padding: 10px;
   border: 2px solid #fff;
   border-radius: 7px;
