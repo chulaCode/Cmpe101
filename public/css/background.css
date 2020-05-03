@@ -129,12 +129,12 @@ canvas{
 #submit-btn {
   color: #fff !important;
   text-transform: uppercase;
-  background: #0275d8!important;
-  padding: 10px;
-  border: 2px solid #fff;
+  background: #0275d8;
+  padding: 13px;
+  border: 2px solid #292b2c;
   border-radius: 7px;
   display: inline-block;
-  max-width: 500px;
+  max-width: 550px;
   transition: all 0.3s ease 0s;
   margin-left:14rem;
 }
