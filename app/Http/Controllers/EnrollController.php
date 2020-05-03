@@ -89,7 +89,7 @@ class EnrollController extends Controller
                         $student->save();
 
                         $count= new counts();
-                        $count->user_id=$user_id;
+                        $count->user_id=$student->id;
                         $count->wrong=0;
                         $count->right=0;
                         $count->values=0;
