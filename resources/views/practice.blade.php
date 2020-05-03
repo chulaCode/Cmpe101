@@ -112,7 +112,7 @@
         </div>
         <div class="modal-footer">
       
-          <button type="button" class="replay btn btn-info" id="play" data-dismiss="modal">Replay</button></a>
+          <button type="button" class="replay btn btn-info" id="replay" data-dismiss="modal">Replay</button></a>
   
         </div>
         </div>
