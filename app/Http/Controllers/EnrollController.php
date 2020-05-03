@@ -44,13 +44,22 @@ class EnrollController extends Controller
       $name=$request->get('stdno');
       $user=(integer)$name;
       $number=(integer)$value =substr($name,-1);
+
       $student=students::where('studentNo',$user)->first();
-     // $first=surveys::all()->first();
-     // $qID=$first->question_id;
+
+      $exist = students::where('studentNo',$user)->exists();
+      if((!$exist)&&(($number%2)==1)){
+        $student= new students();
+        $student->studentNo=$user;
+        $student->save();
+
+      
+      }
       $exist_result = surveys::where('studentNo',$user)->exists();
       if(!$exist_result)
       {
-       
+        $student=students::where('studentNo',$user)->first();
+
             if(($number%2)==0){
                 
                     foreach($result as $value)
@@ -84,10 +93,6 @@ class EnrollController extends Controller
                         
                     }
                     if($save){
-                        $student= new students();
-                        $student->studentNo=$user;
-                        $student->save();
-
                         $count= new counts();
                         $count->user_id=$student->id;
                         $count->wrong=0;
@@ -95,6 +100,7 @@ class EnrollController extends Controller
                         $count->values=0;
                         $count->attempts=0;
                         $count->save();
+                
                         return redirect(route('profile.display',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
                     }
 
