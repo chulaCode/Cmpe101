@@ -14,7 +14,7 @@ class AddStudentToPostSurveys extends Migration
     public function up()
     {
         Schema::table('post_surveys', function (Blueprint $table) {
-            $table->integer('studentNo');
+            //$table->integer('studentNo');
         });
     }
 
