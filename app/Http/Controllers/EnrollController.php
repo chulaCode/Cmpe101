@@ -52,8 +52,15 @@ class EnrollController extends Controller
         $student= new students();
         $student->studentNo=$user;
         $student->save();
-
       
+      }else{
+        $count= new counts();
+        $count->user_id=$student->id;
+        $count->wrong=0;
+        $count->right=0;
+        $count->values=0;
+        $count->attempts=0;
+        $count->save();
       }
       $exist_result = surveys::where('studentNo',$user)->exists();
       if(!$exist_result)
