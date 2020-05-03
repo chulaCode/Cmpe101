@@ -124,8 +124,8 @@
                                 </li>
                             </ul>
                          @endforeach
-                         <button type="button" name="submit" value="Submit Answer"  id="submit" class="btn btn-lg btn-block btn-primary ml-4">Submit Answer</button>
-                         <!--<button type="submit" name="submit" value="Submit Answer"  class="btn btn-lg info">Submit Answer</button>-->
+                         <!--<button type="button" name="submit" value="Submit Answer"  id="submit" class="btn btn-lg btn-block btn-primary ml-4">Submit Answer</button>-->
+                         <input type="submit" name="submit" value="Submit Answer"  class="submit-btn"/>
                             
                      </form>
                 </div>
