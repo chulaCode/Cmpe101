@@ -21,6 +21,14 @@ canvas{
   display:block;
   vertical-align:bottom;
 }
+.sidebar{
+  background:#ffff;
+  opacity:0.8;
+  padding:0em;
+  position: absolute;
+  top:50px;
+  left:0px;
+}
 
 #clockdiv{
   font-family: sans-serif;

@@ -5,25 +5,25 @@
         
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-2 bg-secondary h-100 sidebar">
+          <div class="col-md-2 bg-secondary h-100 sidebar">
 
-            <br> <a href="{{route('profile.display',$user->id)}}"><button class="btn btn-dark my-4 ml-lg-4">Go Back to Profile</button></a>
-           
-             <hr class="bg-white">
-            <div id="clockdiv" class="my-4 mb-5 " style="">            
-                <div class="ml-lg-5 time ">
-                    <span id="timer">00:00</span>
-                    <div class="smalltext">Timer</div>
+                <br> <a href="{{route('profile.display',$user->id)}}"><button class="btn btn-dark my-4 ml-lg-4">Go Back to Profile</button></a>
+            
+                <hr class="bg-white">
+                <div id="clockdiv" class="my-4 mb-5 " style="">            
+                    <div class="ml-lg-5 time ">
+                        <span id="timer">00:00</span>
+                        <div class="smalltext">Timer</div>
+                    </div>
                 </div>
-            </div>
-            <div class="mt-1"> 
-                <button class="btn btn-lg btn-dark mb-4 mt-4  p-lg-3  ml-lg-5" ><span>Score  {{$count_value->values*10}}</button>
-            </div>
-            <br><br><br><br><br><br><br><br><br><br><br>
-            <br><br><br><br><br><br>
-            </div>
+                <div class="mt-1"> 
+                    <button class="btn btn-lg btn-dark mb-4 mt-4  p-lg-3  ml-lg-5" ><span>Score  {{$count_value->values*10}}</button>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br>
+         </div>
             <!--right -->
-            <div class="col-md-9 offset-lg-3 mt-2">
+         <div class="col-md-9 offset-lg-3 mt-2">
                 @if (session('status'))
                     <div class="alert alert-info">
                         {{ session('status') }}
