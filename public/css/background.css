@@ -210,6 +210,9 @@ a:hover {
 .sidebar{
   display: none;
 }
+.bar{
+  display:none;
+}
 
      
    }

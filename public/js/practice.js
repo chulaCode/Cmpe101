@@ -29,7 +29,7 @@ function startTimer(duration,display,id) {
             $(`#button7${block}`).prop('disabled', true);
             $(`#button8${block}`).prop('disabled', true);
             $(`#test${block}`).prop('disabled', true);
-           timer=20
+           timer=15
            
         }
     }, 1000);
@@ -347,7 +347,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     changeValue(`#button8${num}`)
                     calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
                     `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                    var fiveMinutes = 20
+                    var fiveMinutes = 15
                     display = document.querySelector('#timer');
                    startTimer(fiveMinutes,display,`#tr${num}`);
             }
@@ -401,7 +401,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     changeValue(`#button8${num}`)
                     calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
                     `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                    var fiveMinutes = 20
+                    var fiveMinutes = 15
                     display = document.querySelector('#timer');
                    startTimer(fiveMinutes,display,`#tr${num}`);
             }
@@ -448,7 +448,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
     
             });
-            var fiveMinutes = 20
+            var fiveMinutes = 15
             display = document.querySelector('#timer');
            startTimer(fiveMinutes,display,`#tr${num}`);
           
@@ -497,7 +497,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
     
             });
-            var fiveMinutes = 20
+            var fiveMinutes = 15
             display = document.querySelector('#timer');
            startTimer(fiveMinutes,display,`#tr${num}`);
             } 
@@ -513,4 +513,4 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 });
             }
         
-    },1000*20);
+    },1000*16);
