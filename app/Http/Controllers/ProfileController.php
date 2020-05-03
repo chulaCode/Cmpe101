@@ -67,10 +67,10 @@ class ProfileController extends Controller
        return view('practice',compact('user'));
     }
     public function postScore($point,Request $request){
-       dd($request->get('stdno'),$request->get('name'),$point);
+       //dd($request->get('stdno'),$request->get('name'),$point);
         $this->validate($request,[
             'name'=>'required','string',
-            'studentNo'=>'interger','unique:points'
+            'studentNo'=>'unique:points'
         ]);
         $save=points::create([
             'name'=>$request->get('name'),
