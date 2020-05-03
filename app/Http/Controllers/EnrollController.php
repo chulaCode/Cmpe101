@@ -44,8 +44,8 @@ class EnrollController extends Controller
       $user=(integer)$name;
       $number=(integer)$value =substr($name,-1);
       $student=students::where('studentNo',$user)->first();
-      $first=surveys::all()->first();
-      $qID=$first->question_id;
+     // $first=surveys::all()->first();
+     // $qID=$first->question_id;
       $exist_result = surveys::where('studentNo',$user)->exists();
       if(!$exist_result)
       {
