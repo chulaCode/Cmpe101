@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header "><h2>{{ __('Score Board') }}</h2>
-                  <!--<a href="{{route('post_survey',$id ?? '')}}"><span class="pull-right" style="margin-top:-2rem; cursor:pointer;">Fill survey</span></a>-->
+                  <a href="{{route('post_survey',$id)}}"><span class="pull-right" style="margin-top:-2rem; cursor:pointer;">Fill survey</span></a>
                 </div>
 
                 <div class="card-body">
