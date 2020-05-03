@@ -67,15 +67,14 @@ class ProfileController extends Controller
        return view('practice',compact('user'));
     }
     public function postScore($point,Request $request){
-       //dd($request->get('stdno'),$request->get('name'),$point);
         $this->validate($request,[
             'name'=>'required','string',
-            'studentNo'=>'interger','unique:points'
+            //'studentNo'=>'interger','unique:points'
         ]);
         $save=points::create([
             'name'=>$request->get('name'),
             'score'=>(integer)$point,
-            'studentNo'=>$request->get('stdno')
+            //'studentNo'=>$request->get('stdno')
         ]);
       if($save)
          return redirect()->route('score.board');
@@ -85,12 +84,12 @@ class ProfileController extends Controller
              
         return view('score');
     }
-    public function board($id){
+    public function board(){
         
         $result = DB::table('points')
                 ->orderBy('name', 'asc')
                 ->get();
-         return view('scoreboard',compact('result','id'));
+         return view('scoreboard',compact('result'));
     }
     public function quiz($id, Request $request){
        

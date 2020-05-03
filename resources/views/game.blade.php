@@ -95,7 +95,7 @@
             <div class="modal-footer">
         
                 <button class="btn btn-dark ml-3" id="scores_submit">Submit score to score board</button>
-                <a href="{{route('score.board',$user->id)}}" target="_blank"><button class="btn btn-success">View score board</button></a>
+                <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
                 <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
             </div>
             </div>
@@ -118,7 +118,7 @@
             </div>
             <div class="modal-footer">    
              <button class="btn btn-dark ml-3" id="score_submit">Submit score to score board</button>
-             <a href="{{route('score.board',$user->id)}}" target="_blank"><button class="btn btn-success">View score board</button></a>
+             <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
              <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
             </div>
             </div>
@@ -143,7 +143,7 @@
             
                 <!--<a href="/score/{{$user->id}}"  target="_blank"></a>-->
                 <button class="btn btn-primary" id="s_submit" data-dismiss="modal">Submit score to score board</button>
-                <a href="{{route('score.board',$user->id)}}" target="_blank"><button class="btn btn-success">View score board</button></a>
+                <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
                 <button type="button" id="close" class="btn btn-secondary ml-3" data-dismiss="modal">Replay</button>
             </div>
             </div>

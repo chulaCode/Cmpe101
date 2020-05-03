@@ -8,6 +8,7 @@ Use App\surveys;
 Use App\students;
 use App\post_surveys;
 use App\Quiz_survey;
+use App\counts;
 use Auth;
 use Session;
 use Illuminate\Http\Request;

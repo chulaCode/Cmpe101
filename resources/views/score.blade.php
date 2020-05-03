@@ -11,7 +11,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{route('post.score',app('request')->input('point'))}}">
                         @csrf
-                        <div class="form-group row">
+                       <!-- <div class="form-group row">
                             <label for="stdno" class="col-md-4 col-form-label text-md-right">{{ __('Student Number') }}</label>
 
                             <div class="col-md-6">
@@ -24,7 +24,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div>-->
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
