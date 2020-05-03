@@ -36,7 +36,7 @@ Route::get('/postsurvey/{id}','EnrollController@postSurvey')->name('post_survey'
 Route::post('/postSurvey/{id}','EnrollController@post')->name('survey.post');
 
 Route::post('/scores/{point}','ProfileController@postScore')->name("post.score");
-Route::get('/scoreboard/{id}','ProfileController@board')->name('score.board');
+Route::get('/scoreboard','ProfileController@board')->name('score.board');
 
 Route::get('/game/{user}','ProfileController@show')->name('profile.game');
 Route::get('/practice/{user}','ProfileController@practice')->name('practice.game');

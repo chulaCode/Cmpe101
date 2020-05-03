@@ -70,12 +70,12 @@ class ProfileController extends Controller
        //dd($request->get('stdno'),$request->get('name'),$point);
         $this->validate($request,[
             'name'=>'required','string',
-            'studentNo'=>'interger','unique:points'
+            //'studentNo'=>'interger','unique:points'
         ]);
         $save=points::create([
             'score'=>(integer)$point,
             'name'=>$request->get('name'),
-            'studentNo'=>$request->get('stdno')
+            //'studentNo'=>$request->get('stdno')
         ]);
       if($save)
          return redirect()->route('score.board');
@@ -85,7 +85,7 @@ class ProfileController extends Controller
              
         return view('score');
     }
-    public function board($id){
+    public function board(){
         
         $result = DB::table('points')
                 ->orderBy('name', 'asc')
