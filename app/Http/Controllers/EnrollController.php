@@ -44,57 +44,60 @@ class EnrollController extends Controller
       $user=(integer)$name;
       $number=(integer)$value =substr($name,-1);
       $student=students::where('studentNo',$user)->first();
-      $exist_result = surveys::where([ ['studentNo',$user],['question_id',1]])->exists();
-      if(!$exist_result){
+      $first=surveys::all()->first();
+      $qID=$first->question_id;
+      $exist_result = surveys::where([ ['studentNo',$user],['question_id',$qID]])->exists();
+      if(!$exist_result)
+      {
        
-        if(($number%2)==0){
-            
-                foreach($result as $value)
-                { 
-                    $save=surveys::create([
-                        'question_id'=> $request->input('ques'.$value->id),
-                        'answer'=>  $request->input('option'.$value->id),
-                        'studentNo'=> $user,
-            
-                    ]);
-                    
-                }
-                if($save){
-                    $student= new students();
-                    $student->studentNo=$user;
-                    $student->save();
-                    return redirect(route('profile.show',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
-                }
+            if(($number%2)==0){
+                
+                    foreach($result as $value)
+                    { 
+                        $save=surveys::create([
+                            'question_id'=> $request->input('ques'.$value->id),
+                            'answer'=>  $request->input('option'.$value->id),
+                            'studentNo'=> $user,
+                
+                        ]);
+                        
+                    }
+                    if($save){
+                        $student= new students();
+                        $student->studentNo=$user;
+                        $student->save();
+                        return redirect(route('profile.show',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
+                    }
 
-        }  
-        else{
+            }  
+            else{
 
-                foreach($result as $value)
-                { 
-                    $save=surveys::create([
-                        'question_id'=> $request->input('ques'.$value->id),
-                        'answer'=>  $request->input('option'.$value->id),
-                        'studentNo'=> $user,
-            
-                    ]);
-                    
+                    foreach($result as $value)
+                    { 
+                        $save=surveys::create([
+                            'question_id'=> $request->input('ques'.$value->id),
+                            'answer'=>  $request->input('option'.$value->id),
+                            'studentNo'=> $user,
+                
+                        ]);
+                        
+                    }
+                    if($save){
+                        $student= new students();
+                        $student->studentNo=$user;
+                        $student->save();
+
+                        $count= new counts();
+                        $count->user_id=$user_id;
+                        $count->wrong=0;
+                        $count->right=0;
+                        $count->values=0;
+                        $count->attempts=0;
+                        $count->save();
+                        return redirect(route('profile.display',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
+                    }
+
                 }
-                if($save){
-                    $student= new students();
-                    $student->studentNo=$user;
-                    $student->save();
-
-                    $count= new counts();
-                    $count->user_id=$user_id;
-                    $count->wrong=0;
-                    $count->right=0;
-                    $count->values=0;
-                    $count->attempts=0;
-                    $count->save();
-                    return redirect(route('profile.display',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
-                }
-
-            }
         }
         else{
             if(($number%2)==0)
