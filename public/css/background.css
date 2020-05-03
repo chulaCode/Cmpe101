@@ -126,7 +126,7 @@ canvas{
     height: 38rem!important;
   }
   
-.submit-btn {
+#submit-btn {
   color: #fff !important;
   text-transform: uppercase;
   background: #0275d8;
@@ -138,7 +138,7 @@ canvas{
   transition: all 0.3s ease 0s;
   margin-left:14rem;
 }
-.submit-btn:hover {
+#submit-btn:hover {
   color: #fff !important;
   font-weight: 700 !important;
   letter-spacing: 3px;
