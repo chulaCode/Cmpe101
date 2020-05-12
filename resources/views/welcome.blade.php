@@ -11,14 +11,13 @@
     <!-- Animate.css -->
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
 	<!-- Icomoon Icon Fonts-->
-    <link href="{{ asset('css/icomoon.css') }}" rel="stylesheet">
+    
 	<!-- Magnific Popup -->
-    <link href="{{ asset('css/magnific-popup.css') }}" rel="stylesheet">
+    
 	<!-- Flexslider  -->
     <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
 	<!-- Owl Carousel -->
-    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+   
 	<!-- Flaticons  -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
@@ -31,146 +30,65 @@
 	<script src="js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-    <!-- 
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif   
-        </div>
-        -->
-
-	<div class="colorlib-loader"></div>
-
-<div id="page">
-    <nav class="colorlib-nav" role="navigation">
-    <div class="upper-menu">
+        
+    <section>
+       <div class="unit-5 overlay mb-5" style="background-image:url('{{asset('images/game3.jpg')}}');">
+            <div class="container text-center">
+                <h2 class="mb-0">{{__('CPME 101 INTRODUCTION TO COMPUTING')}}</h2>
+                <h3 > <a href="/"><span class="text-success font-weight-bold" style="">{{__('home')}}</span></a></h3>
+            </div>
+      </div>
+    </section>
+<!--
+    <section>
+      <div class="colorlib-classes ">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-4">
-                        <P>GAME EXPERIENCE WITH CMPE 101</P>
+                    <div class="col-md-12 colorlib-heading center-heading text-center animate-box">
+                        <h1 class="heading-big">Gamification in learning</h1>
                     </div>
-                   
                 </div>
-            </div>
-        </div>
-        <div class="top-menu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div id="colorlib-logo"><a href="/">
-                        <span class="">Introduction To Computing Gamified</span></a></div>
-                    </div>
-                    <!--
-                    <div class="col-md-6 text-right">
-                    
-                        <ul >
-                        @if(Route::has('login'))
-                        <div class="top-right links">
-                         @auth
-                        <p style="color:white; font-weight: bold;">You're logged in click Acces system to proceed thanks!</p>
-                        
-                         @else
-                            <li> <a href="{{ route('register') }}">Register</a></li>
-                            <li class="btn-cta"> <a href="{{ route('login') }}"><span style="background:black">Login</span></a></li>
-                            @endif
-                            @endauth
-                        </ul>
-                        
-                       
-                    </div>
-                    -->
-                    
-                     
-                </div>
-            </div>
-        </div>
-    </nav>
-    <aside id="colorlib-hero">
-        <div class="flexslider">
-            <ul class="slides">
-              
-               <li class="img-fluid" style="background-image: url(images/game3.jpg);">
-                   <div class="overlay"></div>
-                   <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-3 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner" style="">
-                                   <div class="desc" style="padding:7px;margin-bottom:14px; background-color:black; opacity:0.7">
-                                       <h1>This study is aimed at investigating whether or not students taking introduction to computing
-                                        can be motivated and angaged more with a gamified experience added to their course.</h1>
-                                      
-                                   </div>
-                                  
-                                   <form action="/survey" method="get">
-                                         @csrf
-                                         <!--
-                                         <div class="form-group col-md-9 px-lg-5 mx-sm-3 my-4">
-                                            <label for="inputPassword2" class="sr-only">Password</label>
-                                            <input type="text" class="form-control" id="std" name="stdno" placeholder="Enter student number and click submit to access the system">
-                                        </div>
-                                        <button type="submit" name="submit" value="course" class="btn btn-dark btn-lg ">Submit Form</button>
-                                      -->
-                                         <button type="submit" name="submit"  class="btn btn-dark btn-lg ">Please fill survey & proceed</button>
-                             
-                                      </form>
-                                      
-                                       </div>
-                           </div>
-                       </div>
-                   </div>
-               </li>
-               <!--
-               <li class="img-fluid" style="background-image: url(images/game1.jpg); ">
-                   <div class="overlay"></div>
-                   <div class="container-fluid">
-                       <div class="row">
-                           <div class="col-md-8 col-sm-12 col-md-offset-2 col-xs-12 col-md-pull-1 slider-text">
-                               <div class="slider-text-inner">
-                                   <div class="desc">
-                                       <h2>You only have to know one thing</h2>
-                                       <h1><span>Education is a Key to Success</span></h1>
-                                       <form action="/enrol" method="get">
-                                         @csrf
-                                       <p><button type="submit" name="submit" value="course" class="btn btn-danger btn-lg">
-                                       
-                                       <span class="icon"><i class="fas fa-graduation-cap"></i></span>View Course</button></p>
-                                       </form>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </li>
-              -->
-              
-              </ul>
-          </div>
-    </aside>
-    <!-- end of carousal -->
-    <div class="colorlib-classes ">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 colorlib-heading center-heading text-center animate-box">
-						<h1 class="heading-big">Gamification in learning</h1>
-						<h2>Gamification in learning</h2>
-					</div>
-				</div>
             </div>	
-     </div>
-     
+        </div> 
+    </section>
+-->
+    <section class="mb-5">
+      <div class="container">
+          <div class="row justify-content-center">
+             <div class="col-8 ">
+                 <h1 class="text-secondary my-5" style="font-size:40px;">Information</h1>
+                 <p class="text-secondary" style="font-size:23px;">This website is prepared for the ‘binary numbering system’ subject of CMPE 101 
+                      introduction to computing course of Cyprus International University.</p>
+                 <p class="text-secondary my-5" style="font-size:23px;">
+                 After entering your student number, you will be directed to a page. On that page, first you are expected to complete the pre-questionnaire 
+                 <span class="text-danger">(step 1)</span>. Then you can use the lesson material<span class="text-danger">(step 2)</span>..
+                  Finally, you are expected to complete the post-questionnaire <span class="text-danger">(step 3)</span>.
+                 </p>
+                 <p class="text-secondary my-5" style="font-size:23px;">
+                 If you have any questions, please contact: chulazy4christ@gmail.com
+                 </p>
+              </div>
+              <div class="col-4 my-5">
+                 <form method="post" action="{{route('survey.store')}}">
+                    @csrf
+                     <div class="my-5">
+                       <label for=" " style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
+                        <input type="number" class="form-control" id="std" name="stdno" 
+                        placeholder="Enter student number" required>
+                    </div>
+            
+                    <div class="col-md-12">   
+                        <button type="submit" name="submit" value="course" class="btn btn-success  btn-lg btn-block">
+                            <span style="font-size:18px;">Submit</span></button>
+                    </div>
+                 </form>
+             </div>
+         </div>
+       </div>
+    </section>
    
-      <!-- ending div -->
-    </div>
+     
+    
     
     <footer id="colorlib-footer">
 			<div class="container">
@@ -181,8 +99,9 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<p>
-								<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | coder <i class="icon-heart" aria-hidden="true"></i> Ochulaobari Emmanuel
+                                <small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            
+ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | coder <i class="icon-heart" aria-hidden="true"></i> Ochulaobari Emmanuel
               </small><br> 
 								
 							</p>

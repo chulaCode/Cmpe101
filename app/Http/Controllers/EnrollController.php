@@ -18,112 +18,47 @@ class EnrollController extends Controller
     
     public function index(Request $request)
     {
-        if($request->submit == "course")
-        {
-           $name=$request->get('stdno');
-           $number=(integer)$value =substr($name,-1);
-           if(($number%2)==0)
-               dd();
-           else
-              dd('not zero');
-           
-       }
+        return view('pretest');
    }
    public function survey(){
 
-     $result= survey_questions::where('number',1)->get();
-     return view('survey',compact('result'));
+     return view('survey');
    }
-
+   public function pretest()
+   {
+     return view("post_surveys");
+   }
+   public function consent()
+   {
+       return view("quiz_survey");
+   }
    public function store(Request $request)
    {
-    $result= survey_questions::where('number',1)->get();
 
     if($request->submit == "course")
     {
       $name=$request->get('stdno');
       $user=(integer)$name;
       $number=(integer)$value =substr($name,-1);
-
-      $student=students::where('studentNo',$user)->first();
-
-      $exist = students::where('studentNo',$user)->exists();
-      if((!$exist)&&(($number%2)==1)){
-        $student= new students();
-        $student->studentNo=$user;
-        $student->save();
-      
-      }else{
-        $count= new counts();
-        $count->user_id=$student->id;
-        $count->wrong=0;
-        $count->right=0;
-        $count->values=0;
-        $count->attempts=0;
-        $count->save();
-      }
-      $exist_result = surveys::where('studentNo',$user)->exists();
-      if(!$exist_result)
-      {
-        $student=students::where('studentNo',$user)->first();
-
-            if(($number%2)==0){
-                
-                    foreach($result as $value)
-                    { 
-                        $save=surveys::create([
-                            'question_id'=> $request->input('ques'.$value->id),
-                            'answer'=>  $request->input('option'.$value->id),
-                            'studentNo'=> $user,
-                
-                        ]);
-                        
-                    }
-                    if($save){
-                        $student= new students();
-                        $student->studentNo=$user;
-                        $student->save();
-                        return redirect(route('profile.show',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
-                    }
-
-            }  
-            else{
-
-                    foreach($result as $value)
-                    { 
-                        $save=surveys::create([
-                            'question_id'=> $request->input('ques'.$value->id),
-                            'answer'=>  $request->input('option'.$value->id),
-                            'studentNo'=> $user,
-                
-                        ]);
-                        
-                    }
-                    if($save){
-                        $count= new counts();
-                        $count->user_id=$student->id;
-                        $count->wrong=0;
-                        $count->right=0;
-                        $count->values=0;
-                        $count->attempts=0;
-                        $count->save();
-                
-                        return redirect(route('profile.display',$student->id))->with('status', 'THANK YOU FOR FILLING THE SURVEY');
-                    }
-
-                }
-        }
-        else{
-            if(($number%2)==0)
-               return redirect(route('profile.show',$student->id));
-              //return view('profile',compact('student'));
-            else
-               return redirect(route('profile.display',$student->id));
-        }
-        
+      if(($number%2)==0)
+           return redirect()->route('survey.show');
+       else
+          return redirect()->route('consent');
+  
     }
    
    }
+   public function land()
+   {
+       return view("land");
+   }
+   public function landing()
+   {
+       return view("landing");
+   }
+}
+
+   /*
    public function postSurvey($id){
       $count=1;
         $result= survey_questions::where('number',2)->get();
@@ -206,4 +141,4 @@ class EnrollController extends Controller
   }
 
 
-}
+}*/

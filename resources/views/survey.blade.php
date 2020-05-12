@@ -1,101 +1,130 @@
 @extends('layouts.app')
-
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @section('content')
-<div class="container">
+<div class="container mb-3">
     <div class="row">
        <div class="col-12">
-       @if (session('status'))
-         <div class="text-center alert alert-success">
-            {{ session('status') }}
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-          </div>
-       @endif
+      
           <section>
-               
-                <div class="text-right my-3 " style="text-weight:bold"><h4></h4>  </div>
-                <div class="text-center text-capitalize ">
-                    <h2 class="font-weight-bold">Introduction to computer course survey</h2>
-                  
-                    <hr>
-                    <h4> 
-                        The results of the following questionnaire will be use to check if game elements increase interaction and engagement.
-                    </h4>
-                    <hr>
-                </div>
-               
-            </section>
+              <div class="text-center text-capitalize my-5">
+                <hr>
+                <h3> 
+                Participation in playing binary game to Enhance Motivation and engagement
+                 in Learning intoduction to computing.
+                </h3>
+                <hr>
+             </div>
+             <div>
+                 <h4>This research aims to enhance the motivation and engagement of students in 
+                     learning “binary numbering system” subject in Introduction to Computing courses being 
+                     taught in Cyprus International University (CIU). It is intended to support this course with a gaming tool in 
+                     order to support the learning process of “Binary Numbering system” subject and thus, increase students’ intrinsic motivation, 
+                     attitude towards answering questions, grade motivation and knowledge.</h4>
 
-            <section>
-            <form method="post" action="{{route('survey.store')}}">
-            @csrf
+                     <h4 class="my-5">The questionnaire consists of five different parts. These are</h4>
 
-                <div class="body-top my-4">
-                   
-                        <h4 class="my-4"> Please if you've submitted survey before just enter your student number and click submit form thanks!</h4>
-                        
-                        <input id="" type="hidden" name="ques"value=""/>
-                    
-                        <h5 class="font-weight-bold my-3">Note: To answer this section 1(Strongly Disagree)-2(Disagree)-3(Neutral)- 4(Agree) - 5(Strongly Agree) choose  any of them.</h5>    
-                        
-                        <div class="table">
-                            <table class="table table-bordered" id="">
-                            
-                                <thead>
-                                    <tr>
-                                            <th>Number</th>
-                                            <th>Questions</th>
-                                            <th>Strongly Agree 5</th>
-                                            <th>Agree 4</th>
-                                            <th>Neutral 3</th>
-                                            <th>Disagree 2</th>
-                                            <th>Strongly Disagree 1</th>
-                                        </tr>
-                                    
-                                    </thead>
-                                    <tbody id="">
-                                    @foreach($result as $result)
-                                    <tr id="">
-                                        
-                                        <td>{{$result->id}}</td>
-                                        <td>{{$result->question}}</td>
-                                        <input id="" type="hidden" name="ques{{$result->id}}"value="{{$result->id}}"/>
-                                        <td><label class="radio-inline"><input type="radio" 
-                                        name="option{{$result->id}}" value='5'checked></label></td>
+                     <h4>
+                        1. Demographic Information <br>
+                        2. Background in Introduction to Computing, “Binary Numbering System” subject and gaming <br>
+                        3. Intrinsic Motivation <br>
+                        4. Attitude towards gaming <br>
+                        5. Knowledge <br>
+                     </h4>
+                     <h4 class="my-5">
+                        The questionnaire will take 5 - 10 minutes to complete.
+                     </h4>
+                     <h4>
+                        Please be aware that it is your choice whether to participate in this questionnaire or not. If you choose to participate,
+                         you will gain %10 marks to overall mark of your chemistry course. Your student number was asked to enter this before 
+                         filling in the questionnaire, because we will ask for your student number later to complete another questionnaire after
+                          playing game. Your student number is an identifier to compare your responses from the pre-questionnaire (i.e. this questionnaire) 
+                          with the post-questionnaire (the one you will use a particular course material) and we will not use it for any other purpose.
+                     </h4>
+                     <h4 class="my-5 text-danger">
+                       Please answer all questions honestly especially in the knowledge section. Please if you do not find the correct answer, do not ask around
+                      or search the Internet. Try to answer all questions on your own without getting any help. This is not exam, we are just trying to
+                       understand how we can enhance education with interactive tools. So please do not worry even if you answer wrong, this will not affect your marks.
+                     </h4>
+                     <h4 class="">
+                       Thank you for participating in our study. We really appreciate your contribution to this research.
+                     </h4>
+             </div>
+             <div class="row">
+                 <div class="col-5">
+                    <h4 class="my-4">
+                        Ochulaobari Emmanuel (Graduate Student)
+                        Graduate Program in Information Technology Department
+                        Institute of Graduate Studies and Research
+                        Cyprus International University
+                     </h4>
+                   </div>
+                 <div class="col-7"></div>
+             </div>
+             <div class="row">
+                 <div class="col-10">
+                   <h4>
+                       If you need more information about this work, you can contact my thesis advisor.
 
-                                        <td><label class="radio-inline"><input type="radio" 
-                                        name="option{{$result->id}}"value='4' checked></label></td>
+                   </h4>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-6">
+                    <h4 class="my-4">
+                        Ochulaobari Emmanuel (Graduate Student) <br>
+                        Graduate Program in Information Technology Department <br>
+                        Institute of Graduate Studies and Research <br>
+                        Cyprus International University <br>
+                        codechula@gmail.com <br>
+                        Phone: +90 533 848 27 63
+                     </h4>
+                   </div>
+                 <div class="col-6">
+                  <h4 class="my-4"> 
+                    Asst. Prof. Dr. Çağın KAZIMOĞLU <br>
+                    Computer Engineering Department <br>
+                    Faculty of Engineering <br>
+                    Cyprus International University <br>
+                    ckazimoglu@ciu.edu.tr <br>
+                    Phone: +90 671 11 11-2416
+                 </h4>
+                 </div>
+             </div>
 
-                                        <td><label class="radio-inline"><input type="radio" 
-                                        name="option{{$result->id}}" value='3' checked></label></td>
-
-                                        <td><label class="radio-inline"><input type="radio" 
-                                        name="option{{$result->id}}" value='2'  checked></label></td>
-
-                                        <td><label class="radio-inline"><input type="radio" 
-                                        name="option{{$result->id}}" value='1' checked></label></td>
-                                        
-                                    </tr>
-                                    @endforeach
-                                </tbody>
-                                
-                            </table>
+            <div>
+                <h4 class="my-4"> *By clicking on continue button you've agreed to participate in this research</h4>
+            </div>
+             <div>
+               <div class="col-md-12">   
+                        <a href="{{route('pretest')}}" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
+                            <span style="font-size:18px;">Continue</span></button></a>
                     </div>
-                    <div class="row">
-                        <div class="col-md-10">
-                                            
-                            <input type="number" class="form-control py-4" id="std" name="stdno" 
-                            placeholder="Enter student number (No letters just numbers) and click submit to access the system" required>
-                        </div>
-                        <div class="col-md-2">
-                            <button type="submit" name="submit" value="course" class="btn btn-dark btn-lg ">Submit Form</button>
-                        </div>
-                    </div>
-                                        
-                <!--last question section-->
-               
-             </form>
+             </div>
+            
             </section>
-        </div>
-    </div>
+       </div>
+   </div>
 </div>
+
+<footer id="colorlib-footer">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+                                <small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            
+ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | coder <i class="icon-heart" aria-hidden="true"></i> Ochulaobari Emmanuel
+              </small><br> 
+								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
 @endsection

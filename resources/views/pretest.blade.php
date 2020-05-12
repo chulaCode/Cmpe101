@@ -28,7 +28,7 @@
                 <div>
              
                <div class="col-md-12">   
-                        <a href="" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
+                        <a href="{{route('land')}}" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
                             <span style="font-size:18px;">TAKE SURVEY</span></button></a>
                     </div>
              </div>

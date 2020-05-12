@@ -22,9 +22,14 @@ Route::get('/profile/create','PostController@create');
 //Route::post('/profile','PostController@store');
 Route::get('/score','ProfileController@score')->name("score");
 
-Route::post('/enrol','EnrollController@index')->name('enrol.index');
-Route::get('/survey','EnrollController@survey')->name('survey.show');
+Route::get('/pretest','EnrollController@index')->name('pretest');
+Route::get('/consent','EnrollController@survey')->name('survey.show');
 Route::post('/survey','EnrollController@store')->name('survey.store');
+Route::get('/quizpretest','EnrollController@pretest')->name('quiz.pretest');
+Route::get('/quizconsent','EnrollController@consent')->name('consent');
+Route::get('/land','EnrollController@land')->name('land');
+Route::get('/landing','EnrollController@landing')->name('landing');
+
 Route::post('/answer','AnswerController@index');
 
 Route::get('/quiz/{id}','ProfileController@quiz')->name('quiz');

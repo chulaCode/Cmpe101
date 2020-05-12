@@ -9,7 +9,7 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h3> 
-                   You will be directed to the pre-questionnaire on SurveyMonkey by clicking on "TAKE-SURVEY" button at the bottom of this page.
+                   Thank you for participating.
                 </h3>
                 <hr>
              </div>
