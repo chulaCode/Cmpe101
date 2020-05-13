@@ -26,7 +26,7 @@ class EnrollController extends Controller
    }
    public function pretest()
    {
-     return view("post_surveys");
+     return view("pretest2");
    }
    public function consent()
    {

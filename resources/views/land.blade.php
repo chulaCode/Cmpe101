@@ -8,28 +8,35 @@
           <section>
               <div class="text-center text-capitalize my-5">
                 <hr>
-                <h3> 
-                   Thank you for participating.
-                </h3>
+                <h2> 
+                   You will redirected to the game section by click GAME SECTION button at the bottom of the page.
+                </h2>
                 <hr>
              </div>
              <div> 
-                <h4 class="my-5">
-                    Please provide <span class="text-danger">consistent and realistic answers</span> to questions in the pre-questionnaire. You can make changes 
-                    to your responses until you complete the questionnaire. You must also fill the questionnaires <span class="text-danger">only once</span>.
-                </h4>
+                <h3 class="my-5">
+                    After clicking on the Game section you'll be directed to<span class="text-danger">game instruction page</span> 
+                    be sure to read the instruction carefully and watch video
+                    on how to play. Be sure to clıck the <span class="text-danger">practice button</span> to learn how to play the game
+                    before you procced to play the game after you're sure you've known how to play
+                </h3>
                  <h4 class="my-5">
-                 At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME PAGE"</span>.
-                   Please don't forget to click <span class="text-danger">"GAME PAGE"</span> word in blue BEFORE clicking on "DONE" button. because when you 
-                   click on Done button you cannot access that last survey page again.
+                 At the game page before starting game you'll be prompted to read <span class="text-danger">"GAME RULE"</span>
+                  before starting game by clicking<span class="text-danger">"start"</span> be ensure you read the rule carefully.
+                  after you're done with the game you can submit your score to score board to see how you rank amidst other gamers
+                  please note you'll need to submit your name and student number to access the score board your student number will 
+                  not be displaced just your name. NOTE your detail will not be used for anything except to identify among other gamers.
+
+                   <span class="danger">After the game you'll need to fill the post-questionnaire is important to fill the 
+                   post-questionnaire to get the 10% mark that will be awarded to those that partake in this research.
+                   the FILL SURVEY BUTTON is at the right side bar at the game page. Be sure to click it to complete the post-questionnaire thanks.
                  </h4>
 
-                 <h4 class="my-5 mr-5 font-weight-bold text-center">Sample view at the end of Pre-Questionnaire</h4>
                 <div>
              
                <div class="col-md-12">   
                         <a href="" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
-                            <span style="font-size:18px;">TAKE SURVEY</span></button></a>
+                            <span style="font-size:18px;">GAME SECTION</span></button></a>
                     </div>
              </div>
             

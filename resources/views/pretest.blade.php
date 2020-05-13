@@ -9,7 +9,7 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h3> 
-                   You will be directed to the pre-questionnaire on SurveyMonkey by clicking on "TAKE-SURVEY" button at the bottom of this page.
+                   You will be directed to the pre-questionnaire on Google forms by clicking on "TAKE-SURVEY" button at the bottom of this page.
                 </h3>
                 <hr>
              </div>
@@ -19,16 +19,18 @@
                     to your responses until you complete the questionnaire. You must also fill the questionnaires <span class="text-danger">only once</span>.
                 </h4>
                  <h4 class="my-5">
-                 At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME PAGE"</span>.
-                   Please don't forget to click <span class="text-danger">"GAME PAGE"</span> word in blue BEFORE clicking on "DONE" button. because when you 
-                   click on Done button you cannot access that last survey page again.
+                 At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME SECTION"</span>.
+                   Please don't forget to click <span class="text-danger">"LINK AFTER click on the link to game section"</span>  BEFORE clicking on "SUBMIT" button. because when you 
+                   click on submit button you cannot access that last survey page again.
                  </h4>
 
-                 <h4 class="my-5 mr-5 font-weight-bold text-center">Sample view at the end of Pre-Questionnaire</h4>
+                 <h4 class=" d-none d-lg-block my-5 mr-5 font-weight-bold text-center ">Sample view at the end of Pre-Questionnaire</h4>
+                 <div class="d-none d-lg-block"><img src="{{asset('images/section.png')}}" alt="" class="" style="margin-left:150px"></div>
                 <div>
              
-               <div class="col-md-12">   
-                        <a href="{{route('land')}}" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
+                   <div class="col-md-12 ">   
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3a2rNANxLgCmAl11SF-gDZnhrLcbPlgjPIW8vikRctbz1Mw/viewform?vc=0&c=0&w=1" 
+                        class="float-right" target="_blank"><button type="submit" class="btn btn-secondary  btn-lg px-5">
                             <span style="font-size:18px;">TAKE SURVEY</span></button></a>
                     </div>
              </div>
