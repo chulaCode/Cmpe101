@@ -5,9 +5,9 @@
 <div class="container my-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-        @if (session('status'))
+          @if (session('status'))
                 <div class="alert alert-info">
-                    {{ session('message') }}
+                    {{ session('status') }}
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
              @endif

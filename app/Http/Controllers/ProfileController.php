@@ -82,7 +82,7 @@ class ProfileController extends Controller
              return redirect()->route('score.board');
         }
         else
-          return redirect()->back()->with('message',"You can't submit score more than once");
+          return redirect()->back()->with('status',"You can't submit score more than once");
          
     }
 
