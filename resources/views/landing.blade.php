@@ -9,30 +9,52 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h3> 
-                   Thank you for participating.
+                  You will redirected to the Quiz section by entering your student number and clicking the SUBMIT button.
+              
                 </h3>
                 <hr>
              </div>
-             <div> 
-                <h4 class="my-5">
-                    Please provide <span class="text-danger">consistent and realistic answers</span> to questions in the pre-questionnaire. You can make changes 
-                    to your responses until you complete the questionnaire. You must also fill the questionnaires <span class="text-danger">only once</span>.
-                </h4>
-                 <h4 class="my-5">
-                 At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME PAGE"</span>.
-                   Please don't forget to click <span class="text-danger">"GAME PAGE"</span> word in blue BEFORE clicking on "DONE" button. because when you 
-                   click on Done button you cannot access that last survey page again.
-                 </h4>
-
-                 <h4 class="my-5 mr-5 font-weight-bold text-center">Sample view at the end of Pre-Questionnaire</h4>
-                <div>
-             
-               <div class="col-md-12">   
-                        <a href="" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
-                            <span style="font-size:18px;">TAKE SURVEY</span></button></a>
-                    </div>
-             </div>
             
+            </section>
+            <section class="mb-5">
+               <div class="container">
+                  <div class="row justify-content-center">
+                     <div class="col-md-8 col-sm-12">
+                        <h1 class="text-secondary my-5">Information</h1>
+                        <h3 class="text-secondary" style="">To access the quiz section you'll need to enter your student
+                              number. Please Note your student number won't be used for any purpose except so everyone will be differentiated
+                              and so your score can be unique to you and you alone.</h3>
+                        <h3 class="text-secondary my-5" style="">
+                          Please read the instruction carefully on the instruction page and try to answer the questions to 
+                          the best of your knowledge don't just pick random answers.
+                        </h3>
+                        <h3 class="text-secondary my-5" style="font-size:23px;">
+                          Please ensure you fill the survey after your done with the interactive quiz. You can take the quiz as much as you want
+                          the <span class="text-danger">fill survey button</span> is at the bottom of the instruction page.
+                        </h3>
+                     </div>
+                     <div class="col-md-4 col-sm-12 my-5">
+                        <form method="post" action="{{route('post')}}">
+                           @csrf
+                              <div class="my-5">
+                              <label for="studentNo" style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
+                                 <input type="number" class="form-control @error('studentNo') is-invalid @enderror" id="studentNo" name="studentNo"
+                               placeholder="Enter student number" required>
+                               @error('studentNo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                           </div>
+                     
+                           <div class="col-md-12">   
+                                 <button type="submit" name="submit" value="course" class="btn btn-secondary  btn-lg btn-block">
+                                    <span style="font-size:18px;">Submit</span></button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
             </section>
        </div>
    </div>

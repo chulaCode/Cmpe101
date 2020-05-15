@@ -55,7 +55,7 @@
     <section class="mb-5">
       <div class="container">
           <div class="row justify-content-center">
-             <div class="col-8 ">
+             <div class="col-md-8 col-sm-12 ">
                  <h1 class="text-secondary my-5" style="font-size:40px;">Information</h1>
                  <p class="text-secondary" style="font-size:23px;">This website is prepared for the ‘binary numbering system’ subject of CMPE 101 
                       introduction to computing course of Cyprus International University.</p>
@@ -68,13 +68,13 @@
                  If you have any questions, please contact: chulazy4christ@gmail.com
                  </p>
               </div>
-              <div class="col-4 my-5">
+              <div class="col-md-4 col-sm-12 my-5">
                  <form method="post" action="{{route('survey.store')}}">
                     @csrf
                      <div class="my-5">
                        <label for=" " style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
-                        <input type="number" class="form-control" id="std" name="stdno" 
-                        placeholder="Enter student number" required>
+                        <input type="number" class="form-control" id="std" name="stdno" minlength="8"
+                         maxlength="8" placeholder="Enter student number" required>
                     </div>
             
                     <div class="col-md-12">   

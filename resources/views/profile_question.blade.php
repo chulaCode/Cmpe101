@@ -1,8 +1,7 @@
 @extends('layouts.app')
-
+<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @section('content')
-
-<div class="container my-4">
+<div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-10">
             @if (session('status'))
@@ -17,18 +16,18 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped">
+                    <table class="table table-striped ">
                         <tbody>
-                            <tr>
-                               <td><h4>The test is only on binary to decimal conversion so focus on that </h4></td>
-                            </tr>
-                            <tr><td><h4>You have a total of 10 questions to answer</h4></td></tr>
-                             <tr><td><h4>After the time elapses a new question comes on</h4></td></tr>
-                             <tr><td><h4>You have 20 seconds first 5 questions and 10 seconds  for the last question</h4></td></tr>
-                             <tr><td><h4>Please help fill survey after your done with with the quiz thank you!</h4></td></tr>
+                            <tr><td><h4>You have a total of 10 questions to attempt any wrong answer you pick 
+                            a suggestion will be given to you on how to get the next question right</h4></td></tr>
+                            <tr><td><h4>After 10 attempt you'll be redirect back to this page you can check the quiz page again for your score</h4></td></tr>
+                             <tr><td><h4>You have 30 seconds to answer each question you can see your time count at the left side of the quiz page</h4></td></tr>
+                             <tr><td><h4>After the 30second finishes another question is displayed and if don't pick 
+                             any answer you'll fail the question automatically.</h4></td></tr>
+                             <tr><td><h4>You can attempt the quiz as many times you want till you master the subject.</h4></td></tr>
                              <tr><td><h4>Best of Luck!</h4></td></tr>
                              <tr><td>
-                               <a href="{{route('survey.quiz',$student->id)}}"><button class="btn btn-secondary btn-lg mr-4">Please fill survey</button></a>
+                               <a href="{{route('postlanding')}}" target="_blank"><button class="btn btn-secondary btn-lg mr-4">Please fill survey</button></a>
                                <a href="{{route('quiz',$student->id)}}"><button class="btn btn-secondary btn-lg">Take quiz</button></a>
                                </td>
                             </tr>
@@ -38,5 +37,28 @@
             </div>
         </div>
     </div>
+    
 </div>
+
+<footer id="colorlib-footer" class="mt-5">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3 colorlib-widget">
+						
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>
+                                <small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            
+ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | coder <i class="icon-heart" aria-hidden="true"></i> Ochulaobari Emmanuel
+              </small><br> 
+								
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	
 @endsection

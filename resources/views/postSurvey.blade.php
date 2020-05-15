@@ -21,12 +21,7 @@
                     before you procced to play the game after you're sure you've known how to play.
                 </h3>
                  <h3 class="my-5">
-                 At the game page before starting game you'll be prompted to read <span class="text-danger">"GAME RULE"</span>
-                  before starting game by clicking <span class="text-danger">"start"</span> please ensure you read the rule carefully.
-                  after you're done with the game you can submit your score to score board to see how you rank amidst other gamers
-                  please note you'll need to submit your name  to access the score board 
-                  . NOTE your detail will not be used for anything except to identify you among other gamers.
-                 </h3>
+                </h3>
                  <h3 class="text-danger mb-5">
                    After the playing the game you'll need to fill the post-questionnaire it is important to fill the 
                    post-questionnaire to get the <span class="text-success">10% mark </span> that will be awarded to those that partake in this research.

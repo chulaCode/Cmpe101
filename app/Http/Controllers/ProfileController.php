@@ -28,12 +28,12 @@ class ProfileController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index( $user,Request $request)
+    public function index( Request $request)
     {
-       $student=students::findOrfail($user);
+       //$student=students::findOrfail($user);
       
-       return view('profile',compact ('student'));
-    
+       return view('profile');
+      
     }
 
     public function edit(User $user)
@@ -47,11 +47,10 @@ class ProfileController extends Controller
         return redirect("/profile/{$user->id}");
     }
         
-    public function show( $id)
+    public function show()
     {
-        //$user=students::where('id',$id)->first();
-        $user=students::findOrfail($id);
-         return view('game',compact('user')); 
+     
+         return view('game'); 
         
     }
 
@@ -62,22 +61,29 @@ class ProfileController extends Controller
         return view('profile_question',compact ('student'));
      
     }
-    public function practice($id){
-       $user=students::findOrfail($id);
-       return view('practice',compact('user'));
+    public function practice(){
+       //$user=students::findOrfail($id);
+       return view('practice');
     }
     public function postScore($point,Request $request){
+        $name=$request->get('name');
         $this->validate($request,[
             'name'=>'required','string',
             //'studentNo'=>'interger','unique:points'
         ]);
-        $save=points::create([
-            'name'=>$request->get('name'),
-            'score'=>(integer)$point,
-            //'studentNo'=>$request->get('stdno')
-        ]);
-      if($save)
-         return redirect()->route('score.board');
+        $exist_result = points::where('name',$name)->exists();
+        if(!$exist_result){
+            $save=points::create([
+                'name'=>$name,
+                'score'=>(integer)$point,
+                //'studentNo'=>$request->get('stdno')
+            ]);
+           if($save)
+             return redirect()->route('score.board');
+        }
+        else
+          return redirect()->back()->with('message',"You can't submit score more than once");
+         
     }
 
     public function score(Request $request){

@@ -5,7 +5,7 @@
 <div class="container-fluid">
     <div class="row">
        <div class="col-md-2 bg-secondary h-100  bar">
-          <br><br> <a href="/profile/{{$user->id}}"><button class="btn btn-dark mb-2 ml-4">Go Back to Profile</button></a><br><br>
+          <br><br> <a href="{{route('profile.show')}}"><button class="btn btn-dark mb-2 ml-4">Go Back to Profile</button></a><br><br>
           <div id="clockdiv" class="my-2">            
              <div class="ml-5 time ">
                     <span id="point" style="background-color:#4a4a4b">00</span>
@@ -88,7 +88,7 @@
         <div class="modal-footer">
          <button type="button" class="replay btn btn-info" id="play" data-dismiss="modal">Replay</button></a>
   
-          <a href="/game/{{$user->id}}"><button type="button" class="replay btn btn-info" data-dismiss="modal">Play game</button></a>
+          <a href="/game"><button type="button" class="replay btn btn-info" data-dismiss="modal">Play game</button></a>
   
         </div>
         </div>

@@ -92,7 +92,7 @@
              </div>
 
             <div>
-                <h4 class="my-4"> By clicking on continue button you've agreed to participate in this research</h4>
+                <h4 class="my-4"> *By clicking on continue button you've agreed to participate in this research</h4>
             </div>
              <div>
                <div class="col-md-12">   

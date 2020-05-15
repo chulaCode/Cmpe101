@@ -56,6 +56,50 @@ class EnrollController extends Controller
    {
        return view("landing");
    }
+   public function postland()
+   {
+       return view("post_land");
+   }
+   public function postlanding()
+   {
+       return view("post_landing");
+   }
+   public function postSurvey()
+   {
+       return view("postSurvey");
+   }
+   public function post(Request $request)
+   {
+        $stdId=$request->input('studentNo');
+        $exist_result = students::where('studentNo',$stdId)->exists();
+        if(!$exist_result)
+        {
+            $this->validate($request,[
+                'studentNo'=>'required|unique:students|min:8|max:8' 
+            ]);   
+            $save=students::create([
+            'studentNo'=>$stdId
+            ]);
+            if($save)
+            {
+                $student=students::where('studentNo',$stdId)->first();
+                $count= new counts();
+                $count->right=0;
+                $count->wrong=0;
+                $count->attempts=0;
+                $count->values=0;
+                $count->user_id=$student->id;
+                $count->save();
+                return view('profile_question',compact('student'));
+            }
+        }
+        else{
+            $student=students::where('studentNo',$stdId)->first();
+            return view('profile_question',compact('student'));
+        }
+      
+   }
+   
 }
 
    /*

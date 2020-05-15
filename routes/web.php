@@ -29,27 +29,36 @@ Route::get('/quizpretest','EnrollController@pretest')->name('quiz.pretest');
 Route::get('/quizconsent','EnrollController@consent')->name('consent');
 Route::get('/land','EnrollController@land')->name('land');
 Route::get('/landing','EnrollController@landing')->name('landing');
+Route::get('/postland','EnrollController@postland')->name('postland');
+Route::get('/postlanding','EnrollController@postlanding')->name('postlanding');
+Route::get('/postsurvey','EnrollController@postSurvey')->name('post_survey');
 
-Route::post('/answer','AnswerController@index');
+Route::get('/profiles','ProfileController@index')->name('profile.show');
+
+Route::get('/game','ProfileController@show')->name('profile.game');
+Route::get('/practice','ProfileController@practice')->name('practice.game');
+Route::post('/post','EnrollController@post')->name('post');
+
+
+Route::get('/scoreboard','ProfileController@board')->name('score.board');
+Route::post('/scores/{point}','ProfileController@postScore')->name("post.score");
+
+Route::get('/question/{user}', 'ProfileController@display')->name('profile.display');
 
 Route::get('/quiz/{id}','ProfileController@quiz')->name('quiz');
 Route::post('/quiz/{id}','ProfileController@quiz')->name('post.quiz');
+
+/*
 
 Route::get('/survey/{id}','EnrollController@quiz')->name('survey.quiz');
 Route::post('/survey/{id}','EnrollController@quiz_post')->name('quiz.post');
 Route::get('/postsurvey/{id}','EnrollController@postSurvey')->name('post_survey');
 Route::post('/postSurvey/{id}','EnrollController@post')->name('survey.post');
 
-Route::post('/scores/{point}','ProfileController@postScore')->name("post.score");
-Route::get('/scoreboard','ProfileController@board')->name('score.board');
 
-Route::get('/game/{user}','ProfileController@show')->name('profile.game');
-Route::get('/practice/{user}','ProfileController@practice')->name('practice.game');
 Route::post('/profile/{user}','HomeController@store')->name('home.store');
 //Route::post('/answer/{user}','ProfileController@quiz');
 Route::get('/home/{user}', 'HomeController@index')->name('home.show');
-Route::get('/profile/{user}','ProfileController@index')->name('profile.show');
-Route::get('/question/{user}', 'ProfileController@display')->name('profile.display');
 Route::get('/profile/{user}/edit', 'ProfileController@edit')->name('profile.edit');
 Route::patch('/profile/{user}', 'ProfileController@update')->name('profile.update');
-
+*/

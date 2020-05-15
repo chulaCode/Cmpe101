@@ -25,8 +25,8 @@
                              <tr><td><h4>Please help fill survey after playing game link to survey is on the game page</h4></td></tr>
                              <tr><td><h4>Click on PRACTICE GAME to learn how to play or PLAY GAME to start game</h4></td></tr>
                              <tr><td>
-                               <a href="/practice/{{$student->id}}"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
-                               <a href="/game/{{$student->id}}"><button class="btn btn-secondary btn-lg">Play game</button></a>
+                               <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
+                               <a href="/game"><button class="btn btn-secondary btn-lg">Play game</button></a>
                                </td>
                             </tr>
                         </tbody>
@@ -36,4 +36,5 @@
         </div>
     </div>
 </div>
+
 @endsection

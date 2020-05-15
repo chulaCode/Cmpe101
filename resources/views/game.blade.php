@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-2 bg-secondary h-100 bar">
-            <br> <a href="/profile/{{$user->id}}"><button class="btn btn-dark mb-2 ml-lg-4">Go Back to Profile</button></a>
+            <br> <a href="{{route('profile.show')}}'"><button class="btn btn-dark mb-2 ml-lg-4">Go Back to Profile</button></a>
             <div id="clockdiv" class="my-3">            
                 <div class="ml-5 time ">
                         <span id="point" style="background-color:#4a4a4b">00</span>
@@ -23,7 +23,7 @@
                     <div class="smalltext">Timer</div>
                 </div>
             </div>
-            <a href="{{route('post_survey',$user->id)}}"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-5" data-toggle="modal" data-target="#score">Please fill survey</button></a>
+            <a href="{{route('postland')}}" target="_blank"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-5" data-toggle="modal" data-target="#score">Please fill survey</button></a>
             <br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-4">
@@ -141,7 +141,6 @@
             </div>
             <div class="modal-footer">
             
-                <!--<a href="/score/{{$user->id}}"  target="_blank"></a>-->
                 <button class="btn btn-primary" id="s_submit" data-dismiss="modal">Submit score to score board</button>
                 <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
                 <button type="button" id="close" class="btn btn-secondary ml-3" data-dismiss="modal">Replay</button>
@@ -173,7 +172,7 @@
                     <strong><h4>8)</h4></strong> If you fail to clear any of the first 3 blocks you'll loose game early
                     <strong><h4>9)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks with failure and get 60 life.
                     <strong><h4>10)</h4></strong> Rewards - you earn a gold badge when you win game with 100 points.
-                    <strong><h4>10)</h4></strong> Note - score submission to score board is optional.
+                    <strong><h4>11)</h4></strong> Note - score submission to score board is optional.
                      
                     <strong>Enjoy your game.</strong> 
                 </div>
