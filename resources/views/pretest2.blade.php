@@ -31,7 +31,7 @@
              
                <div class="col-md-12">   
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxBgpUq5DwTcbSv-HsORP2m2sn42OiBxjy_FOQBBELy5AfAA/viewform?vc=0&c=0&w=1" 
-                        class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
+                        class="float-right" target="_blank"><button type="submit" class="btn btn-secondary  btn-lg px-5">
                             <span style="font-size:18px;">TAKE SURVEY</span></button></a>
                     </div>
              </div>
