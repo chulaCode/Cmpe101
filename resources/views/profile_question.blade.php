@@ -25,7 +25,7 @@
                              <tr><td><h4>After the 30second finishes another question is displayed and if don't pick 
                              any answer you'll fail the question automatically.</h4></td></tr>
                              <tr><td><h4>You can attempt the quiz as many times you want till you master the subject.</h4></td></tr>
-                             <tr><td><h4>You will need to fill out the post survey after your done with the interaction quiz by 
+                             <tr><td><h4>You will need to fill out the post survey after your done with the interactive quiz by 
                              clicking the FILL SURVEY BUTTON.</h4></td></tr>
                              
                              <tr><td><h4>Best of Luck!</h4></td></tr>

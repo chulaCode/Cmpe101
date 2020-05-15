@@ -6,8 +6,9 @@
     <div class="container-fluid">
         <div class="row">
         <div class="col-md-2 bg-secondary h-100 bar">
-            <br> <a href="{{route('profile.show')}}'"><button class="btn btn-dark mb-2 ml-lg-4">Go Back to Profile</button></a>
-            <div id="clockdiv" class="my-3">            
+            <br> <a href="{{route('postland')}}" target="_blank"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-4" data-toggle="modal" data-target="#score">Please fill survey</button></a>
+            
+           <div id="clockdiv" class="my-3">            
                 <div class="ml-5 time ">
                         <span id="point" style="background-color:#4a4a4b">00</span>
                         <div class="smalltext">Score</div>
@@ -23,8 +24,8 @@
                     <div class="smalltext">Timer</div>
                 </div>
             </div>
-            <a href="{{route('postland')}}" target="_blank"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-5" data-toggle="modal" data-target="#score">Please fill survey</button></a>
-            <br><br><br><br><br>
+            <a href="{{route('profile.show')}}'"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>
+             <br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-4">
                 <div class=" offset-1">
