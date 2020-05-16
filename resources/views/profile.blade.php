@@ -22,9 +22,12 @@
                                 src="https://www.youtube.com/embed/7AJaPBpmzSo">
                              </iframe></th></tr>
                              <tr><td><h4>Please read the game rules carefully on game page to grasp what to do and expect</h4></td></tr>
-                             <tr><td><h4>Please help fill survey after playing game link to survey is on the game page</h4></td></tr>
+                             <tr><td><h4>Please help fill survey after playing game link to survey is on the game page "please fill survey"
+                             another link to survey is here too the "Fill survey" button</h4></td></tr>
                              <tr><td><h4>Click on PRACTICE GAME to learn how to play or PLAY GAME to start game</h4></td></tr>
                              <tr><td>
+                             <tr><td>
+                               <a href="{{route('postland')}}"><button class="btn btn-secondary btn-lg">Fill survey</button></a>
                                <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
                                <a href="/game"><button class="btn btn-secondary btn-lg">Play game</button></a>
                                </td>
