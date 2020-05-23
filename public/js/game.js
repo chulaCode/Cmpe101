@@ -441,7 +441,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="text" class="btext" value="201" id="test${num}" style="" name=btn${num}/></td>
+                <td><input type="text" class="btext" value="73" id="test${num}" style="" name=btn${num}/></td>
                 </tr>`)
             
                     changeValue(`#button1${num}`)
@@ -726,7 +726,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="text"class="btext" value="241" id="test${num}"style="" name=btn${num}/></td>
+                <td><input type="text"class="btext" value="18" id="test${num}"style="" name=btn${num}/></td>
                 </tr>`)
             
                     changeValue(`#button1${num}`)
@@ -782,7 +782,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="text" class="btext" value="101" id="test${num}"style="" name=btn${num}/></td>
+                <td><input type="text" class="btext" value="54" id="test${num}"style="" name=btn${num}/></td>
                 </tr>`)
             
                     changeValue(`#button1${num}`)
@@ -854,7 +854,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 //table2(num,ran1,ran2,ran3,ran4,ran5,ran6,ran7,ran8)
                 $('#myTable').prepend(`<tr id=tr${num}>
                 <td>
-                <input type="button" id="button1${num}" value="1" class="b_game" name="btn1"/>
+                <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
                 <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
                 </td>
                 <td>
@@ -870,15 +870,15 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
                 </td>
                 <td>
-                <input type="button" id="button5${num}" value="0"class="b_game" name="btn5"/>
+                <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
                 <input type="hidden"id="h_button5" value="8" name="btn5"/>
                 </td>
                 <td>
-                <input type="button" id="button6${num}" value="1" class="b_game" name="btn6"/>
+                <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
                 <input type="hidden"id="h_button6" value="4" name="btn6"/>
                 </td>
                 <td>
-                <input type="button" id="button7${num}"value="0"class="b_game" name="btn7"/>
+                <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
                 <input type="hidden"id="h_button7" value="2" name="btn7"/>
                 </td>
                 <td>
@@ -940,7 +940,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="text" class="btext" value="23" id="test${num}" style="" name=btn${num}/></td>
+                <td><input type="text" class="btext" value="152" id="test${num}" style="" name=btn${num}/></td>
                 </tr>`)
             
                     changeValue(`#button1${num}`)
