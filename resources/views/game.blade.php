@@ -171,7 +171,7 @@
                     <strong><h4>6)</h4></strong> If you answer first 5 block correctly you get an extra live meaning you'll win game when you clear 9 blocks
                     <strong><h4>7)</h4></strong> You get 1 live (10 on life bar) when you clear each block and 1 extra live (10 on life bar) when you clear first 5 blocks without any failure
                     <strong><h4>8)</h4></strong> If you fail to clear any of the first 3 blocks you'll loose game early
-                    <strong><h4>9)</h4></strong> Any block you fail to clear andthe time elapses the block will be locked so you can't answer it again
+                    <strong><h4>9)</h4></strong> Any block you fail to clear and the time elapses the block will be locked so you can't answer it again
                     <strong><h4>10)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks without failure and get 6 life (60 on life bar) you can track
                     your life with the blue life bar.
                     <strong><h4>11)</h4></strong> Rewards - you earn a gold badge when you win game with 100 points.
