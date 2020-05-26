@@ -163,18 +163,22 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <strong><h4>1)</h4></strong> You have to wait for 20seconds after clicking on start game
-                    <strong><h4>2)</h4></strong> If you live game page you'll loose your progress
+                    <strong><h4>1)</h4></strong> You have to wait for 20seconds after clicking on start game for game to start
+                    <strong><h4>2)</h4></strong> If you live game page you'll loose your progress so stay on game page still game is finished
                     <strong><h4>3)</h4></strong> You have 20seconds to answer each block for the first 5 blocks
                     <strong><h4>4)</h4></strong> You have 10seconds to answer the last 5 blocks
                     <strong><h4>5)</h4></strong> To win game you need to get 100 points 10 point for each block answered correctly
                     <strong><h4>6)</h4></strong> If you answer first 5 block correctly you get an extra live meaning you'll win game when you clear 9 blocks
-                    <strong><h4>7)</h4></strong> You get 10 amount of life when you clear each block and 10 extra when you clear first 5 blocks without any failure
+                    <strong><h4>7)</h4></strong> You get 1 live (10 in number) when you clear each block and 1 extra live (10 in number) when you clear first 5 blocks without any failure
                     <strong><h4>8)</h4></strong> If you fail to clear any of the first 3 blocks you'll loose game early
-                    <strong><h4>9)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks with failure and get 60 life.
+                    <strong><h4>9)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks without failure and get 60 life you can track
+                    your life with the blue life bar.
                     <strong><h4>10)</h4></strong> Rewards - you earn a gold badge when you win game with 100 points.
                     <strong><h4>11)</h4></strong> Note - score submission to score board is optional.
-                     
+                    <strong><h4>11)</h4></strong> Note - To submit score you'll need to enter youir name so you can track yourself
+                    and others on the score board.
+                    <strong><h4>11)</h4></strong> Note - you'll need to click on the submit score button to submit score.
+                    
                     <strong>Enjoy your game.</strong> 
                 </div>
                 <div class="modal-footer">

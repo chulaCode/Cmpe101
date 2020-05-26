@@ -9,7 +9,7 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h2> 
-                   You will redirected to the game section by click GAME SECTION button at the bottom of the page.
+                   You will be redirected to the game section by click GAME SECTION button at the bottom of the page.
                 </h2>
                 <hr>
              </div>
@@ -30,7 +30,8 @@
                  <h3 class="text-danger mb-5">
                    After the playing the game you'll need to fill the post-questionnaire it is important to fill the 
                    post-questionnaire to get the <span class="text-success">10% mark </span> that will be awarded to those that partake in this research.
-                   the <span class="text-success">FILL SURVEY BUTTON </span> is at the right side bar at the game page. Be sure to click it to complete the post-questionnaire thanks.
+                   the <span class="text-success">FILL SURVEY BUTTON </span> is at the right side bar at the game page and
+                   <span class="text-success">FILL SURVEY button </span> at the game instruction page. Be sure to click it to complete the post-questionnaire thanks.
                  </h3>
 
                 <div>

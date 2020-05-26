@@ -14,14 +14,21 @@
                     <table class="table table-striped">
                         <tbody>
                             <tr>
-                               <td><h4>The test is only on binary to decimal conversion so focus on that </h4></td>
+                               <td><h4>Detailed game rule is at the game page when you proceed to game 
+                               You'll be prompted to read the game rule before starting game please read the 
+                               instructions properly</h4></td>
                             </tr>
-                            <tr><td><h4>You have a total of 10 game questions to answer</h4></td></tr>
-                             <tr><td><h4>Checkout video below on how to play</h4></td></tr>
+                            <tr><td><h4>You can check the game practice video below to see how the game is played</h4></td></tr>
+                             <tr><td><h4>After watching video click on "PRACTICE GAME"so you can try out what you've watched
+                             to see if you know how to play it</h4></td></tr>
                              <tr><th> <iframe width="850" height="380"
                                 src="https://www.youtube.com/embed/7AJaPBpmzSo">
                              </iframe></th></tr>
-                             <tr><td><h4>Please read the game rules carefully on game page to grasp what to do and expect</h4></td></tr>
+                             <tr><td><h4>Also the game rule at the game page show you what to expect after your action when playing</h4></td></tr>
+                             <tr><td><h4>After you're done reading the game rule to start the game you'll need to click on the start button 
+                             down below and wait for the time count to begin to start playing</h4></td></tr>
+                             <tr><td><h4>You're to expect 10 game blocks in total other detail are on the game page</h4></td></tr>
+                            
                              <tr><td><h4>Please help fill survey after playing game link to survey is on the game page "please fill survey"
                              another link to survey is here too the "Fill survey" button</h4></td></tr>
                              <tr><td><h4>Click on PRACTICE GAME to learn how to play or PLAY GAME to start game</h4></td></tr>
