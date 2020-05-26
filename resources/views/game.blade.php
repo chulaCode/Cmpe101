@@ -30,7 +30,7 @@
             <div class="col-md-10 mt-4">
                 <div class=" offset-1">
                     <div class="bar ml-4">
-                        <h4 class="text-dark">Life bar (clear first 5 blocks and earn 10 extra life and win game with 90 points and 100 life)</h4>
+                        <h4 class="text-dark">Life bar (clear first 5 blocks and earn 1 extra life and win game with 90 points and 100 life)</h4>
                         <div class="progress">
                             <div id="dynamic" class="progress-bar progress-bar-secondary progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%, background-color:black;">
                                 <span id="current-progress"></span>
@@ -169,15 +169,15 @@
                     <strong><h4>4)</h4></strong> You have 10seconds to answer the last 5 blocks
                     <strong><h4>5)</h4></strong> To win game you need to get 100 points 10 point for each block answered correctly
                     <strong><h4>6)</h4></strong> If you answer first 5 block correctly you get an extra live meaning you'll win game when you clear 9 blocks
-                    <strong><h4>7)</h4></strong> You get 1 live (10 in number) when you clear each block and 1 extra live (10 in number) when you clear first 5 blocks without any failure
+                    <strong><h4>7)</h4></strong> You get 1 live (10 on life bar) when you clear each block and 1 extra live (10 on life bar) when you clear first 5 blocks without any failure
                     <strong><h4>8)</h4></strong> If you fail to clear any of the first 3 blocks you'll loose game early
-                    <strong><h4>9)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks without failure and get 60 life you can track
+                    <strong><h4>9)</h4></strong> Rewards - you earn a silver badge when you clear first 5 blocks without failure and get 6 life (60 on life bar) you can track
                     your life with the blue life bar.
                     <strong><h4>10)</h4></strong> Rewards - you earn a gold badge when you win game with 100 points.
                     <strong><h4>11)</h4></strong> Note - score submission to score board is optional.
-                    <strong><h4>11)</h4></strong> Note - To submit score you'll need to enter youir name so you can track yourself
+                    <strong><h4>12)</h4></strong> Note - To submit score you'll need to enter your name so you can track yourself
                     and others on the score board.
-                    <strong><h4>11)</h4></strong> Note - you'll need to click on the submit score button to submit score.
+                    <strong><h4>13)</h4></strong> Note - you'll need to click on the submit score button to submit score.
                     
                     <strong>Enjoy your game.</strong> 
                 </div>
