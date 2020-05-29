@@ -130,6 +130,9 @@
                      </form>
                 </div>
                 <!-- end of form div-->
+                <div>
+                    <span class="font-weight-bold">Hint numbers for bits</span><img src="{{asset('images/bınaryNumber.png')}}" alt="" class="ml-5 mt-4" style="">
+                </div>
             </div>
             <!--end of col-10 -->
         </div>
