@@ -11,17 +11,17 @@ $(document).ready( function(){
     })
     $("#s_submit").click(()=>{
         //location.href = "http://127.0.0.1:8000/score";
-        window.open('http://nameless-fortress-56926.herokuapp.com/score?point='+point,target='_blank');
+        window.open('http://cmpe101.herokuapp.com/score?point='+point,target='_blank');
 
     })
     $("#score_submit").click(()=>{
         //location.href = "http://127.0.0.1:8000/score";
-        window.open('http://nameless-fortress-56926.herokuapp.com/score?point='+point,target='_blank');
+        window.open('http://cmpe101.herokuapp.com/score?point='+point,target='_blank');
 
     })
     $("#scores_submit").click(()=>{
         //location.href = "http://127.0.0.1:8000/score";
-        window.open('http://nameless-fortress-56926.herokuapp.com/score?point='+point,target='_blank');
+        window.open('http://cmpe101.herokuapp.com/score?point='+point,target='_blank');
 
     })
    
