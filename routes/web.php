@@ -20,7 +20,7 @@ Auth::routes();
 Route::post('/post','PostController@store');
 Route::get('/profile/create','PostController@create');
 //Route::post('/profile','PostController@store');
-Route::get('/score','ProfileController@score')->name("score");
+Route::get('/score','ProfileController@score')->name("score");\
 
 Route::get('/pretest','EnrollController@index')->name('pretest');
 Route::get('/consent','EnrollController@survey')->name('survey.show');
@@ -32,6 +32,8 @@ Route::get('/landing','EnrollController@landing')->name('landing');
 Route::get('/postland','EnrollController@postland')->name('postland');
 Route::get('/postlanding','EnrollController@postlanding')->name('postlanding');
 Route::get('/postsurvey','EnrollController@postSurvey')->name('post_survey');
+Route::post('/loggingIn','EnrollController@entrance')->name('entrance');
+Route::post('/access','EnrollController@entrance2')->name('entrance2');
 
 Route::get('/profiles','ProfileController@index')->name('profile.show');
 
@@ -45,6 +47,7 @@ Route::post('/scores/{point}','ProfileController@postScore')->name("post.score")
 
 Route::get('/question/{user}', 'ProfileController@display')->name('profile.display');
 
+Route::get('/quizCount/{id}','ProfileController@count')->name('quiz.count');
 Route::get('/quiz/{id}','ProfileController@quiz')->name('quiz');
 Route::post('/quiz/{id}','ProfileController@quiz')->name('post.quiz');
 

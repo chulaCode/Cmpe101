@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CMPE GAMIFIED</title>
+        <title>CMPE 101</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -56,16 +56,12 @@
       <div class="container">
           <div class="row justify-content-center">
              <div class="col-md-8 col-sm-12 ">
-                 <h1 class="text-secondary my-5" style="font-size:40px;">Information</h1>
-                 <p class="text-secondary" style="font-size:23px;">This website is prepared for the ‘binary numbering system’ subject of CMPE 101 
-                      introduction to computing course of Cyprus International University.</p>
-                 <p class="text-secondary my-5" style="font-size:23px;">
-                 After entering your student number, you will be directed to a page. On that page, first you are expected to complete the pre-questionnaire 
-                 <span class="text-danger">(step 1)</span>. Then you can use the lesson material<span class="text-danger">(step 2)</span>..
-                  Finally, you are expected to complete the post-questionnaire <span class="text-danger">(step 3)</span>.
+                 <h1 class="text-secondary my-5" style="font-size:40px;"></h1>
+                 <p>
+                   <img src="{{asset('images/research_guide.jpg')}}" alt="" class="" style="">
                  </p>
                  <p class="text-secondary my-5" style="font-size:23px;">
-                 If you have any questions, please contact: chulazy4christ@gmail.com
+                 If you have any questions, please contact: <a href="https://mail.google.com" target="_blank">ochulazy4christ@gmail.com</a>
                  </p>
               </div>
               <div class="col-md-4 col-sm-12 my-5">
@@ -73,8 +69,13 @@
                     @csrf
                      <div class="my-5">
                        <label for=" " style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
-                        <input type="number" class="form-control" id="std" name="stdno" minlength="8"
+                        <input type="text" class="form-control" id="std" name="stdno" minlength="8"
                          maxlength="8" placeholder="Enter student number" required>
+                         @error('stdno')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                         @enderror
                     </div>
             
                     <div class="col-md-12">   
@@ -86,9 +87,6 @@
          </div>
        </div>
     </section>
-   
-     
-    
     
     <footer id="colorlib-footer">
 			<div class="container">

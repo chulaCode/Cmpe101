@@ -18,20 +18,20 @@
                  <h4>This research aims to enhance the motivation and engagement of students in 
                      learning “binary numbering system” subject in Introduction to Computing courses being 
                      taught in Cyprus International University (CIU). It is intended to support this course with an interaction quiz in 
-                     order to support the learning process of “Binary Numbering system” subject and thus, increase students’ intrinsic motivation, 
-                     attitude towards answering questions, grade motivation and knowledge.</h4>
+                     order to support the learning process of “Binary Numbering system” subject and thus, increase students’ intrinsic motivation
+                     and engagement to learning and answering questions
+                    </h4>
 
-                     <h4 class="my-5">The questionnaire consists of five different parts. These are</h4>
+                     <h4 class="my-5">The questionnaire consists of four different parts. These are</h4>
 
                      <h4>
                         1. Demographic Information <br>
-                        2. Background in Introduction to Computing, “Binary Numbering System” subject and gaming <br>
-                        3. Intrinsic Motivation <br>
-                        4. Attitude towards taking interaction quiz<br>
-                        5. Knowledge <br>
+                        2. Information on your engagement why learning <br>
+                        3. Information on Motivation <br>
+                        4. Knowledge <br>
                      </h4>
                      <h4 class="my-5">
-                        The questionnaire will take 5 - 10 minutes to complete.
+                        The questionnaire will take 4 - 8 minutes to complete.
                      </h4>
                      <h4>
                         Please be aware that it is your choice whether to participate in this questionnaire or not. If you choose to participate,
@@ -75,7 +75,7 @@
                         Graduate Program in Information Technology Department <br>
                         Institute of Graduate Studies and Research <br>
                         Cyprus International University <br>
-                        codechula@gmail.com <br>
+                        <a href="https://mail.google.com/"> ochulazy4christ@gmail.com</a> <br>
                         Phone: +90 533 848 27 63
                      </h4>
                    </div>

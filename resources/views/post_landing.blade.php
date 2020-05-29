@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @section('content')
-<div class="container mb-3">
+<div class="container mb-5">
     <div class="row">
        <div class="col-12">
       
@@ -42,7 +42,7 @@
    </div>
 </div>
 
-<footer id="colorlib-footer">
+<footer id="colorlib-footer" class="mt-5">
 			<div class="container">
 				<div class="row row-pb-md">
 					<div class="col-md-3 colorlib-widget">

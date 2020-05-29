@@ -24,7 +24,7 @@
                     <div class="smalltext">Timer</div>
                 </div>
             </div>
-            <a href="{{route('profile.show')}}'"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>
+            <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
              <br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-4">
@@ -97,7 +97,7 @@
         
                 <button class="btn btn-dark ml-3" id="scores_submit">Submit score to score board</button>
                 <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-                <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
+                <button type="button" id="stop" class=" replay btn btn-info" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
             <div class="modal-footer">    
              <button class="btn btn-dark ml-3" id="score_submit">Submit score to score board</button>
              <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-             <button type="button" id="stop" class=" replay btn btn-info" data-dismiss="modal">Replay</button>
+             <button type="button" id="stop" class="replay btn btn-info" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -144,7 +144,7 @@
             
                 <button class="btn btn-primary" id="s_submit" data-dismiss="modal">Submit score to score board</button>
                 <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-                <button type="button" id="close" class="btn btn-secondary ml-3" data-dismiss="modal">Replay</button>
+                <button type="button" id="close" class="btn btn-secondary ml-3" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -179,6 +179,7 @@
                     <strong><h4>13)</h4></strong> Note - To submit score you'll need to enter your name so you can track yourself
                     and others on the score board.
                     <strong><h4>14)</h4></strong> Note - you'll need to click on the submit score button to submit score.
+                    <strong><h4>15)</h4></strong> Note - you'll need to login again with your student number to replay so we can know how engaging you where thanks..
                     
                     <strong>Enjoy your game.</strong> 
                 </div>
@@ -190,4 +191,42 @@
         </div>
     </div>
 
+
+<!-- Modal login -->
+<div class="modal fade" id="login2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+  <form action="{{route('entrance')}}" method="post">
+    @csrf
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please login to replay game</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div class="form-group row">
+            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Student number') }}</label>
+
+            <div class="col-md-6">
+                <input id="stdnumber" type="text" class="form-control @error('studentNo') is-invalid @enderror" 
+                name="studentNo" value="{{ old('stdnumber') }}" minlength="8" maxlength="8" 
+                required autocomplete="studentNo" placeholder="Enter your student number"autofocus>
+
+                @error('studentNo')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+   </form>
+  </div>
+</div>
 @endsection

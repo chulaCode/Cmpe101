@@ -9,6 +9,7 @@ Use App\students;
 use App\post_surveys;
 use App\Quiz_survey;
 use App\counts;
+use App\student_counts;
 use Auth;
 use Session;
 use Illuminate\Http\Request;
@@ -35,8 +36,13 @@ class EnrollController extends Controller
    public function store(Request $request)
    {
 
+    $this->validate($request,[
+        'stdno'=>'required','integer','min:8' 
+    ]); 
+   
     if($request->submit == "course")
     {
+    
       $name=$request->get('stdno');
       $user=(integer)$name;
       $number=(integer)$value =substr($name,-1);
@@ -75,7 +81,7 @@ class EnrollController extends Controller
         if(!$exist_result)
         {
             $this->validate($request,[
-                'studentNo'=>'required|unique:students|min:8|max:8' 
+                'studentNo'=>'required|unique:students|integer|min:8' 
             ]);   
             $save=students::create([
             'studentNo'=>$stdId
@@ -90,15 +96,103 @@ class EnrollController extends Controller
                 $count->values=0;
                 $count->user_id=$student->id;
                 $count->save();
+
+                $stdId=new student_counts();
+                $stdId->student_id=$student->id;
+                $stdId->count=1;
+                $stdId->save();
                 return view('profile_question',compact('student'));
             }
         }
         else{
             $student=students::where('studentNo',$stdId)->first();
+           
+            $std_id=student_counts::where('student_id',$student->id)->first();
+            $stdId=new student_counts();
+            $stdId->student_id=$std_id->id;
+            $stdId->count=$std_id->count+1;
+            $stdId->save();
             return view('profile_question',compact('student'));
         }
       
    }
+   public function entrance(Request $request)
+   {
+    $stdId=request('studentNo');
+    /*$this->validate($request,[
+        'studentNo'=>'required|unique:students|integer' 
+    ]);*/
+
+        $stdId=request('studentNo');
+
+        $exist_result = students::where('studentNo',$stdId)->exists();
+        if(!$exist_result)
+        {
+            $save=students::create([
+            'studentNo'=>$stdId
+            ]);
+            if($save)
+            {
+                $student=students::where('studentNo',$stdId)->first();
+                $stdId=new student_counts();
+                $stdId->student_id=$student->id;
+                $stdId->count=1;
+                $stdId->save();
+                return redirect()->route('profile.game');
+            }
+        }
+        else{
+            $student=students::where('studentNo',$stdId)->first();
+            $exists=student_counts::where('student_id',$student->id)->exists();
+            if($exists){
+                $stdId=student_counts::where('student_id',$student->id)->first();
+                student_counts::where('student_id',$student->id)->update([
+                    'count'=>$stdId->count+1,
+                ]);
+              
+                return redirect()->route('profile.game');
+            }else
+            return redirect()->back()->with('message','The student number is not for this research group');
+        }
+
+   }
+   public function entrance2(Request $request)
+   {
+        $stdId=request('studentNo');
+        $exist_result = students::where('studentNo',$stdId)->exists();
+        if(!$exist_result)
+        {
+            dd($stdId,'yes');
+            $save=students::create([
+            'studentNo'=>$stdId
+            ]);
+            if($save)
+            {
+                $student=students::where('studentNo',$stdId)->first();
+                $stdId=new student_counts();
+                $stdId->student_id=$student->id;
+                $stdId->count=1;
+                $stdId->save();
+                return redirect()->route('quiz',$student->id);
+            }
+        }
+        else{
+            $student=students::where('studentNo',$stdId)->first();
+            $exists=student_counts::where('student_id',$student->id)->exists();
+            if($exists){
+                $stdId=student_counts::where('student_id',$student->id)->first();
+                student_counts::where('student_id',$student->id)->update([
+                    'count'=>$stdId->count+1,
+                ]);
+              
+                return redirect()->route('quiz',$student->id);
+             
+            }else
+            return redirect()->back()->with('message','The student number is not for this research group');
+        }
+
+   }
+  
    
 }
 

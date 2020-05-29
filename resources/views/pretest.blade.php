@@ -20,7 +20,7 @@
                 </h4>
                  <h4 class="my-5">
                  At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME SECTION"</span>.
-                   Please don't forget to click <span class="text-danger">"LINK AFTER click on the link to game section"</span>  BEFORE clicking on "SUBMIT" button. because when you 
+                   Please don't forget to click <span class="text-danger">"The "LINK" that is underlined and enclosed in [ ]</span>  BEFORE clicking on "SUBMIT" button. because when you 
                    click on submit button you cannot access that last survey page again.
                  </h4>
 

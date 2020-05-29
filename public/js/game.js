@@ -308,7 +308,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
             $(".img_badge").html("Gold badge");
             $( "#exampleModal" ).modal("show");
             $("#stop").click(function(){
-                location.reload();
+                $( "#exampleModal" ).modal("hide"); 
             });
             } 
             $("#point").html(point);
@@ -377,7 +377,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 $(".img_badge").html("Gold badge");
                 $( "#exampleModal" ).modal("show");
                 $("#stop").click(function(){
-                    location.reload();
+                    $( "#exampleModal" ).modal("hide"); 
                 });
                  
              }
@@ -521,7 +521,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
                     </td>
                     <td>
-                    <input type="button" id="button2${num}" value="1"class="b_game" name="btn2"/>
+                    <input type="button" id="button2${num}" value="0"class="b_game" name="btn2"/>
                     <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
                     </td> 
                     <td>
@@ -529,15 +529,15 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
                     </td>
                     <td>
-                    <input type="button" id="button4${num}" value="1"class="b_game" name="btn4"/>
+                    <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
                     <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
                     </td>
                     <td>
-                    <input type="button" id="button5${num}" value="0"class="b_game" name="btn5"/>
+                    <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
                     <input type="hidden"id="h_button5" value="8" name="btn5"/>
                     </td>
                     <td>
-                    <input type="button" id="button6${num}" value="1" class="b_game" name="btn6"/>
+                    <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
                     <input type="hidden"id="h_button6" value="4" name="btn6"/>
                     </td>
                     <td>
@@ -545,7 +545,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     <input type="hidden"id="h_button7" value="2" name="btn7"/>
                     </td>
                     <td>
-                    <input type="button" id="button8${num}" value="1"class="b_game" name="btn8"/>
+                    <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
                     <input type="hidden"id="h_button8" value="1" name="btn8"/>
                     </td>
                     <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
@@ -663,8 +663,8 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 }
                else if(current_progress==100){
                     $( "#win" ).modal("show");
-                    $("#stop").click(function(){
-                        location.reload();
+                    $("#login2").click(function(){
+                        $( "#win" ).modal("hide");
                     });
                }
                 else if((point==100)||(current_progress==100))
@@ -675,7 +675,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 else{
                     $( "#lost" ).modal("show"); 
                     $("#close").click(function(){
-                        location.reload();
+                        $( "#lost" ).modal("hide");
                     });
                    
                 
@@ -899,7 +899,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 if(point<10){
                     $( "#lost" ).modal("show");
                     $("#close").click(function(){
-                        location.reload();
+                        $( "#lost" ).modal("hide");
                     });
                     clearInterval(interval);
                 }
@@ -940,7 +940,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="text" class="btext" value="152" id="test${num}" style="" name=btn${num}/></td>
+                <td><input type="text" class="btext" value="23" id="test${num}" style="" name=btn${num}/></td>
                 </tr>`)
             
                     changeValue(`#button1${num}`)

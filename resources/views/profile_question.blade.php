@@ -1,7 +1,7 @@
 @extends('layouts.app')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 @section('content')
-<div class="container my-5">
+<div class="container my-5" style="margin-bottom:10rem">
     <div class="row justify-content-center">
         <div class="col-md-10">
             @if (session('status'))
@@ -43,25 +43,4 @@
     
 </div>
 
-<footer id="colorlib-footer" class="mt-5">
-			<div class="container">
-				<div class="row row-pb-md">
-					<div class="col-md-3 colorlib-widget">
-						
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<p>
-                                <small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            
- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | coder <i class="icon-heart" aria-hidden="true"></i> Ochulaobari Emmanuel
-              </small><br> 
-								
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	
 @endsection

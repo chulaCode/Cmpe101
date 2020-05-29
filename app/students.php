@@ -10,4 +10,8 @@ class students extends Model
 
     protected $fillable = ['studentNo','name'];
 
+    public function student_count()
+    {
+        return $this->hasOne(student_counts::class);
+    }
 }

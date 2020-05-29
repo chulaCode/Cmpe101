@@ -38,8 +38,8 @@
                            @csrf
                               <div class="my-5">
                               <label for="studentNo" style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
-                                 <input type="number" class="form-control @error('studentNo') is-invalid @enderror" id="studentNo" name="studentNo"
-                               placeholder="Enter student number" required>
+                                 <input type="text" class="form-control @error('studentNo') is-invalid @enderror" id="studentNo" name="studentNo"
+                               placeholder="Enter student number"  minlength="8" maxlength="8"required>
                                @error('studentNo')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
