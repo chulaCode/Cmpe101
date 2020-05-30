@@ -30,7 +30,9 @@
                 </div>
 
                 <div class="card-body">
-                    <table class="table table-striped">
+                <div class=" text-dark d-block d-sm-none"><h3>Please view on your computer</h3></div>
+      
+                    <table class="table table-striped d-sm-none d-md-block">
                         <tbody>
                             <tr>
                                <td><h4>Detailed game rule is at the game page when you proceed to game 

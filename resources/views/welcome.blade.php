@@ -57,7 +57,7 @@
           <div class="row justify-content-center">
              <div class="col-md-8 col-sm-12 ">
                  <h1 class="text-secondary my-5" style="font-size:40px;"></h1>
-                 <p>
+                 <p class="d-sm-none d-md-block">
                    <img src="{{asset('images/research_guide.jpg')}}" alt="" class="" style="">
                  </p>
                  <p class="text-secondary my-5" style="font-size:23px;">

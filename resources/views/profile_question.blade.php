@@ -13,10 +13,13 @@
             <div class="card">
                 <div class="card-header "><h2>{{ __('Instructions') }}</h2>
                   <!--<a href=""><span class="pull-right" style="margin-top:-2rem; cursor:pointer;">Game page</span></a>-->
+                 
                 </div>
 
-                <div class="card-body">
-                    <table class="table table-striped ">
+                <div class="card-body ">
+                <div class=" text-dark d-block d-sm-none"><h3>Please view on your computer</h3></div>
+      
+                    <table class="table table-striped d-sm-none d-md-block">
                         <tbody>
                             <tr><td><h4>You have a total of 10 questions to attempt any wrong answer you pick 
                             a suggestion will be given to you on how to get the next question right</h4></td></tr>
@@ -25,6 +28,7 @@
                              <tr><td><h4>After the 30second finishes another question is displayed and if don't pick 
                              any answer you'll fail the question automatically.</h4></td></tr>
                              <tr><td><h4>You can attempt the quiz as many times you want till you master the subject.</h4></td></tr>
+                             <tr><td><h4>To retake the quiz you'll need to login with your student number just so we can know if the quiz was engaging</h4></td></tr>
                              <tr><td><h4>You will need to fill out the post survey after your done with the interactive quiz by 
                              clicking the FILL SURVEY BUTTON.</h4></td></tr>
                              

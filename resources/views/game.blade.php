@@ -5,30 +5,32 @@
         
     <div class="container-fluid">
         <div class="row">
-        <div class="col-md-2 bg-secondary h-100 bar">
-            <br> <a href="{{route('postland')}}" target="_blank"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-4" data-toggle="modal" data-target="#score">Please fill survey</button></a>
+        <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
+        <div class="col-md-2 col-sm-12 bg-secondary h-100 bar">
+        
+            <br> <a href="{{route('postland')}}" target="_blank"><button class="btn btn-dark mb-4 mt-4 px-4 p-lg-2 ml-lg-5" data-toggle="modal" data-target="#score">Please fill survey</button></a>
             
-           <div id="clockdiv" class="my-3">            
+           <div id="clockdiv" class="my-3 d-sm-none d-md-block">            
                 <div class="ml-5 time ">
                         <span id="point" style="background-color:#4a4a4b">00</span>
                         <div class="smalltext">Score</div>
                 </div>
             </div>
             <hr class="bg-white">
-            <div class="img ml-lg-5 " id="badge"></div>
+            <div class="img ml-lg-5 d-sm-none d-md-block" id="badge"></div>
             <div class="img_badge my-3 ml-lg-5 pl-4 mb-4 text-white"></div>
              <hr class="bg-white">
-            <div id="clockdiv" class="mt-2 mb-3">            
+            <div id="clockdiv" class="mt-3 mb-3 d-sm-none d-md-block">            
                 <div class="ml-5 time ">
                     <span id="timer">00:00</span>
                     <div class="smalltext">Timer</div>
                 </div>
             </div>
             <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
-             <br><br><br><br><br>
+             <br><br><br><br><br><br><br>
             </div>
-            <div class="col-md-10 mt-4">
-                <div class=" offset-1">
+            <div class="col-md-10 mt-4 col-sm-12 d-none d-lg-block" >
+                <div class=" offset-1 ">
                     <div class="bar ml-4">
                         <h4 class="text-dark">Life bar (clear first 5 blocks and earn 1 extra life and win game with 90 points and 100 life)</h4>
                         <div class="progress">
