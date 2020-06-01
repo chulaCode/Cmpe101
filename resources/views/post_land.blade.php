@@ -25,7 +25,7 @@
                     You can make changes to your responses until you complete the questionnaire. 
                     You must also fill the questionnaires ONLY ONCE.
                  <h3 class="text-danger mb-5">
-                      If you have any question and/or any help, please contact: ecemgokdogan@gmail.com </h3>
+                      If you have any question and/or any help, please contact: ochulazy4christ@gmail.com </h3>
                  </h3>
 
                 <div>
