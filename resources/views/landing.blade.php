@@ -3,6 +3,13 @@
 @section('content')
 <div class="container mb-3">
     <div class="row">
+    @if(Session::has('message'))
+              <div class="alert alert-danger text-center">
+              {{Session::get('message')}}
+              <button type="button" class="close" 
+              data-dismiss="alert">&times;</button>
+              </div>
+           @endif
        <div class="col-12">
       
           <section>
