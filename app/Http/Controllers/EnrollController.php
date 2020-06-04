@@ -105,22 +105,17 @@ class EnrollController extends Controller
             }
         }
         else{
-            $student=students::where('studentNo',$stdId)->first();
-           
-             $count= new counts();
-             $count->right=0;
-             $count->wrong=0;
-             $count->attempts=0;
-             $count->values=0;
-             $count->user_id=$student->id;
-             $count->save();
-             
-            $std_id=student_counts::where('student_id',$student->id)->first();
-            $stdId=new student_counts();
-            $stdId->student_id=$std_id->id;
-            $stdId->count=$std_id->count+1;
-            $stdId->save();
-            return view('profile_question',compact('student'));
+             $student=students::where('studentNo',$stdId)->first();
+            $exists=student_counts::where('student_id',$student->id)->exists();
+            if($exists){
+                $stdId=student_counts::where('student_id',$student->id)->first();
+                student_counts::where('student_id',$student->id)->update([
+                    'count'=>$stdId->count+1,
+                ]);
+                return view('profile_question',compact('student'));
+            }else
+            return redirect()->back()->with('message','The student number is not for this research group');
+       
         }
       
    }
