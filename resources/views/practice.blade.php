@@ -12,7 +12,10 @@
                     <div class="smalltext">Score</div>
              </div>
           </div>
-          <br><br><br> <hr class="bg-white"> <br>
+          <br><br>
+          <a href="/game"><button class="btn btn-dark mb-2 ml-4">Go to main Game page</button></a>
+         
+          <br> <hr class="bg-white"> <br>
           <div id="clockdiv" class="my-2">            
              <div class="ml-5 time ">
                 <span id="timer">00:00</span>

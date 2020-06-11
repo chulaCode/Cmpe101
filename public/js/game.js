@@ -1,14 +1,33 @@
 
-
 $(document).ready( function(){
-    let point=0;
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
     $( "#rule" ).modal("show");
     badge("#badge");
-    $("#start").click(()=>{
-        value=21;
-        let num=0;
-        time(value,num);
-    })
+
+function badge(div_img_id){
+    
+    let img;
+            if (!img) {
+                $(div_img_id).empty();
+                img = $('<img />', {
+                    src: '/images/badge.png'
+               }).appendTo(div_img_id);
+            }
+
+}
+ $("#start").click(()=>{
+    let point=0;
+    let live=4;
+    let life=3;
+    let value=2000;
+    var num=0;
+    var isTimeOn = 0;
+    $("#life").html(life);
+    
+    
     $("#s_submit").click(()=>{
         //location.href = "http://127.0.0.1:8000/score";
         window.open('http://cmpe101.herokuapp.com/score?point='+point,target='_blank');
@@ -29,14 +48,15 @@ $(document).ready( function(){
 
 let current_progress = 0;
 let time_counter=0;
-let block=-1;
+var block= 0;
 
 
 function remove(id){
-    $(id).fadeOut(2000, function() { 
-        $(id).remove(); 
-   // $(`#tr${id}`).remove().fadeOut(4000);
-    })
+    $(`#tr${id}`).fadeOut(3000);
+    // $(id).fadeOut(2000, function() { 
+        //  $(id).remove(); 
+   
+        // })
 }
 
 function progress(){
@@ -55,11 +75,48 @@ function progress(){
     })
 }
 
-function startTimer(duration,display,id) {
+const runCalc  = ( endvalue, values, time, id)=> {
+        
+        var sum = 0;
+        isTimeOn = point;
+        for(var i=0; i<values.length; i++){
+            sum+= values[i];
+        }
+        if(sum == endvalue){
+            remove(id);
+            isTimeOn =100;
+            if((id==4)&&(point==30)){
+              life+=1;
+               $("#life").html(life);
+               //progress();
+               console.log("life",id,point,life);
+            }
+            else if((id==6)&&(point==50))
+            {
+                $(".message").html("Congrats you got a silver badge");
+                silver("#badge");
+                $(".img_badge").html("Silver badge");
+            }
+            else if((id==7)&&(point==60)){
+                life+=1;
+                $("#life").html(life);
+            }
+            console.log(isTimeOn, "point", point, values);
+        }
+       
+        
+
+}
+ function startTimer(duration,display,id) {
     var timer = duration, minutes, seconds;
+    
     time_counter++
     block++
-    setInterval(function () {
+    let counterIncrement=-1;
+    live=live+counterIncrement;
+    
+    const Interval = setInterval(function () {
+       
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
@@ -67,31 +124,76 @@ function startTimer(duration,display,id) {
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
+    
         if (--timer < 0) {
-            //Delete(id);
-            $(`#button1${block}`).prop('disabled', true);
-            $(`#button2${block}`).prop('disabled', true);
-            $(`#button3${block}`).prop('disabled', true);
-            $(`#button4${block}`).prop('disabled', true);
-            $(`#button5${block}`).prop('disabled', true);
-            $(`#button6${block}`).prop('disabled', true);
-            $(`#button7${block}`).prop('disabled', true);
-            $(`#button8${block}`).prop('disabled', true);
-            $(`#test${block}`).prop('disabled', true);
-            if(time_counter<6)
-              timer=20
-           else
-              timer=10;
+            console.log("id--",id)
+            console.log(isTimeOn,"point2", point)
+            if(isTimeOn > point){
+                console.log(isTimeOn,"passed",point);
+                point +=10;
+                $("#point").html(point);
+                progress();
+                isTimeOn = point;
+                clearInterval(Interval);
+                //remove(id)   
+                if(life<=0)
+                  life=0;
+                  if((point==90)&&((life==4)||(life==5))&&(id==10)){
+                    $( "#win" ).modal("show");
+                    $("#login2").click(function(){
+                        $( "#win" ).modal("hide");
+                    });
+                  }
+                else if(point>90){
+                    $(".message").html("Wow! you got a gold badge");
+                    gold("#badge");
+                    $(".img_badge").html("Gold badge");
+                    $( "#exampleModal" ).modal("show");
+                    $("#stop").click(function(){
+                        $( "#exampleModal" ).modal("hide"); 
+                    });
+                    $("#login2").click(function(){
+                        $( "#win" ).modal("hide");
+                    });
+                }
+               
+               else if((point=90)||(current_progress==90)&&((life==4)||(life==5)))
+               {
+                   $( "#lost" ).modal("hide"); 
+   
+               }
+            }
+         else if(isTimeOn == point) {
+                console.log(isTimeOn,'failed',point);
+                   life -=1;
+                if(life<1) {
+                    $( "#lost" ).modal("show"); 
+                    $("#close").click(function(){
+                        $( "#lost" ).modal("hide");
+                    });
+                    life=0;
+                }
+                counterIncrement=-counterIncrement;
+                $("#life").html(life);
+                clearInterval(Interval);
+                
+            }
+            
+            $(`#button1${id}`).prop('disabled', true);
+            $(`#button2${id}`).prop('disabled', true);
+            $(`#button3${id}`).prop('disabled', true);
+            $(`#button4${id}`).prop('disabled', true);
+            $(`#button5${id}`).prop('disabled', true);
+            $(`#button6${id}`).prop('disabled', true);
+            $(`#button7${id}`).prop('disabled', true);
+            $(`#button8${id}`).prop('disabled', true);
+            $(`#test${id}`).prop('disabled', true);
+            
+            
         }
+        
     }, 1000);
-}
-
-
-function Delete(id){
-    $(id).fadeOut(1000, function() { 
-        $(id).remove(); 
-   // $(`#tr${id}`).remove().fadeOut(4000);
-    })
+    
 }
 
 function changeValue(value)
@@ -117,17 +219,6 @@ function changeValue(value)
               });
          }//toggle ends
         });
-}
-function badge(div_img_id){
-    
-    let img;
-            if (!img) {
-                $(div_img_id).empty();
-                img = $('<img />', {
-                    src: '/images/badge.png'
-               }).appendTo(div_img_id);
-            }
-
 }
 function bronze(div_img_id){
     
@@ -162,165 +253,120 @@ function gold(div_img_id){
             }
 
 }
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-  })
 
 
 function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value9,
     value10,value11,value12,value13,value14,value15,value16,input,role_id)
 {
     let btn1=0,btn2=0,btn3=0,btn4=0,btn5=0,btn6=0,btn7=0,btn8=0,output=0;
-    let b1,b2,b3,b4,b5,b6,b7,b8;
+    let b1,b2,b3,b4,b5,b6,b7,b8; 
+    output=parseInt($(input).val());
+    var values = [0,0,0,0,0,0,0,0]
+    
             $(value1).click(function() {
-                output=($(input).val()); //value of input field type text
+                 //value of input field type text
                 b1=($(value1).val()); //value of input field type button
+                btn1=($(value2).val());
                 if(b1==1)
                 {
-                    btn1=($(value2).val()); //value of input field type hidden that holds the value to be calculated
+
+                     //value of input field type hidden that holds the value to be calculated
+                    values[0]= parseInt(btn1);
                 }else{
-                    btn1=($(value2).val(0)); //changing hidden value to 0 when double clicked
+                     //changing hidden value to 0 when double clicked
+                    values[0] = 0
                 }
-               
-                sum()
+                
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value3).click(function() {
-                output=($(input).val());
                 b2=($(value3).val()); 
+                btn2=($(value4).val()); 
                 if(b2==1)
                 {
-                    btn2=($(value4).val()); 
+                    values[1] = parseInt(btn2);
                 }else{
-                    btn2=($(value4).val(0)); 
+                    values[1] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value5).click(function() {
-                output=($(input).val());
                 b3=($(value5).val()); 
+                btn3=($(value6).val()); 
                 if(b3==1)
                 {
-                    btn3=($(value6).val()); 
+                    values[2] = parseInt(btn3);
                 }else{
-                    btn3=($(value6).val(0)); 
+                   values[2] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value7).click(function() {
-                output=($(input).val());
+                
                 b4=($(value7).val()); 
+                btn4=($(value8).val()); 
                 if(b4==1)
                 {
-                    btn4=($(value8).val()); 
+                    values[3] = parseInt(btn4);
                 }else{
-                    btn4=($(value8).val(0)); 
+                    values[3] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value9).click(function() {
-                output=($(input).val());
+                
                 b5=($(value9).val()); 
+                btn5=($(value10).val());
                 if(b5==1)
                 {
-                    btn5=($(value10).val()); 
+                    values[4] = parseInt(btn5);
                 }else{
-                    btn5=($(value10).val(0)); 
+                    values[4] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value11).click(function() {
-                output=($(input).val());
+                
                 b6=($(value11).val()); 
+                btn6=($(value12).val());
                 if(b6==1)
                 {
-                    btn6=($(value12).val()); 
+                     values[5] = parseInt(btn6);
                 }else{
-                    btn6=($(value12).val(0)); 
+                    values[5] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value13).click(function() {
-                output=($(input).val());
+                
                 b7=($(value13).val()); 
+                btn7=($(value14).val()); 
                 if(b7==1)
                 {
-                    btn7=($(value14).val()); 
+                    values[6] = parseInt(btn7);
                 }else{
-                    btn7=($(value14).val(0)); 
+                    values[6]  = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
             $(value15).click(function() {
-                output=($(input).val());
+                
                 b8=($(value15).val()); 
+                btn8=($(value16).val());
                 if(b8==1)
                 {
-                    btn8=($(value16).val()); 
+                     values[7] = parseInt(btn8);
                 }else{
-                    btn8=($(value16).val(0)); 
+                    values[7] = 0;
                 }
-                sum()
+                runCalc(output, values, isTimeOn, role_id);
             });
-           
-    function sum()
-    {
-    
-        let num1,num2,num3,num4,num5,num6,num7,num8,num9;
-        num1=parseInt(btn1);num2=parseInt(btn2);num3=parseInt(btn3);num4=parseInt(btn4);
-        num5=parseInt(btn5);num6=parseInt(btn6);num7=parseInt(btn7);num8=parseInt(btn8);
-        num9=parseInt(output);
-        if (isNaN(num1))
-            num1=0;
-        if (isNaN(num2))
-            num2=0;
-        if (isNaN(num3))
-            num3=0;
-        if (isNaN(num4))
-            num4=0;
-        if (isNaN(num5))
-            num5=0;
-         if (isNaN(num6))
-            num6=0;
-         if (isNaN(num7))
-            num7=0;
-         if (isNaN(num8))
-            num8=0;
-        let total=num1+num2+num3+num4+num5+num6+num7+num8;
-      
-        if(total==num9){
-            console.log("yes correct")
-            remove(role_id);
-            num1=0,num2=0,num3=0,num4=0,num5=0,num6=0,num7=0,num8=0,num9=0,total=0
-            point+=10;
-           /*if(current_progress>50){
-            $(".message").html("You won a silver badge");
-            silver("#badge");
-            $(".img_badge").html("silver badge");
-            }
-            else if((point>50)&&(point<90)){
-            $(".message").html("You won a silver badge");
-            silver("#badge");
-            $(".img_badge").html("Silver badge");
-            }*/
-            if(point>90){
-            $(".message").html("You won a gold badge");
-            gold("#badge");
-            $(".img_badge").html("Gold badge");
-            $( "#exampleModal" ).modal("show");
-            $("#stop").click(function(){
-                $( "#exampleModal" ).modal("hide"); 
-            });
-            } 
-            $("#point").html(point);
-            progress();
-            
-            }
-            console.log(num1,num2,num3,num4,num5,num6,num7,num8,num9,role_id, total) 
-    }
+        
 }
 function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,value9,
     value10,value11,value12,value13,value14,value15,value16,input,role_id)
     {
+        var values = [0,0,0,0,0,0,0,0]
         let btn1=0,btn2=0,btn3=0,btn4=0,btn5=0,btn6=0,btn7=0,btn8=0,output=0;
         let b1,b2,b3,b4,b5,b6,b7,b8;
     
@@ -333,365 +379,38 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
            b6=($(value11).val());
            b7=($(value13).val());
            b8=($(value15).val());
-           output=($(input).val()); 
+           output=parseInt(($(input).val())); 
            if(b1==1)
-               btn1=($(value2).val()); 
+           
+               btn1=($(value2).val());
+               values[0] = parseInt(btn1); 
            if(b2==1)
-               btn2=($(value4).val()); 
+               btn2=($(value4).val());
+               values[1] = parseInt(btn2);
            if(b3==1)
-               btn3=($(value6).val()); 
+               btn3=($(value6).val());
+               values[2] = parseInt(btn3); 
            if(b4==1)
-               btn4=($(value8).val()); 
+               btn4=($(value8).val());
+               values[3] = parseInt(btn4); 
            if(b5==1)
-               btn5=($(value10).val()); 
+               btn5=($(value10).val());
+               values[4] = parseInt(btn5); 
            if(b6==1)
-               btn6=($(value12).val()); 
+               btn6=($(value12).val());
+               values[5] = parseInt(btn6); 
            if(b7==1)
                btn7=($(value14).val()); 
+               values[6] = parseInt(btn7);
            if(b8==1)
                btn8=($(value16).val()); 
-
-         //console.log($(input).val(),'out')
-          num1=parseInt(btn1);num2=parseInt(btn2);num3=parseInt(btn3);num4=parseInt(btn4);
-          num5=parseInt(btn5);num6=parseInt(btn6);num7=parseInt(btn7);num8=parseInt(btn8);
-          num9=parseInt($(input).val());
-          let total=num1+num2+num3+num4+num5+num6+num7+num8;
-         if(total==num9){
-            console.log("yes correct") 
-            remove(role_id);
-            //num1=0,num2=0,num3=0,num4=0,num5=0,num6=0,num7=0,num8=0,num9=0,total=0
-            point+=10;
-            /* if(current_progress>50){
-                $(".message").html("You won a silver badge");
-                silver("#badge");
-                $(".img_badge").html("silver badge");
-                }
-                else if((point>50)&&(point<90)){
-                $(".message").html("You won a silver badge");
-                silver("#badge");
-                $(".img_badge").html("Silver badge");
-                }*/
-                if(point>90){
-                $(".message").html("You won a gold badge");
-                gold("#badge");
-                $(".img_badge").html("Gold badge");
-                $( "#exampleModal" ).modal("show");
-                $("#stop").click(function(){
-                    $( "#exampleModal" ).modal("hide"); 
-                });
-                 
-             }
+               values[7] = parseInt(btn8);
             
-            $("#point").html(point);
-            progress();
-        
-            }
-         
-         console.log(num1,num2,num3,num4,num5,num6,num7,num8,num9,role_id,total)
-            
+               runCalc(output, values, isTimeOn, role_id);       
     }
-    function time2(value, num){
-        setInterval(function()
-        {  
-                if((point==50)&&(num==5))
-                {
-                    //$("#point").html(point);
-                    progress();
-                    $(".message").html("You won a silver badge");
-                    silver("#badge");
-                    $(".img_badge").html("silver badge");
-                    
-                }
-                num++;
-              
-                if(num==6)
-                {
-                   
-                //table(num,random)
-                $('#myTable').prepend(`<tr id=tr${num}>
-                <td>
-                <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
-                <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                </td>
-                <td>
-                <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
-                <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                </td> 
-                <td>
-                <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
-                <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                </td>
-                <td>
-                <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
-                <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                </td>
-                <td>
-                <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
-                <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                </td>
-                <td>
-                <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
-                <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                </td>
-                <td>
-                <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
-                <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                </td>
-                <td>
-                <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
-                <input type="hidden"id="h_button8" value="1" name="btn7"/>
-                </td>
-                <td><input type="text" class="btext" value="73" id="test${num}" style="" name=btn${num}/></td>
-                </tr>`)
-            
-                    changeValue(`#button1${num}`)
-                    changeValue(`#button2${num}`)
-                    changeValue(`#button3${num}`)
-                    changeValue(`#button4${num}`)
-                    changeValue(`#button5${num}`)
-                    changeValue(`#button6${num}`)
-                    changeValue(`#button7${num}`)
-                    changeValue(`#button8${num}`)
-                    calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                    let time= 10
-                    display = document.querySelector('#timer');
-                   startTimer(time,display,`#tr${num}`);
-                 
-                }
-                else if(num==7)
-                {  
-                    //table(num,random)
-                    $('#myTable').prepend(`<tr id=tr${num}>
-                    <td>
-                    <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
-                    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                    </td> 
-                    <td>
-                    <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button8" value="1" name="btn7"/>
-                    </td>
-                    <td><input type="text" class="btext" value="7" id="test${num}" style="" name=btn${num}/></td>
-                    </tr>`)
-                
-                        changeValue(`#button1${num}`)
-                        changeValue(`#button2${num}`)
-                        changeValue(`#button3${num}`)
-                        changeValue(`#button4${num}`)
-                        changeValue(`#button5${num}`)
-                        changeValue(`#button6${num}`)
-                        changeValue(`#button7${num}`)
-                        changeValue(`#button8${num}`)
-                        calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                        `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                        let time= 10
-                        display = document.querySelector('#timer');
-                       startTimer(time,display,`#tr${num}`);
-                }
-                else if(num==8)
-                {
-                    //table2(num,ran1,ran2,ran3,ran4,ran5,ran6,ran7,ran8)
-                    $('#myTable').prepend(`<tr id=tr${num}>
-                    <td>
-                    <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
-                    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button2${num}" value="0"class="b_game" name="btn2"/>
-                    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                    </td> 
-                    <td>
-                    <input type="button" id="button3${num}"value="0"class="b_game" name="btn3"/>
-                    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
-                    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
-                    <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
-                    <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
-                    <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
-                    <input type="hidden"id="h_button8" value="1" name="btn8"/>
-                    </td>
-                    <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
-                    </tr>`)
-                    
-                $( `#text${num}` ).change(function() {
-                    calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
-        
-                });
-                let time= 10
-                display = document.querySelector('#timer');
-               startTimer(time,display,`#tr${num}`);
-                }
-                else if(num==9)
-                {
-                    $('#myTable').prepend(`<tr id=tr${num}>
-                    <td>
-                    <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
-                    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button2${num}" value="0"class="b_game" name="btn2"/>
-                    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                    </td> 
-                    <td>
-                    <input type="button" id="button3${num}"value="0"class="b_game" name="btn3"/>
-                    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
-                    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
-                    <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button6${num}" value="1" class="b_game" name="btn6"/>
-                    <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
-                    <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
-                    <input type="hidden"id="h_button8" value="1" name="btn8"/>
-                    </td>
-                    <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
-                    </tr>`)
-                    
-                $( `#text${num}` ).change(function() {
-                    calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
-        
-                });
-                let time= 10
-                display = document.querySelector('#timer');
-               startTimer(time,display,`#tr${num}`);
-                }
-                else if(num==10)
-                {
-                   // table(num,random)
-                    $('#myTable').prepend(`<tr id=tr${num}>
-                    <td>
-                    <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
-                    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                    </td> 
-                    <td>
-                    <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
-                    <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                    </td>
-                    <td>
-                    <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
-                    <input type="hidden"id="h_button8" value="1" name="btn7"/>
-                    </td>
-                    <td><input type="text" class="btext" value="129" id="test${num}" style="" name=btn${num}/></td>
-                    </tr>`)
-                
-                        changeValue(`#button1${num}`)
-                        changeValue(`#button2${num}`)
-                        changeValue(`#button3${num}`)
-                        changeValue(`#button4${num}`)
-                        changeValue(`#button5${num}`)
-                        changeValue(`#button6${num}`)
-                        changeValue(`#button7${num}`)
-                        changeValue(`#button8${num}`)
-                        calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                        `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                        let time= 10
-                        display = document.querySelector('#timer');
-                       startTimer(time,display,`#tr${num}`);
-                        
-                }
-               else if(current_progress==100){
-                    $( "#win" ).modal("show");
-                    $("#login2").click(function(){
-                        $( "#win" ).modal("hide");
-                    });
-               }
-                else if((point==100)||(current_progress==100))
-                {
-                    $( "#lost" ).modal("hide"); 
-    
-                }
-                else{
-                    $( "#lost" ).modal("show"); 
-                    $("#close").click(function(){
-                        $( "#lost" ).modal("hide");
-                    });
-                   
-                
-                }
-        },1000*value);
-    }
-
-   function time(value,num){
-
-    let interval= setInterval(function()
-    {  
-
-            num++;
-            
-            if(num==1)
-            {
+    num++
+  block++
+  var Tab1 =  setTimeout(function(){
                 //table(num,random)
                 $('#myTable').prepend(`<tr id=tr${num}>
                 <td>
@@ -738,15 +457,19 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     changeValue(`#button7${num}`)
                     changeValue(`#button8${num}`)
                     calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
+                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`)
             
                 badge("#badge")
-                let time= 20
+                let time= 25
                 display = document.querySelector('#timer');
-               startTimer(time,display,`#tr${num}`);
-            }
-            else if(num==2)
-            { 
+                
+               startTimer(time,display,num);
+    }, value + (block - 1)*1000);
+    block++
+    var Tab2 =  setTimeout(function(){
+    clearTimeout(Tab1);
+
+       num++
               //table2(num,ran1,ran2,ran3,ran4,ran5,ran6,ran7,ran8)
                 //table(num,random)
                 $('#myTable').prepend(`<tr id=tr${num}>
@@ -794,16 +517,18 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     changeValue(`#button7${num}`)
                     changeValue(`#button8${num}`)
                     calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
-                    let time= 20
+                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`)
+                    let time= 25
                     display = document.querySelector('#timer');
-                   startTimer(time,display,`#tr${num}`);
-                 
-            }
-            else if(num ==3)
-            { 
-                
-                $('#myTable').prepend(`<tr id=tr${num}>
+                   startTimer(time,display,num);
+        
+    },value + (block - 1)*1000 * 26)
+    block++
+    var Tab3 =   setTimeout(function(){
+    clearTimeout(Tab2);
+
+        num++;
+        $('#myTable').prepend(`<tr id=tr${num}>
                 <td>
                 <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
                 <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
@@ -839,75 +564,72 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
                 </tr>`)
                 
-            $( `#text${num}` ).change(function() {
+            $( `#text${num}` ).on("change", function() {
                 calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
+                `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`${num}`)
     
             });
-            let time= 20
+            let time= 25
             display = document.querySelector('#timer');
-           startTimer(time,display,`#tr${num}`);
-              
-            }
-            else if((num==4))
-            {
-                //table2(num,ran1,ran2,ran3,ran4,ran5,ran6,ran7,ran8)
-                $('#myTable').prepend(`<tr id=tr${num}>
-                <td>
-                <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
-                <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
-                </td>
-                <td>
-                <input type="button" id="button2${num}" value="1"class="b_game" name="btn2"/>
-                <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
-                </td> 
-                <td>
-                <input type="button" id="button3${num}"value="1"class="b_game" name="btn3"/>
-                <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
-                </td>
-                <td>
-                <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
-                <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
-                </td>
-                <td>
-                <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
-                <input type="hidden"id="h_button5" value="8" name="btn5"/>
-                </td>
-                <td>
-                <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
-                <input type="hidden"id="h_button6" value="4" name="btn6"/>
-                </td>
-                <td>
-                <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
-                <input type="hidden"id="h_button7" value="2" name="btn7"/>
-                </td>
-                <td>
-                <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
-                <input type="hidden"id="h_button8" value="1" name="btn8"/>
-                </td>
-                <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
-                </tr>`)
-                
-            $( `#text${num}` ).change(function() {
-                calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`#tr${num}`)
+           startTimer(time,display,num);
+    }, value + (block - 1)*1000 * 26);
+    block++
+var Tab4 =   setTimeout(function(){
+    clearTimeout(Tab3);
+
+        num++;
+        $('#myTable').prepend(`<tr id=tr${num}>
+        <td>
+        <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
+        <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+        </td>
+        <td>
+        <input type="button" id="button2${num}" value="1"class="b_game" name="btn2"/>
+        <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+        </td> 
+        <td>
+        <input type="button" id="button3${num}"value="1"class="b_game" name="btn3"/>
+        <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+        </td>
+        <td>
+        <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
+        <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+        </td>
+        <td>
+        <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
+        <input type="hidden"id="h_button5" value="8" name="btn5"/>
+        </td>
+        <td>
+        <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
+        <input type="hidden"id="h_button6" value="4" name="btn6"/>
+        </td>
+        <td>
+        <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
+        <input type="hidden"id="h_button7" value="2" name="btn7"/>
+        </td>
+        <td>
+        <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
+        <input type="hidden"id="h_button8" value="1" name="btn8"/>
+        </td>
+        <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
+        </tr>`)
+        
+    $( `#text${num}` ).on("change", function() {
+        calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+        `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`${num}`)
+
+    });
+        let time= 25
+        display = document.querySelector('#timer');
+        startTimer(time,display,num);
     
-            });
-                let time= 20
-                display = document.querySelector('#timer');
-                startTimer(time,display,`#tr${num}`);
-                if(point<10){
-                    $( "#lost" ).modal("show");
-                    $("#close").click(function(){
-                        $( "#lost" ).modal("hide");
-                    });
-                    clearInterval(interval);
-                }
-                 
-            } 
-            else if(num==5)
-            {
-                $('#myTable').prepend(`<tr id=tr${num}>
+    }, value + (block - 1) *1000 *26);
+    block++
+    var Tab5 = setTimeout(function(){
+    clearTimeout(Tab4);
+
+        num++;
+        $('#myTable').prepend(`<tr id=tr${num}>
                 <td>
                 <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
                 <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
@@ -952,20 +674,333 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                     changeValue(`#button7${num}`)
                     changeValue(`#button8${num}`)
                     calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
-                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`#tr${num}`)
+                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`)
                    
-                    let time= 20
+                    let time= 25
                     display = document.querySelector('#timer');
-                    startTimer(time,display,`#tr${num}`);
+                    startTimer(time,display,num);
+                   
+    }, value + (block - 1) * 1000 * 26);
+    block++
+    var Tab6 =  setTimeout(function(){
+    clearTimeout(Tab5);
 
-                   value=11;
-                   number=5
-                   time2(value, number);
-              
-            }
-           
-        
-    },1000*value);
+        num++
+        $('#myTable').prepend(`<tr id=tr${num}>
+                <td>
+                <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
+                <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+                </td>
+                <td>
+                <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
+                <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+                </td> 
+                <td>
+                <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
+                <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+                </td>
+                <td>
+                <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
+                <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+                </td>
+                <td>
+                <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
+                <input type="hidden"id="h_button5" value="8" name="btn5"/>
+                </td>
+                <td>
+                <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
+                <input type="hidden"id="h_button6" value="4" name="btn6"/>
+                </td>
+                <td>
+                <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
+                <input type="hidden"id="h_button7" value="2" name="btn7"/>
+                </td>
+                <td>
+                <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
+                <input type="hidden"id="h_button8" value="1" name="btn7"/>
+                </td>
+                <td><input type="text" class="btext" value="73" id="test${num}" style="" name=btn${num}/></td>
+                </tr>`)
+            
+                    changeValue(`#button1${num}`)
+                    changeValue(`#button2${num}`)
+                    changeValue(`#button3${num}`)
+                    changeValue(`#button4${num}`)
+                    changeValue(`#button5${num}`)
+                    changeValue(`#button6${num}`)
+                    changeValue(`#button7${num}`)
+                    changeValue(`#button8${num}`)
+                    calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+                    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`);
+                    let time= 25
+                    display = document.querySelector('#timer');
+                   startTimer(time,display,num);
+    }, value + (block - 1) * 1000 * 26);
+   block++
+   var Tab7 = setTimeout(function(){
+    clearTimeout(Tab6);
 
-   }
+    num++
+    $('#myTable').prepend(`<tr id=tr${num}>
+    <td>
+    <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
+    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+    </td>
+    <td>
+    <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+    </td> 
+    <td>
+    <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+    </td>
+    <td>
+    <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+    </td>
+    <td>
+    <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button5" value="8" name="btn5"/>
+    </td>
+    <td>
+    <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
+    <input type="hidden"id="h_button6" value="4" name="btn6"/>
+    </td>
+    <td>
+    <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
+    <input type="hidden"id="h_button7" value="2" name="btn7"/>
+    </td>
+    <td>
+    <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
+    <input type="hidden"id="h_button8" value="1" name="btn7"/>
+    </td>
+    <td><input type="text" class="btext" value="7" id="test${num}" style="" name=btn${num}/></td>
+    </tr>`)
+
+        changeValue(`#button1${num}`)
+        changeValue(`#button2${num}`)
+        changeValue(`#button3${num}`)
+        changeValue(`#button4${num}`)
+        changeValue(`#button5${num}`)
+        changeValue(`#button6${num}`)
+        changeValue(`#button7${num}`)
+        changeValue(`#button8${num}`)
+        calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+        `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`)
+        let time= 20
+        display = document.querySelector('#timer');
+       startTimer(time,display,num);
+   }, value + (block - 1) * 1000 * 21)
+   block++
+   var Tab8 =  setTimeout(function(){
+    clearTimeout(Tab7);
+
+       num++
+    $('#myTable').prepend(`<tr id=tr${num}>
+    <td>
+    <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
+    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+    </td>
+    <td>
+    <input type="button" id="button2${num}" value="0"class="b_game" name="btn2"/>
+    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+    </td> 
+    <td>
+    <input type="button" id="button3${num}"value="0"class="b_game" name="btn3"/>
+    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+    </td>
+    <td>
+    <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
+    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+    </td>
+    <td>
+    <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
+    <input type="hidden"id="h_button5" value="8" name="btn5"/>
+    </td>
+    <td>
+    <input type="button" id="button6${num}" value="0" class="b_game" name="btn6"/>
+    <input type="hidden"id="h_button6" value="4" name="btn6"/>
+    </td>
+    <td>
+    <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
+    <input type="hidden"id="h_button7" value="2" name="btn7"/>
+    </td>
+    <td>
+    <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
+    <input type="hidden"id="h_button8" value="1" name="btn8"/>
+    </td>
+    <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
+    </tr>`)
+    
+$( `#text${num}` ).on("change", function() {
+    calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`${num}`)
+
 });
+let time= 20
+display = document.querySelector('#timer');
+startTimer(time,display,num);
+   },value + (block - 1) * 1000 * 21);
+   block++
+   var Tab9 = setTimeout(function(){
+    clearTimeout(Tab8);
+
+       num++
+    $('#myTable').prepend(`<tr id=tr${num}>
+    <td>
+    <input type="button" id="button1${num}" value="0" class="b_game" name="btn1"/>
+    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+    </td>
+    <td>
+    <input type="button" id="button2${num}" value="0"class="b_game" name="btn2"/>
+    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+    </td> 
+    <td>
+    <input type="button" id="button3${num}"value="0"class="b_game" name="btn3"/>
+    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+    </td>
+    <td>
+    <input type="button" id="button4${num}" value="0"class="b_game" name="btn4"/>
+    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+    </td>
+    <td>
+    <input type="button" id="button5${num}" value="1"class="b_game" name="btn5"/>
+    <input type="hidden"id="h_button5" value="8" name="btn5"/>
+    </td>
+    <td>
+    <input type="button" id="button6${num}" value="1" class="b_game" name="btn6"/>
+    <input type="hidden"id="h_button6" value="4" name="btn6"/>
+    </td>
+    <td>
+    <input type="button" id="button7${num}"value="1"class="b_game" name="btn7"/>
+    <input type="hidden"id="h_button7" value="2" name="btn7"/>
+    </td>
+    <td>
+    <input type="button" id="button8${num}" value="0"class="b_game" name="btn8"/>
+    <input type="hidden"id="h_button8" value="1" name="btn8"/>
+    </td>
+    <td><input type="text" class="btext" id=text${num} style="" name="text"/></td>
+    </tr>`)
+    
+$( `#text${num}` ).on("change", function() {
+    calculate2(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+    `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#text${num}`,`${num}`)
+
+});
+let time= 20
+display = document.querySelector('#timer');
+startTimer(time,display,num);
+   }, value + (block - 1) * 1000 * 21)
+   block++
+   var Tab10 =  setTimeout(function(){
+    clearTimeout(Tab9);
+
+       num++
+    $('#myTable').prepend(`<tr id=tr${num}>
+    <td>
+    <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
+    <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+    </td>
+    <td>
+    <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+    </td> 
+    <td>
+    <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+    </td>
+    <td>
+    <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+    </td>
+    <td>
+    <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
+    <input type="hidden"id="h_button5" value="8" name="btn5"/>
+    </td>
+    <td>
+    <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
+    <input type="hidden"id="h_button6" value="4" name="btn6"/>
+    </td>
+    <td>
+    <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
+    <input type="hidden"id="h_button7" value="2" name="btn7"/>
+    </td>
+    <td>
+    <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
+    <input type="hidden"id="h_button8" value="1" name="btn7"/>
+    </td>
+    <td><input type="text" class="btext" value="129" id="test${num}" style="" name=btn${num}/></td>
+    </tr>`)
+
+        changeValue(`#button1${num}`)
+        changeValue(`#button2${num}`)
+        changeValue(`#button3${num}`)
+        changeValue(`#button4${num}`)
+        changeValue(`#button5${num}`)
+        changeValue(`#button6${num}`)
+        changeValue(`#button7${num}`)
+        changeValue(`#button8${num}`)
+        calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+        `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`)
+        let time= 20
+        display = document.querySelector('#timer');
+       startTimer(time,display,num);
+   }, value + (block - 1) * 1000 * 21)
+   block++
+   var Tab11 =  setTimeout(function(){
+   clearTimeout(Tab10);
+
+       num++
+       $('#myTable').prepend(`<tr id=tr${num}>
+               <td>
+               <input type="button" id="button1${num}" value="0" class="b_game" name="btn"  />
+               <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
+               </td>
+               <td>
+               <input type="button" id="button2${num}" value="0"class="b_game" name="btn" />
+               <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
+               </td> 
+               <td>
+               <input type="button" id="button3${num}"value="0"class="b_game" name="btn" />
+               <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
+               </td>
+               <td>
+               <input type="button" id="button4${num}" value="0"class="b_game" name="btn" />
+               <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
+               </td>
+               <td>
+               <input type="button" id="button5${num}" value="0"class="b_game" name="btn" />
+               <input type="hidden"id="h_button5" value="8" name="btn5"/>
+               </td>
+               <td>
+               <input type="button" id="button6${num}" value="0" class="b_game" name="btn"/>
+               <input type="hidden"id="h_button6" value="4" name="btn6"/>
+               </td>
+               <td>
+               <input type="button" id="button7${num}" value="0"class="b_game" name="btn"/>
+               <input type="hidden"id="h_button7" value="2" name="btn7"/>
+               </td>
+               <td>
+               <input type="button" id="button8${num}" value="0"class="b_game" name="btn"/>
+               <input type="hidden"id="h_button8" value="1" name="btn7"/>
+               </td>
+               <td><input type="text" class="btext" value="73" id="test${num}" style="" name=btn${num}/></td>
+               </tr>`)
+           
+                   changeValue(`#button1${num}`)
+                   changeValue(`#button2${num}`)
+                   changeValue(`#button3${num}`)
+                   changeValue(`#button4${num}`)
+                   changeValue(`#button5${num}`)
+                   changeValue(`#button6${num}`)
+                   changeValue(`#button7${num}`)
+                   changeValue(`#button8${num}`)
+                   calculate(`#button1${num}`,'#h_button1',`#button2${num}`,'#h_button2',`#button3${num}`,'#h_button3',`#button4${num}`,'#h_button4',
+                   `#button5${num}`,'#h_button5',`#button6${num}`,'#h_button6',`#button7${num}`,'#h_button7',`#button8${num}`,'#h_button8',`#test${num}`,`${num}`);
+                   let time= 20
+                   display = document.querySelector('#timer');
+                  startTimer(time,display,num);
+   }, value + (block - 1) * 1000 * 21);
+  
+});
+});  
