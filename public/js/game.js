@@ -143,6 +143,12 @@ const runCalc  = ( endvalue, values, time, id)=> {
                         $( "#win" ).modal("hide");
                     });
                   }
+                  else if((point==90)&&(life==5)){
+                    $( "#win" ).modal("show");
+                    $("#login2").click(function(){
+                        $( "#win" ).modal("hide");
+                    });
+                  }
                 else if(point>90){
                     $(".message").html("Wow! you got a gold badge");
                     gold("#badge");
