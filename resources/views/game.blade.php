@@ -30,14 +30,14 @@
             <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
              <br><br><br><br><br><br><br>
             </div>
-            <div class="col-md-10 mt-4 col-sm-12 d-none d-lg-block" >
+            <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block" >
                 <div class=" offset-1 ">
                 <h4>FOR GAME BLOCK 6 WITH HEX NUMBER "7" YOU NEED TO WAIT FOR "5 SECONDS" TILL THE TIME FOR BLOCK 5 HEX NUMBER
                 "23" FINISHES BEFORE CLICKING ON THE DIGIT TO CHOOSE YOUR ANSWER, IF YOU DON'T WAIT YOU'LL LOOSE 1 LIFE EVEN IF 
                 YOUR ANSWER IS RIGHT. </h4>
                     <div class="bar ml-4">
                         <h4 class="text-dark">Game progress bar (Win extra life by clearing first 3 and 6 game block)
-                          <span class="message text-danger  my-3 ml-5"></span>
+                          <span class="message text-danger  my-3 ml-2"></span>
                         </h4>
                         <div class="progress">
                             <div id="dynamic" class="progress-bar progress-bar-secondary progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%, background-color:black;">
