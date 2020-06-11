@@ -84,7 +84,7 @@ const runCalc  = ( endvalue, values, time, id)=> {
         }
         if(sum == endvalue){
             remove(id);
-            isTimeOn =100;
+            isTimeOn =11;
             if((id==4)&&(point==30)){
               life+=1;
                $("#life").html(life);
