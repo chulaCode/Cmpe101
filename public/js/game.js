@@ -84,7 +84,7 @@ const runCalc  = ( endvalue, values, time, id)=> {
         }
         if(sum == endvalue){
             remove(id);
-            isTimeOn =11;
+            isTimeOn =100;
             if((id==4)&&(point==30)){
               life+=1;
                $("#life").html(life);
@@ -101,9 +101,8 @@ const runCalc  = ( endvalue, values, time, id)=> {
                 life+=1;
                 $("#life").html(life);
             }
-            console.log(isTimeOn, "point", point, values);
         }
-       
+        console.log(isTimeOn, "point", point, values);
         
 
 }
@@ -138,7 +137,7 @@ const runCalc  = ( endvalue, values, time, id)=> {
                 //remove(id)   
                 if(life<=0)
                   life=0;
-                  if((point==90)&&((life==4)||(life==5))&&(id==10)){
+                  if((point==90)&&(life==4)&&(id==10)){
                     $( "#win" ).modal("show");
                     $("#login2").click(function(){
                         $( "#win" ).modal("hide");
@@ -157,7 +156,7 @@ const runCalc  = ( endvalue, values, time, id)=> {
                     });
                 }
                
-               else if((point=90)||(current_progress==90)&&((life==4)||(life==5)))
+               else if((point==100)||(current_progress==90)&&(life==4))
                {
                    $( "#lost" ).modal("hide"); 
    
