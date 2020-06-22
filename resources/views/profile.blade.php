@@ -56,7 +56,6 @@
                              <tr><td><h4> You'll be directed to login with your student number to access the game 
                              so we can keep tract of your engagement with the system.</h4></td></tr>
                              <tr><td>
-                               <a href="{{route('postland')}}"><button class="btn btn-secondary btn-lg">Fill survey</button></a>
                                <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
                               <button class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#login">Play game</button>
                                </td>
