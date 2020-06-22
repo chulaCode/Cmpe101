@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
-                <br><br><br><br><br>
+                <br><br><br><br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block" >
                 <div class=" offset-1 ">

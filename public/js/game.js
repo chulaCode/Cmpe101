@@ -227,9 +227,7 @@ const runCalc  = ( endvalue, values, time, id)=> {
 
            }
            //calling timmer function
-                let time= 15
-                display = document.querySelector('#timer');
-               startTimer(time,display,id);
+                
         }
         console.log(isTimeOn, "point", point, values);
 }
@@ -270,7 +268,6 @@ const runCalc  = ( endvalue, values, time, id)=> {
             }
             else if(isTimeOn == point) {
                 console.log(isTimeOn,'failed',point);
-                lifeShow.pop();
                    life -=1;
                 if(life<1) {
                     $( "#lost" ).modal("show"); 

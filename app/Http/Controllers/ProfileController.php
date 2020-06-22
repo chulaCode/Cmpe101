@@ -66,23 +66,33 @@ class ProfileController extends Controller
        return view('practice');
     }
     public function postScore($point,Request $request){
+       
         $name=$request->get('name');
         $this->validate($request,[
             'name'=>'required','string',
-            //'studentNo'=>'interger','unique:points'
+            'studentNo'=>'integer|unique:points'
         ]);
-        $exist_result = points::where('name',$name)->exists();
+        $number=(integer)$request->get('studentNo');
+        $exist_result = points::where('studentNo',$number)->exists();
         if(!$exist_result){
+          
             $save=points::create([
                 'name'=>$name,
                 'score'=>(integer)$point,
-                //'studentNo'=>$request->get('stdno')
+                'studentNo'=>(integer)$number
             ]);
            if($save)
              return redirect()->route('score.board');
         }
         else
-          return redirect()->back()->with('status',"You can't submit score more than once");
+          {
+            $result=points::where('studentNo',$number)->first();
+            $values=$result->score +(integer)$point;
+            $save=$result->save();
+            if($save)
+                return redirect()->route('score.board');
+          }
+        return redirect()->back()->with('status',"You can't submit score more than once");
          
     }
 

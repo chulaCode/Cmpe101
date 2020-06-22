@@ -11,26 +11,28 @@
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
              @endif
+             <h4>Note: Your student number won't be displayed it is just to uniquely identify 
+             everyone since two people can have same name</h4>
             <div class="card">
                 <div class="card-header "><h2>{{ __('Score submission') }}</h2></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{route('post.score',app('request')->input('point'))}}">
                         @csrf
-                       <!-- <div class="form-group row">
-                            <label for="stdno" class="col-md-4 col-form-label text-md-right">{{ __('Student Number') }}</label>
+                       <div class="form-group row">
+                            <label for="studentNo" class="col-md-4 col-form-label text-md-right">{{ __('Student Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="stdno" type="number" class="form-control @error('stdno') is-invalid @enderror" name="stdno" 
-                                 required autocomplete="stdno" placeholder="please enter student Number" autofocus>
+                                <input id="studentNo" type="text" class="form-control @error('studentNo') is-invalid @enderror" name="studentNo" 
+                                 required autocomplete="studentNo" placeholder="please enter student Number" autofocus>
 
-                                @error('stdno')
+                                @error('studentNo')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>-->
+                        </div>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -72,7 +74,9 @@
                             </div>
                         </div>
                     </form>
+                    
                 </div>
+           
             </div>
         </div>
     </div>
