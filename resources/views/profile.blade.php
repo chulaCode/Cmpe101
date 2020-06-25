@@ -35,9 +35,7 @@
                     <table class="table table-striped d-sm-none d-md-block">
                         <tbody>
                             <tr>
-                               <td><h4>Detailed game rule is at the game page when you proceed to game 
-                               You'll be prompted to read the game rule before starting game please read the 
-                               instructions properly</h4></td>
+                               <td><h4>Check out video on how to play the game</h4></td>
                             </tr>
                              <tr><th> <iframe width="850" height="380"
                                 src="https://www.youtube.com/embed/7AJaPBpmzSo">
