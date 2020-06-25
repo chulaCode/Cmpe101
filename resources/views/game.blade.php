@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
-                <br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block" >
                 <div class=" offset-1 ">
@@ -46,7 +46,7 @@
                  
                <hr>
                     <div class="bar ml-4">
-                        <h4 class="text-dark">Game progress bar (Win extra life by clearing first 3 and 6 game block)
+                        <h4 class="text-dark">Game progress bar
                           <span class="message text-danger  my-3 ml-2"></span>
                         </h4>
                         <div class="progress">
@@ -87,7 +87,9 @@
                     </div>
                     <div class="col-md-2">
                       <div>
-                      <input type="button" id="start" class="btn btn-primary my-3" value="start game"/>
+                      <input type="button" id="start" class="btn btn-success my-3" value="start game"/>
+                      <input type="button" id="playagain" class="btn btn-primary my-3"
+                       data-toggle="modal" data-target="#login2"value="Play  Again"/>
                       </div>
                         <span class="mt-5 ml-2">Life</span>
                         <div class="lifes mt-2"> </div>
@@ -181,11 +183,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <strong><h4>1)</h4></strong> You have total of 3 life if you loose all 3 you'll loose gain
-                    <strong><h4>2)</h4></strong> If you live game page you'll loose your progress so stay on game page still game is finished
-                    <strong><h4>3)</h4></strong> You have 25seconds to answer each block for the first 5 blocks
-                    <strong><h4>4)</h4></strong> You have 20seconds to answer the last 5 blocks
-                    <strong><h4>5)</h4></strong> To win game you need to get 100 points 10 point for each block answered correctly
+                    <strong><h4>1)</h4></strong> Please ensure you check tutorial so you can know how to play
+                    <strong><h4>2)</h4></strong> Click on "how to win badge" button to know how different badges can be won
+                    <strong><h4>3)</h4></strong> To win game you need to ensure you have at least one life after all game blocks finishes
+                    <strong><h4>4)</h4></strong> To win game with a gold badge you need to clear all 12 game block without failure
+                    <strong><h4>5)</h4></strong> You have a total of 12 game block
                     
                     <strong>Enjoy your game.</strong> 
                 </div>
@@ -246,17 +248,17 @@
                   <div class="row">
                       <div class="col-4">
                           <img src="{{asset('images/bronze.png')}}" alt="" class="w-50" style="">
-                          <p>To win a bronze badge you'll need to have 4 life to have and extra life added to the 3
-                              given when the game start you need to clear the first 3 game block, Clearing means you need to get the answers right.</p>
+                          <p>To win a bronze badge you need to clear the first 3 game blocks.
+                            Clearing means you need to get the answers right.</p>
                         </div>
                       <div class="col-4">
                          <img src="{{asset('images/silver1.png')}}" alt="" class="w-50" style="">
-                         <p>To win a bronze badge you'll need to clear the first 3 game block, Clearing means you need to get the answers right.</p>
+                         <p>To win a Silver badge you need to get 80 points</p>
                       
                       </div>
                       <div class="col-4">
                          <img src="{{asset('images/gold1.png')}}" alt="" class="w-50" style="">
-                         <p>To win a gold badge you need to finish the game by clearing all the blocks 13 in number without failing anyone</p>
+                         <p>To win a Gold badge you need to finish the game by clearing all the blocks 12 in number without failing anyone</p>
                       
                       </div>
                   </div>

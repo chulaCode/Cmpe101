@@ -20,7 +20,7 @@ function startTimer(duration,display) {
 
 window.onload = function () {
     //const time = 20;
-    const Minutes=30;
+    const Minutes=50;
     //let value=document.getElementById("attempt").innerHTML;
    // console.log(value)
     display = document.querySelector('#timer');

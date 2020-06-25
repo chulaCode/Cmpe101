@@ -11,7 +11,8 @@
                 </div>
              @endif
             <div class="card">
-                <div class="card-header "><h2>{{ __('Login to retake quiz thanks')}}</h2>
+                <div class="card-header "><h2>{{ __('Login to retake quiz')}}</h2>
+                <h4><a href="{{route('postlanding')}}" target="_blank" class="text-dark pull-right " style="margin-top:-35px">Please fill survey</a></h4>
                 </div>
 
                 <div class="card-body">

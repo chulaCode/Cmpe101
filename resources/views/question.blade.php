@@ -7,22 +7,24 @@
         <div class="row">
         <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
       
-          <div class="col-md-2 col-sm-12 bg-secondary h-100 sidebar d-sm-none d-md-block">
+          <div class="col-md-2 col-sm-12 bg-secondary sidebar d-sm-none d-md-block">
 
-                <br> <a href="{{route('profile.display',$user->id)}}"><button class="btn btn-dark my-4 ml-lg-4">Go Back to Profile</button></a>
+                <br> <a href="{{route('profile.display',$user->id)}}"><button class="btn btn-dark my-3 ml-lg-4">Go Back to Profile</button></a>
             
                 <hr class="bg-white">
-                <div id="clockdiv" class="my-4 mb-5 " style="">            
+                <div id="clockdiv" class="my-3" style="">            
                     <div class="ml-lg-5 time ">
                         <span id="timer">00:00</span>
                         <div class="smalltext">Timer</div>
                     </div>
                 </div>
-                <div class="mt-1"> 
-                    <button class="btn btn-lg btn-dark mb-4 mt-4  p-lg-3  ml-lg-5" ><span>Score  {{$count_value->values*10}}</button>
+                <div class="my-5"> 
+                    <button class="btn btn-lg btn-dark mb-3 mt-4  p-lg-3  ml-lg-5" ><span>Score  {{$count_value->values*10}}</button>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br><br>
-                <br><br><br><br><br><br>
+            
+                <span class="text-white"> Please help fill survey when your done after being redirected thanks.</span>
+                <br><br><br><br><br><br><br><br><br><br>
+                
          </div>
             <!--right -->
          <div class="col-md-9 offset-lg-3 mt-2 d-sm-none d-md-block">
@@ -32,7 +34,7 @@
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     </div>
                 @endif
-
+                <div> <h4>You got 12 attempts when it elapses you'll be redirected to a score page to check your score.</h4></div>
                 <div class="row ml-md-5"> 
                      <div class="col-3 col-lg-3 "> 
                          <div class="text-dark wr mx-1">

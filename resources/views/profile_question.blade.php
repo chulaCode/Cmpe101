@@ -1,50 +1,83 @@
 @extends('layouts.app')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('css/practice.css') }}" rel="stylesheet">
+<script src="{{ asset('js/practice.js') }}" defer></script>
 @section('content')
-<div class="container my-5" style="margin-bottom:10rem">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            @if (session('status'))
+
+ <div class="container-fluid" id="grad1">
+    <div class="row justify-content-center mt-0">
+    @if (session('status'))
                 <div class="alert alert-info">
                     {{ session('status') }}
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                 </div>
              @endif
-            <div class="card">
-                <div class="card-header "><h2>{{ __('Instructions') }}</h2>
-                  <!--<a href=""><span class="pull-right" style="margin-top:-2rem; cursor:pointer;">Game page</span></a>-->
-                 
-                </div>
 
-                <div class="card-body ">
-                <div class=" text-dark d-block d-sm-none"><h3>Please view on your computer</h3></div>
-      
-                    <table class="table table-striped d-sm-none d-md-block">
-                        <tbody>
-                            <tr><td><h4>You have a total of 10 questions to attempt any wrong answer you pick 
-                            a suggestion will be given to you on how to get the next question right</h4></td></tr>
-                            <tr><td><h4>After 10 attempt you'll be redirect back to this page you can check the quiz page again for your score</h4></td></tr>
-                             <tr><td><h4>You have 30 seconds to answer each question you can see your time count at the left side of the quiz page</h4></td></tr>
-                             <tr><td><h4>After the 30second finishes another question is displayed and if don't pick 
-                             any answer you'll fail the question automatically.</h4></td></tr>
-                             <tr><td><h4>You can attempt the quiz as many times you want till you master the subject.</h4></td></tr>
-                             <tr><td><h4>To retake the quiz you'll need to login with your student number just so we can know if the quiz was engaging</h4></td></tr>
-                             <tr><td><h4>You will need to fill out the post survey after your done with the interactive quiz by 
-                             clicking the FILL SURVEY BUTTON.</h4></td></tr>
-                             
-                             <tr><td><h4>Best of Luck!</h4></td></tr>
-                             <tr><td>
-                               <a href="{{route('postlanding')}}" target="_blank"><button class="btn btn-secondary btn-lg mr-4">Please fill survey</button></a>
-                               <a href="{{route('quiz',$student->id)}}"><button class="btn btn-secondary btn-lg">Take quiz</button></a>
-                               </td>
-                            </tr>
-                        </tbody>
-                     </table>
+        <div class="col-11 col-sm-9 col-md-7 col-lg-9 text-center p-0 mt-3 mb-2">
+              
+            <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                <h2><strong>INSTRUCTIONS</strong></h2>
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                    <a href="{{route('quiz',$student->id)}}"><button class="btn btn-primary btn-lg">Take quiz</button></a>
+                          
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account"><strong></strong></li>
+                                <li id="personal"><strong></strong></li>
+                                <li id="personal2"><strong></strong></li>
+                                <li id="payment"><strong></strong></li>
+                                <li id="confirm"><strong></strong></li>
+                            </ul> <!-- fieldsets -->
+                            <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h4 class="text-dark">You have a total of 12 questions to attempt any wrong answer you pick 
+                                    a suggestion will be given to you on how to get the next question right</h4>
+                                    <h4 class="text-dark">After the attempts you'll be redirect to a score board</h4>
+                                </div><span class="mr-2"></span><input type="button" id="next1" name="next" class="next action-button" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                <h4 class="text-dark">One of the question requires you to convert a binary number to decimal e.g 000000011 = 3 in decimal </h4>
+                                <h4 class="text-dark">The second type of question requires conversion from decimal to binary you to convert a binary e.g 4 = 00000100 in binary </h4>
+                                
+                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                <h4 class="text-dark">You have 50 seconds for each question when the time elapses a new question comes up</h4>
+                                <h4 class="text-dark">You can retake quiz as many times but you'll need to enter your student number just so we check if it was engaging</h4>
+                                </div><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                                 <input type="button" id="next2" name="next" class="next action-button" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                   
+                                 <h4 class="text-dark"> When your attempts is over you'll be redirect to score page please CLICK ON 
+                                 <span class="text-danger">FILL SURVEY</span> so we can get your feedback it's important because of my research </h4>
+                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Done?" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title text-center">Weldone !</h2> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                    </div> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                         <h4>You can proceed to take the quiz now!</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
 </div>
 
 @endsection

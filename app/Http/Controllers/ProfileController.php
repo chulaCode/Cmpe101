@@ -70,7 +70,7 @@ class ProfileController extends Controller
         $name=$request->get('name');
         $this->validate($request,[
             'name'=>'required','string',
-            'studentNo'=>'integer|unique:points'
+            'studentNo'=>'integer|required'
         ]);
         $number=(integer)$request->get('studentNo');
         $exist_result = points::where('studentNo',$number)->exists();
@@ -87,7 +87,8 @@ class ProfileController extends Controller
         else
           {
             $result=points::where('studentNo',$number)->first();
-            $values=$result->score +(integer)$point;
+            //dd($result->score+$point);
+            $result->score=$result->score+$point;
             $save=$result->save();
             if($save)
                 return redirect()->route('score.board');
@@ -144,7 +145,7 @@ class ProfileController extends Controller
                 $attempt = counts::where('user_id',$user_id)->first();
                 $attempt->attempts=$value_attempt+1;
                 $attempt->save();
-                if($value_attempt>10)
+                if($value_attempt>12)
                 {
                     
                     $attempt_count = counts::where('user_id',$user_id)->first();
@@ -187,7 +188,7 @@ class ProfileController extends Controller
                 $attempt->attempts=$value_attempt;
                 $attempt->save();
                 
-                if($value_attempt>10)
+                if($value_attempt>12)
                 {
                     $stored_randomValue=[];
                     $attempt_count = counts::where('user_id',$user_id)->first();

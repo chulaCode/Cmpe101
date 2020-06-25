@@ -76,7 +76,7 @@ class EnrollController extends Controller
    }
    public function post(Request $request)
    {
-    if (Request::isMethod('post')){
+    //if (Request::isMethod('post')){
         $stdId=$request->input('studentNo');
         $exist_result = students::where('studentNo',$stdId)->exists();
         if(!$exist_result)
@@ -118,9 +118,10 @@ class EnrollController extends Controller
             return redirect()->back()->with('message','The student number is not for this research group');
        
         }
-    }else{
-        return redirect()->back();
-    }
+    //}
+    //else{ 
+       //return redirect()->back();
+   // }
    }
    public function entrance(Request $request)
    {
