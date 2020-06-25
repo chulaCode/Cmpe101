@@ -59,7 +59,7 @@
                 <div class="col-md-8 offset-1">
                  <div class="row">
                    <div class="col-md-10">
-                        <div class="card h-100 ml-5">
+                        <div class="card h-100 ml-3">
                             <div class="card-body">
                                 <div class="game mx-auto">
                                     <form name="game" method="post" action="">
