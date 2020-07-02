@@ -47,7 +47,7 @@ canvas{
 }
 
 #clockdiv div > span{
-  padding: 15px;
+  padding: 10px;
   border-radius: 3px;
   background: #0275d8;
   display: inline-block;
@@ -60,15 +60,16 @@ canvas{
   width: 750px;
 }
 #badge{
-  margin-bottom: 10pxpx;
+  margin-bottom: 5px;
+  margin-left:4.5rem!important;
   
 }
 .replay{
   background-color: #d48f56!important;
 }
 #badge>img{
-  width:135px;
-  height: 135px;
+  width:115px;
+  height: 115px;
 }
 
   h{

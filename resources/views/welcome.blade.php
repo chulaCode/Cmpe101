@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>CMPE 101</title>
+        <title>Research</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -34,7 +34,7 @@
     <section>
        <div class="unit-5 overlay mb-5" style="background-image:url('{{asset('images/game3.jpg')}}');">
             <div class="container text-center">
-                <h2 class="mb-0">{{__('CPME 101 INTRODUCTION TO COMPUTING')}}</h2>
+                <h2 class="mb-0">{{__('RESEARCH ON GAMIFICATION')}}</h2>
                 <h3 > <a href="/"><span class="text-success font-weight-bold" style="">{{__('home')}}</span></a></h3>
             </div>
       </div>
@@ -61,7 +61,7 @@
                    <img src="{{asset('images/research_guide.jpg')}}" alt="" class="" style="">
                  </p>
                  <p class="text-secondary my-5" style="font-size:23px;">
-                 If you have any questions, please contact: <a href="https://mail.google.com" target="_blank">ochulazy4christ@gmail.com</a>
+                 If you have any questions, please contact: <a href="https://mail.google.com" target="_blank">ochulaobariEmmanuel@gmail.com</a>
                  </p>
               </div>
               <div class="col-md-4 col-sm-12 my-5">
@@ -69,8 +69,8 @@
                     @csrf
                      <div class="my-5">
                        <label for=" " style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
-                        <input type="text" class="form-control" id="std" name="stdno" minlength="8"
-                         maxlength="8" placeholder="Enter student number" required>
+                        <input type="text" class="form-control" id="std" name="stdno" minlength=""
+                         maxlength="" placeholder="Enter student number" required>
                          @error('stdno')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

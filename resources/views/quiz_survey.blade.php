@@ -10,16 +10,15 @@
                 <hr>
                 <h3> 
                 Participation in taking interaction quiz to Enhance Motivation and engagement
-                 in Learning intoduction to computing.
+                 in Learning.
                 </h3>
                 <hr>
              </div>
              <div>
-                 <h4>This research aims to enhance the motivation and engagement of students in 
-                     learning “binary numbering system” subject in Introduction to Computing courses being 
-                     taught in Cyprus International University (CIU). It is intended to support this course with an interaction quiz in 
-                     order to support the learning process of “Binary Numbering system” subject and thus, increase students’ intrinsic motivation
-                     and engagement to learning and answering questions
+                 <h4 >This research aims to enhance the motivation and engagement of students in 
+                     learning. It is intended to support "binary numbering system" subject with an interactive quiz tool
+                     and thus, increase students’ intrinsic motivation 
+                     and engagement to learning
                     </h4>
 
                      <h4 class="my-5">The questionnaire consists of four different parts. These are</h4>
@@ -33,18 +32,13 @@
                      <h4 class="my-5">
                         The questionnaire will take 4 - 8 minutes to complete.
                      </h4>
-                     <h4>
-                        Please be aware that it is your choice whether to participate in this questionnaire or not. If you choose to participate,
-                         you will gain %10 marks to overall mark of your chemistry course. Your student number was asked to enter this before 
-                         filling in the questionnaire, because we will ask for your student number later to complete another questionnaire after
-                          playing game. Your student number is an identifier to compare your responses from the pre-questionnaire (i.e. this questionnaire) 
-                          with the post-questionnaire (the one you will use a particular course material) and we will not use it for any other purpose.
+                     <h4 class="my-5 text-danger">
+                         Thank you for accepting to paricipate in this research i'm so grateful, please be aware that you will need to enter your 
+                         student number while filling the pre-questionnaire and post questionnaire so we can compare your responses for the pre and post questionnaire.
+                         Your student number won't be used for anything else rather than to compare your response thank you.
                      </h4>
                      <h4 class="my-5 text-danger">
-                       Please answer all questions honestly especially in the knowledge section. Please if you do not find the correct answer, do not ask around
-                      or search the Internet. Try to answer all questions on your own without getting any help. This is not exam, we are just trying to
-                       understand how we can enhance education with interactive tools. So please do not worry even if you answer wrong, this will not affect your marks.
-                     </h4>
+                        </h4>
                      <h4 class="">
                        Thank you for participating in our study. We really appreciate your contribution to this research.
                      </h4>
@@ -75,7 +69,7 @@
                         Graduate Program in Information Technology Department <br>
                         Institute of Graduate Studies and Research <br>
                         Cyprus International University <br>
-                        <a href="https://mail.google.com/"> ochulazy4christ@gmail.com</a> <br>
+                        <a href="https://mail.google.com/"> ochulaobariEmmanuel@gmail.com</a> <br>
                         Phone: +90 533 848 27 63
                      </h4>
                    </div>

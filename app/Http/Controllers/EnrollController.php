@@ -19,64 +19,172 @@ class EnrollController extends Controller
     
     public function index(Request $request)
     {
-        return view('pretest');
+        if ($request->session()->exists('user')) {
+            return view('pretest');
+        }
+        else
+          return redirect("/");
+       
    }
-   public function survey(){
+   public function survey(Request $request){
+    if ($request->session()->exists('user')) {
+        return view('survey');
+    }
+    else
+      return redirect("/");
+     
+   }
+   public function pretest(Request $request)
+   {
+    if ($request->session()->exists('user')) {
+        return view("pretest2");
+    }
+    else
+      return redirect("/");
 
-     return view('survey');
    }
-   public function pretest()
+   public function consent(Request $request)
    {
-     return view("pretest2");
-   }
-   public function consent()
-   {
-       return view("quiz_survey");
+    if ($request->session()->exists('user')) {
+        return view("quiz_survey");
+    }
+    else
+      return redirect("/");
    }
    public function store(Request $request)
    {
 
-    $this->validate($request,[
-        'stdno'=>'required','integer','min:8' 
-    ]); 
-   
-    if($request->submit == "course")
-    {
-    
-      $name=$request->get('stdno');
-      $user=(integer)$name;
-      $number=(integer)$value =substr($name,-1);
-      if(($number%2)==0)
-           return redirect()->route('survey.show');
-       else
-          return redirect()->route('consent');
-  
+        $this->validate($request,[
+            'stdno'=>'required','integer','' 
+        ]); 
+        
+            if($request->submit == "course")
+            {
+            
+            $name=$request->get('stdno');
+            $user=(integer)$name;
+            $number=(integer)$value =substr($name,-1);
+            if(($number%2)==0){
+            
+                $exist = students::where('studentNo',$user)->exists();
+                if(!$exist){
+                    $save=students::create([ 'studentNo'=>$user]);
+                    if($save)
+                    {
+                        $student=students::where('studentNo',$user)->first();
+                        $count= new counts();
+                        $count->right=0;
+                        $count->wrong=0;
+                        $count->attempts=0;
+                        $count->values=0;
+                        $count->user_id=$student->id;
+                        $count->save();
+                        $request->session()->put('user', $user);
+                        return redirect()->route('survey.show');
+                    }
+                }
+                else
+                {
+                    $student=students::where('studentNo',$user)->first();
+                    $count= new counts();
+                    $count->right=0;
+                    $count->wrong=0;
+                    $count->attempts=0;
+                    $count->values=0;
+                    $count->user_id=$student->id;
+                    $count->save();
+                    $request->session()->put('user', $user);
+                    return redirect()->route('survey.show');
+
+                }
+            }
+            else{
+                $exist = students::where('studentNo',$user)->exists();
+                if(!$exist){
+                    $save=students::create([ 'studentNo'=>$user]);
+                    if($save)
+                    {
+                        $student=students::where('studentNo',$user)->first();
+                        $count= new counts();
+                        $count->right=0;
+                        $count->wrong=0;
+                        $count->attempts=0;
+                        $count->values=0;
+                        $count->user_id=$student->id;
+                        $count->save();
+                        $request->session()->put('user', $user);
+                        return redirect()->route('consent');
+                    }
+                }
+                else
+                {
+                    $student=students::where('studentNo',$user)->first();
+                    $count= new counts();
+                    $count->right=0;
+                    $count->wrong=0;
+                    $count->attempts=0;
+                    $count->values=0;
+                    $count->user_id=$student->id;
+                    $count->save();
+                    $request->session()->put('user', $user);
+                    return redirect()->route('consent');
+
+                }
+            }
+             
+        }
     }
    
-   }
-   public function land()
+   public function land(Request $request)
    {
-       return view("land");
+    if ($request->session()->exists('user')) {
+        return view("land");
+    }
+    else
+      return redirect("/");
+       
    }
-   public function landing()
+   public function landing(Request $request)
    {
-       return view("landing");
+    if ($request->session()->exists('user')) {
+        $std=session()->get('user');
+        $value=students::where('studentNo',$std)->first();
+        //dd($value);
+        return view("landing",compact('value'));
+    }
+    else
+      return redirect("/");
+    
    }
-   public function postland()
+   public function postland(Request $request)
    {
-       return view("post_land");
+    if ($request->session()->exists('user')) {
+        return view("post_land");
+    }
+    else
+      return redirect("/");
    }
-   public function postlanding()
+   public function postlanding(Request $request)
    {
-       return view("post_landing");
+    if ($request->session()->exists('user')) {
+        return view("post_landing");
+    }
+    else
+      return redirect("/");
    }
-   public function postSurvey()
+   public function postSurvey(Request $request)
    {
-       return view("postSurvey");
+    if ($request->session()->exists('user')) {
+        return view("postSurvey");
+    }
+    else
+      return redirect("/");
    }
    public function post(Request $request)
    {
-    //if (Request::isMethod('post')){
+    if ($request->session()->exists('user')) {
+    //remove login here
+   
         $stdId=$request->input('studentNo');
         $exist_result = students::where('studentNo',$stdId)->exists();
         if(!$exist_result)
@@ -118,10 +226,9 @@ class EnrollController extends Controller
             return redirect()->back()->with('message','The student number is not for this research group');
        
         }
-    //}
-    //else{ 
-       //return redirect()->back();
-   // }
+    }
+    else
+      return redirect("/");
    }
    public function entrance(Request $request)
    {

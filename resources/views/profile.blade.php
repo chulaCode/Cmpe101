@@ -46,7 +46,7 @@
                              so we can keep tract of your engagement with the system.</h4></td></tr>
                              <tr><td>
                                <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
-                              <button class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#login">Play game</button>
+                              <a href="{{route('profile.game')}}"><button class="btn btn-secondary btn-lg">Play game</button></a>
                                </td>
                             </tr>
                         </tbody>
@@ -57,41 +57,4 @@
     </div>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-  <form action="{{route('entrance')}}" method="post">
-    @csrf
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Please login to access game</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <div class="form-group row">
-            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Student number') }}</label>
-
-            <div class="col-md-6">
-                <input id="stdnumber" type="text" class="form-control @error('studentNo') is-invalid @enderror" 
-                name="studentNo" value="{{ old('stdnumber') }}" minlength="8" maxlength="8" 
-                required autocomplete="studentNo" placeholder="Enter your student number"autofocus>
-
-                @error('studentNo')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-        </div>
-        </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-   </form>
-  </div>
-</div>
 @endsection

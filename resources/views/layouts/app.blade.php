@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Cmpe101</title>
+    <title>Research</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,7 +38,7 @@
             <div class="container">
            
                 <a class="navbar-brand" href="{{ url('/') }}">
-                     CMPE 101
+                     Research
                     <!--{{ config('app.name', 'CMPE 101') }}-->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -46,7 +46,16 @@
                 </button>
               
             </div>
-        
+            <div class="pull-right">
+            <a class="text-white mr-5" href="{{ route('loggingOut') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('log-out').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+             <form id="log-out" action="{{route('loggingOut')}}" method="post">
+               @csrf
+             </form>
+            </div>
         </nav>
        
 

@@ -25,44 +25,27 @@
             
             </section>
             <section class="mb-5">
-               <div class="container">
-                  <div class="row justify-content-center">
-                     <div class="col-md-8 col-sm-12">
-                        <h1 class="text-secondary my-5">Information</h1>
-                        <h3 class="text-secondary" style="">To access the quiz section you'll need to enter your student
-                              number. Please Note your student number won't be used for any purpose except so everyone will be differentiated
-                              and so your score can be unique to you and you alone.</h3>
-                        <h3 class="text-secondary my-5" style="">
-                          Please read the instruction carefully on the instruction page and try to answer the questions to 
-                          the best of your knowledge don't just pick random answers.
-                        </h3>
-                        <h3 class="text-secondary my-5" style="font-size:23px;">
-                          Please ensure you fill the survey after your done with the interactive quiz. You can take the quiz as much as you want
-                          the <span class="text-danger">fill survey button</span> is at the bottom of the instruction page.
-                        </h3>
-                     </div>
-                     <div class="col-md-4 col-sm-12 my-5">
-                        <form method="post" action="{{route('post')}}">
-                           @csrf
-                              <div class="my-5">
-                              <label for="studentNo" style="font-size:23px; margin-bottom:10px">Please enter student number</label>                   
-                                 <input type="text" class="form-control @error('studentNo') is-invalid @enderror" id="studentNo" name="studentNo"
-                               placeholder="Enter student number"  minlength="8" maxlength="8"required>
-                               @error('studentNo')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                           </div>
-                     
-                           <div class="col-md-12">   
-                                 <button type="submit" name="submit" value="course" class="btn btn-secondary  btn-lg btn-block">
-                                    <span style="font-size:18px;">Submit</span></button>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-               </div>
+            <div> 
+                <h3 class="my-5">
+                    After clicking on the quiz section button you'll be directed to <span class="text-danger">quiz instruction page</span> 
+                    please try and read the instruction so you familiarize yourself with the application.
+                </h3>
+                 <h3 class="my-5">
+
+                  </h3>
+                 <h3 class="text-danger mb-5">
+                   After taking the quiz you will fill a post-questionnaire to enable us carry on with our research.
+                   The <span class="text-success">FILL SURVEY BUTTON </span> will be visible when you're done taking the quiz.
+                   <span class="text-success">Please we need your help with the survey</span> thank you.
+                 </h3>
+
+                <div>
+             
+               <div class="col-md-12">   
+                        <a href="{{route('profile.display',$value->id)}}" class="float-right"><button type="submit" class="btn btn-secondary  btn-lg px-5">
+                            <span style="font-size:18px;">QUIZ SECTION</span></button></a>
+                    </div>
+             </div>
             </section>
        </div>
    </div>

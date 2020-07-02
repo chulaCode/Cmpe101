@@ -19,8 +19,9 @@
                 <h2><strong>INSTRUCTIONS</strong></h2>
                 <div class="row">
                     <div class="col-md-12 mx-0">
-                    <a href="{{route('quiz',$student->id)}}"><button class="btn btn-primary btn-lg">Take quiz</button></a>
-                          
+                      <p> Please go through the instruction before proceeding to the quiz thanks</p>      
+                      <a href="{{route('quiz',$student->id)}}"><button class="btn btn-primary btn-lg">Take quiz</button></a>
+                    
                         <form id="msform">
                             <!-- progressbar -->
                             <ul id="progressbar">
@@ -31,6 +32,11 @@
                                 <li id="confirm"><strong></strong></li>
                             </ul> <!-- fieldsets -->
                             <!-- fieldsets -->
+                            <fieldset>
+                                <div class="form-card">
+                                    <h4 class="text-dark">Thank you so much for agreeing to participate in this research i'm so grateful Thank you!</h4>
+                                    </div><span class="mr-2"></span><input type="button" id="next1" name="next" class="next action-button" value="Next" />
+                            </fieldset>
                             <fieldset>
                                 <div class="form-card">
                                     <h4 class="text-dark">You have a total of 12 questions to attempt any wrong answer you pick 
@@ -48,17 +54,13 @@
                             <fieldset>
                                 <div class="form-card">
                                 <h4 class="text-dark">You have 50 seconds for each question when the time elapses a new question comes up</h4>
-                                <h4 class="text-dark">You can retake quiz as many times but you'll need to enter your student number just so we check if it was engaging</h4>
+                                <h4 class="text-dark">When the number of attempts is over you'll be redirected to a page where you can check your score 
+                                and a <span class="text-danger">FILL SURVEY</span> link will be visibl <span class="text-success">PLEASE HELP ME FILL THE SURVEY THANK YOU.</span>
+                                your feedback is important for my research </h4>
                                 </div><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                  <input type="button" id="next2" name="next" class="next action-button" value="Next" />
                             </fieldset>
-                            <fieldset>
-                                <div class="form-card">
-                                   
-                                 <h4 class="text-dark"> When your attempts is over you'll be redirect to score page please CLICK ON 
-                                 <span class="text-danger">FILL SURVEY</span> so we can get your feedback it's important because of my research </h4>
-                                </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="make_payment" class="next action-button" value="Done?" />
-                            </fieldset>
+                          
                             <fieldset>
                                 <div class="form-card">
                                     <h2 class="fs-title text-center">Weldone !</h2> <br><br>
@@ -68,7 +70,9 @@
                                     <div class="row justify-content-center">
                                         <div class="col-7 text-center">
                                          <h4>You can proceed to take the quiz now!</h4>
+                                        
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </fieldset>

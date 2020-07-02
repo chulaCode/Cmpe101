@@ -25,10 +25,10 @@ $(document).ready(function() {
 <td><input type="button" id="button3"value="0"class="b_game" name="btn3" /></td>
 <td><input type="button" id="button4" value="0"class="b_game" name="btn4" /></td>
 <td><input type="button" id="button5" value="0"class="b_game" name="btn5" /></td>
-<td style="border-style:solid; color:#0275d8"><input type="button" id="button6" value="1" class="b_game" name="btn6"/></td>
+<td style=""><input type="button" id="button6" value="0" class="b_game" name="btn6"/></td>
 <td><input type="button" id="button7"value="0"class="b_game" name="btn7"  /></td>
 <td style="border-style: solid;;color:#0275d8"><input type="button" id="button8" value="1"class="b_game" name="btn8" /></td>
-<td><input type="text" class="btext" id="text1"value="5" style="text-align:center;font-weight:30px;
+<td><input type="text" class="btext" id="text1"value="1" style="text-align:center;font-weight:30px;
 background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;line-height: 45px; border-radius: 7px;" name="text"/></td>
 <td><button type="button" id="remove" class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
  </tr>`)
@@ -45,6 +45,24 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
     }, 9000);
 
     $("#start").click(() => {
+      
+        let random1=Math.floor(Math.random() * (5-2+1)) + 2;
+        let random2=Math.floor(Math.random() *  (9-5+1)) + 5;
+        let random3=Math.floor(Math.random() * (20-15+1)) + 15;
+        let random4=Math.floor(Math.random() * (30-21+1)) + 21;
+        let random5=Math.floor(Math.random() * (60-40+1)) + 40;
+        let random6=Math.floor(Math.random() * (129-90+1)) + 90;
+        let random7=Math.floor(Math.random() * (166-130+1)) + 130;
+        let ran1=Math.round(Math.random())//generate a random number between 0 and 1
+        let ran2=Math.round(Math.random())
+        let ran3=Math.round(Math.random())
+        let ran4=Math.round(Math.random()) 
+        let ran5=Math.round(Math.random())
+        let ran6=Math.round(Math.random())
+        let ran7=Math.round(Math.random())
+        let ran8=Math.round(Math.random())
+
+
 
         var Tab1 = `<tr id=tr1>
                 <td>
@@ -79,7 +97,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 <input type="button" id="button81" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="button" class="btext" style="background:#0275d8;"value="4" id="test1"style="" name=btn1/></td>
+                <td><input type="button" class="btext" style="background:#0275d8;"value="${random1}" id="test1"style="" name=btn1/></td>
+                <td><button type="button" id="answer" class="btn btn-success value1"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
                 </tr>`
 
 
@@ -119,7 +139,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 <input type="button" id="button82" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="button" class="btext" value="7" id="test2"style="" name=btn2/></td>
+                <td><input type="button" class="btext" value="${random2}" id="test2"style="" name=btn2/></td>
+                <td><button type="button" id="answer" class="btn btn-success value2"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
                 </tr>`
 
         var Tab3 = `<tr id=tr3>
@@ -148,14 +170,18 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 <input type="hidden"id="h_button6" value="4" name="btn6"/>
                 </td>
                 <td>
-                <input type="button" id="button73"value="1"class="b_game" name="btn7"/>
+                <input type="button" id="button73"value="${ran2}"class="b_game" name="btn7"/>
                 <input type="hidden"id="h_button7" value="2" name="btn7"/>
                 </td>
                 <td>
-                <input type="button" id="button83" value="0"class="b_game" name="btn8"/>
+                <input type="button" id="button83" value="${ran3}"class="b_game" name="btn8"/>
                 <input type="hidden"id="h_button8" value="1" name="btn8"/>
                 </td>
                 <td><input type="text" class="btext" id=text3 style="" name="text3"/></td>
+                <td>
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                </td>
+                <td>Enter answer</td>
                 </tr>`
 
 
@@ -185,14 +211,18 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         <input type="hidden"id="h_button6" value="4" name="btn6"/>
         </td>
         <td>
-        <input type="button" id="button74"value="1"class="b_game" name="btn7"/>
+        <input type="button" id="button74"value="${ran3}"class="b_game" name="btn7"/>
         <input type="hidden"id="h_button7" value="2" name="btn7"/>
         </td>
         <td>
-        <input type="button" id="button84" value="0"class="b_game" name="btn8"/>
+        <input type="button" id="button84" value="${ran4}"class="b_game" name="btn8"/>
         <input type="hidden"id="h_button8" value="1" name="btn8"/>
         </td>
         <td><input type="text" class="btext" id=text4 style="" name="text4"/></td>
+        <td>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </td>
+        <td>Enter answer</td>
         </tr>`
 
 
@@ -229,7 +259,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 <input type="button" id="button85" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="button" class="btext" value="18" id="test5" style="" name=btn5/></td>
+                <td><input type="button" class="btext" value="${random3}" id="test5" style="" name=btn5/></td>
+                <td><button type="button" id="answer" class="btn btn-success value5"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
                 </tr>`
 
 
@@ -268,7 +300,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 <input type="button" id="button86" value="0"class="b_game" name="btn"/>
                 <input type="hidden"id="h_button8" value="1" name="btn7"/>
                 </td>
-                <td><input type="button" class="btext" value="23" id="test6" style="" name=btn6/></td>
+                <td><input type="button" class="btext" value="${random4}" id="test6" style="" name=btn6/></td>
+                <td><button type="button" id="answer" class="btn btn-success value6"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
                 </tr>`
 
 
@@ -305,11 +339,10 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
     <input type="button" id="button87" value="0"class="b_game" name="btn"/>
     <input type="hidden"id="h_button8" value="1" name="btn7"/>
     </td>
-    <td><input type="button" class="btext" value="54" id="test7" style="" name=btn7/></td>
+    <td><input type="button" class="btext" value="${random5}" id="test7" style="" name=btn7/></td>
+    <td><button type="button" id="answer" class="btn btn-success value7"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
     </tr>`
-
-
-
 
         var Tab8 = `<tr id=tr8>
     <td>
@@ -333,18 +366,22 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
     <input type="hidden"id="h_button5" value="8" name="btn5"/>
     </td>
     <td>
-    <input type="button" id="button68" value="0" class="b_game" name="btn6"/>
+    <input type="button" id="button68" value="${ran2}" class="b_game" name="btn6"/>
     <input type="hidden"id="h_button6" value="4" name="btn6"/>
     </td>
     <td>
-    <input type="button" id="button78"value="1"class="b_game" name="btn7"/>
+    <input type="button" id="button78"value="${ran3}"class="b_game" name="btn7"/>
     <input type="hidden"id="h_button7" value="2" name="btn7"/>
     </td>
     <td>
-    <input type="button" id="button88" value="0"class="b_game" name="btn8"/>
+    <input type="button" id="button88" value="${ran4}"class="b_game" name="btn8"/>
     <input type="hidden"id="h_button8" value="1" name="btn8"/>
     </td>
     <td><input type="text" class="btext" id=text8 style="" name="text8"/></td>
+    <td>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </td>
+    <td>Enter answer</td>
     </tr>`
 
 
@@ -362,26 +399,30 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
     <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
     </td>
     <td>
-    <input type="button" id="button49" value="0"class="b_game" name="btn4"/>
+    <input type="button" id="button49" value="${ran2}"class="b_game" name="btn4"/>
     <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
     </td>
     <td>
-    <input type="button" id="button59" value="1"class="b_game" name="btn5"/>
+    <input type="button" id="button59" value="0"class="b_game" name="btn5"/>
     <input type="hidden"id="h_button5" value="8" name="btn5"/>
     </td>
     <td>
-    <input type="button" id="button69" value="0" class="b_game" name="btn6"/>
+    <input type="button" id="button69" value="${ran4}" class="b_game" name="btn6"/>
     <input type="hidden"id="h_button6" value="4" name="btn6"/>
     </td>
     <td>
-    <input type="button" id="button79"value="0"class="b_game" name="btn7"/>
+    <input type="button" id="button79"value="${ran5}"class="b_game" name="btn7"/>
     <input type="hidden"id="h_button7" value="2" name="btn7"/>
     </td>
     <td>
-    <input type="button" id="button89" value="1"class="b_game" name="btn8"/>
+    <input type="button" id="button89" value="${ran6}"class="b_game" name="btn8"/>
     <input type="hidden"id="h_button8" value="1" name="btn8"/>
     </td>
     <td><input type="text" class="btext" id=text9 style="" name="text9"/></td>
+    <td>
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    </td>
+    <td>Enter answer</td>
     </tr>`
 
 
@@ -419,7 +460,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
     <input type="button" id="button810" value="0"class="b_game" name="btn"/>
     <input type="hidden"id="h_button8" value="1" name="btn7"/>
     </td>
-    <td><input type="button" class="btext" value="106" id="test10" style="" name=btn10/></td>
+    <td><input type="button" class="btext" value="${random6}" id="test10" style="" name=btn10/></td>
+    <td><button type="button" id="answer" class="btn btn-success value10"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
     </tr>`
 
         var Tab11 = `<tr id=tr11>
@@ -455,7 +498,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                <input type="button" id="button811" value="0"class="b_game" name="btn"/>
                <input type="hidden"id="h_button8" value="1" name="btn7"/>
                </td>
-               <td><input type="button" class="btext" value="152" id="test11" style="" name=btn11/></td>
+               <td><input type="button" class="btext" value="${random7}" id="test11" style="" name=btn11/></td>
+               <td><button type="button" id="answer1" class="btn btn-success value11"><i class="fa fa-play" aria-hidden="true"></i></button></td>
+
                </tr>`
 
 
@@ -465,7 +510,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         <input type="hidden"id="h_button1" value="128" name="h_btn1"/>
         </td>
         <td>
-        <input type="button" id="button212" value="0"class="b_game" name="btn2"/>
+        <input type="button" id="button212" value="${ran1}"class="b_game" name="btn2"/>
         <input type="hidden"id="h_button2" value="64" name="h_btn2"/>
         </td> 
         <td>
@@ -473,26 +518,30 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         <input type="hidden"id="h_button3" value="32" name="h_btn3"/>
         </td>
         <td>
-        <input type="button" id="button412" value="1"class="b_game" name="btn4"/>
+        <input type="button" id="button412" value="${ran2}"class="b_game" name="btn4"/>
         <input type="hidden"id="h_button4" value="16" name="h_btn4"/>
         </td>
         <td>
-        <input type="button" id="button512" value="0"class="b_game" name="btn5"/>
+        <input type="button" id="button512" value="${ran3}"class="b_game" name="btn5"/>
         <input type="hidden"id="h_button5" value="8" name="btn5"/>
         </td>
         <td>
-        <input type="button" id="button612" value="0" class="b_game" name="btn6"/>
+        <input type="button" id="button612" value="${ran4}" class="b_game" name="btn6"/>
         <input type="hidden"id="h_button6" value="4" name="btn6"/>
         </td>
         <td>
-        <input type="button" id="button712"value="1"class="b_game" name="btn7"/>
+        <input type="button" id="button712"value="${ran5}"class="b_game" name="btn7"/>
         <input type="hidden"id="h_button7" value="2" name="btn7"/>
         </td>
         <td>
-        <input type="button" id="button812" value="1"class="b_game" name="btn8"/>
+        <input type="button" id="button812" value="${ran6}"class="b_game" name="btn8"/>
         <input type="hidden"id="h_button8" value="1" name="btn8"/>
         </td>
         <td><input type="text" class="btext" id=text12 style="" name="text12"/></td>
+        <td>
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </td>
+        <td>Enter answer</td>
         </tr>`
         var QuestionArray = [Tab1, Tab2, Tab3, Tab4, Tab5, Tab6, Tab7, Tab8, Tab9, Tab10, Tab11, Tab12]
         
@@ -510,7 +559,10 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         var isTimeOn = 0;
         let lifeArr = [0, 0, 0];
         let lifeShow = [];
-
+        let right=0;
+        let wrong=0;
+         $('#wrong').html(wrong);
+         $('#right').html(right);
         for (let i = 0; i < lifeArr.length; i++) {
             //<i class="fa fa-heart" aria-hidden="true"></i>
             img = $('<img />', {
@@ -526,19 +578,19 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         //loose
         $("#s_submit").click(() => {
             //location.href = "http://127.0.0.1:8000/score";
-            window.open('http://cmpe101.herokuapp.com/score?point=' + point, target = '_blank');
+            window.open('http://cmpereseach.herokuapp.com/score?point=' + point, target = '_blank');
 
         })
         //won 
         $("#score_submit").click(() => {
             //location.href = "http://127.0.0.1:8000/score";
-            window.open('http://cmpe101.herokuapp.com/score?point=' + point, target = '_blank');
+            window.open('http://cmpereseach.herokuapp.com/score?point=' + point, target = '_blank');
 
         })
         //won with gold badge
         $("#scores_submit").click(() => {
             //location.href = "http://127.0.0.1:8000/score";
-            window.open('http://cmpe101.herokuapp.com/score?point=' + point, target = '_blank');
+            window.open('http://cmpereseach.herokuapp.com/score?point=' + point, target = '_blank');
 
         })
 
@@ -551,14 +603,14 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         var hasWon = false
         var isCorrect  = false
         let time1, time2, time3, time4, time5, time6, time7;
-
+        var Interval;
         $('#start').prop('disabled',true).css({
             background: "#fff",
             color: "#fffff"
         });
         $("#playagain").show();
         $('#playagain').click(function(){
-            //location.reload()
+            location.reload()
         })
         function remove(id) {
             $(`#tr${id}`).fadeOut(2000);
@@ -597,6 +649,8 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 isTimeOn = 100;
                 isCorrect = true
                 point += 10;
+                right+=1;
+                $('#right').html(right);
                 $("#point").html(point);
                 
                 if ((id == 1) && (point == 10)) {
@@ -685,24 +739,106 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                     $("#exampleModal").modal("show");
                     $("#stop").click(function() {
                         $("#exampleModal").modal("hide");
-                    });
-                    $("#login2").click(function() {
-                        $("#win").modal("hide");
-                    });
-                }
-                else if ((id==12) && (lifeShow.length >0)) {
-                    $("#win").modal("show");
-                    hasWon = true
-                  	$("#login2").click(function() {
-                        $("#win").modal("hide");
+                        location.reload();
                     });
                    
+                }
+                else if ((id>11) && (lifeShow.length >0)) {
+                    $("#win").modal("show");
+                    hasWon = true
+                    $("#stop2").click(function() {
+                        $("#win").modal("hide");
+                        location.reload();
+                    });
                 }
                 else if ((current_progress>99) && (lifeShow.length >0) || (point > 110)) {
                     $("#lost").modal("hide");
                 }
                  
                 //calling timmer function
+
+            }
+            else{
+                $(`#button1${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button2${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });;
+                $(`#button3${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button4${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button5${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button6${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button7${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#button8${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`#test${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                $(`input[type=text][name=text${id}]`).prop('disabled', true).css({
+                    background: "#d9534f"
+                })
+                $(`.value${id}`).prop('disabled', true).css({
+                    background: "#d9534f",
+                    color: "#d9534f"
+                });
+                progress();
+                wrong+=1;
+                $('#wrong').html(wrong);
+                isCorrect = false;
+                lifeShow.pop();
+                life -= 1;
+               
+                if (life < 1) {
+                    $("#lost").modal("show");
+                    $("#close").click(function() {
+                        $("#lost").modal("hide");
+                        location.reload();
+                    });
+                    life = 0;
+                    hasFailed = true
+                    
+                } else if (life == 1) {
+                    $(".info4").html("You have one life left if you lose it you'll lose game")
+                    setTimeout(() => {
+                        clearTimeout();
+                        $("#message8").fadeOut(2000);
+                    }, 6000);
+                }
+                $(".lifes").html(lifeShow);
+                if ((id>11) && (lifeShow.length >0)) {
+                    $("#win").modal("show");
+                    hasWon = true
+                    $("#stop2").click(function() {
+                        $("#win").modal("hide");
+                        location.reload();
+                    });
+                }
+                clearInterval(Interval);
+                startTimer(50, block);
+               
+                
+               
 
             }
             console.log(id,'id=',isTimeOn, "point", point, values);
@@ -726,7 +862,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
             let counterIncrement = -1;
             live = live + counterIncrement;
             clearInterval(Interval);
-            var Interval = setInterval(function() {
+             Interval = setInterval(function() {
 
                 minutes = parseInt(timer / 60, 10)
                 seconds = parseInt(timer % 60, 10);
@@ -745,6 +881,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 }
                 if (--timer < 0) {
                     progress();
+                    wrong+=1;
+                    console.log(id)
+                    $('#wrong').html(wrong);
                     if (isTimeOn > point) {
 
                         progress();
@@ -761,12 +900,13 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                             $("#lost").modal("show");
                             $("#close").click(function() {
                                 $("#lost").modal("hide");
+                                location.reload();
                             });
                             life = 0;
                             hasFailed = true
                             
                         } else if (life == 1) {
-                            $(".info4").html("You have one life left if you loose it you'll loose game")
+                            $(".info4").html("You have one life left if you lose it you'll lose game")
                             setTimeout(() => {
                                 clearTimeout();
                                 $("#message8").fadeOut(2000);
@@ -812,9 +952,21 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                         background: "#d9534f",
                         color: "#d9534f"
                     });
-                    $(`input[type=text][name=text${id}]`).css({
+                    $(`input[type=text][name=text${id}]`).prop('disabled', true).css({
                         background: "#d9534f"
                     })
+                    $(`.value${id}`).prop('disabled', true).css({
+                        background: "#d9534f",
+                        color: "#d9534f"
+                    });
+                    if ((id>11) && (lifeShow.length >0)) {
+                        $("#win").modal("show");
+                        hasWon = true
+                        $("#stop2").click(function() {
+                            $("#win").modal("hide");
+                            location.reload();
+                        });
+                    }
                     clearInterval(Interval);
                     startTimer(50, block);
                 }
@@ -886,7 +1038,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
 
 
         function calculate(value1, value2, value3, value4, value5, value6, value7, value8, value9,
-            value10, value11, value12, value13, value14, value15, value16, input, role_id) {
+            value10, value11, value12, value13, value14, value15, value16, input, role_id, answer) {
             let btn1 = 0,
                 btn2 = 0,
                 btn3 = 0,
@@ -913,7 +1065,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                     values[0] = 0
                 }
 
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
             });
             $(value3).click(function() {
                 b2 = ($(value3).val());
@@ -923,7 +1075,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[1] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
             });
             $(value5).click(function() {
                 b3 = ($(value5).val());
@@ -933,7 +1085,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[2] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+               // runCalc(output, values, isTimeOn, role_id);
             });
             $(value7).click(function() {
 
@@ -944,7 +1096,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[3] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
             });
             $(value9).click(function() {
 
@@ -955,7 +1107,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[4] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+               // runCalc(output, values, isTimeOn, role_id);
             });
             $(value11).click(function() {
 
@@ -966,7 +1118,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[5] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
             });
             $(value13).click(function() {
 
@@ -977,7 +1129,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[6] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
             });
             $(value15).click(function() {
 
@@ -988,8 +1140,14 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 } else {
                     values[7] = 0;
                 }
-                runCalc(output, values, isTimeOn, role_id);
+                //runCalc(output, values, isTimeOn, role_id);
+           
             });
+            $(answer).click(function(){
+                runCalc(output, values, isTimeOn, role_id);
+                //console.log(values,"console value")
+                
+            })
 
         }
 
@@ -1054,7 +1212,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button71`)
         changeValue(`#button81`)
         calculate(`#button11`, '#h_button1', `#button21`, '#h_button2', `#button31`, '#h_button3', `#button41`, '#h_button4',
-            `#button51`, '#h_button5', `#button61`, '#h_button6', `#button71`, '#h_button7', `#button81`, '#h_button8', `#test1`, `1`)
+            `#button51`, '#h_button5', `#button61`, '#h_button6', `#button71`, '#h_button7', `#button81`, '#h_button8', `#test1`, `1`,'.value1')
         $('#button12').click(function() {
             console.log("here");
         })
@@ -1067,7 +1225,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button72`)
         changeValue(`#button82`)
         calculate(`#button12`, '#h_button1', `#button22`, '#h_button2', `#button32`, '#h_button3', `#button42`, '#h_button4',
-            `#button52`, '#h_button5', `#button62`, '#h_button6', `#button72`, '#h_button7', `#button82`, '#h_button8', `#test2`, `2`)
+            `#button52`, '#h_button5', `#button62`, '#h_button6', `#button72`, '#h_button7', `#button82`, '#h_button8', `#test2`, `2`,`.value2`)
 
         $(`#text3`).on("change", function() {
 
@@ -1090,7 +1248,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button75`)
         changeValue(`#button85`)
         calculate(`#button15`, '#h_button1', `#button25`, '#h_button2', `#button35`, '#h_button3', `#button45`, '#h_button4',
-            `#button55`, '#h_button5', `#button65`, '#h_button6', `#button75`, '#h_button7', `#button85`, '#h_button8', `#test5`, `5`)
+            `#button55`, '#h_button5', `#button65`, '#h_button6', `#button75`, '#h_button7', `#button85`, '#h_button8', `#test5`, `5`,`.value5`)
 
         changeValue(`#button16`)
         changeValue(`#button26`)
@@ -1101,7 +1259,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button76`)
         changeValue(`#button86`)
         calculate(`#button16`, '#h_button1', `#button26`, '#h_button2', `#button36`, '#h_button3', `#button46`, '#h_button4',
-            `#button56`, '#h_button5', `#button66`, '#h_button6', `#button76`, '#h_button7', `#button86`, '#h_button8', `#test6`, `6`);
+            `#button56`, '#h_button5', `#button66`, '#h_button6', `#button76`, '#h_button7', `#button86`, '#h_button8', `#test6`, `6`,`.value6`);
         changeValue(`#button17`)
         changeValue(`#button27`)
         changeValue(`#button37`)
@@ -1111,7 +1269,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button77`)
         changeValue(`#button87`)
         calculate(`#button17`, '#h_button1', `#button27`, '#h_button2', `#button37`, '#h_button3', `#button47`, '#h_button4',
-            `#button57`, '#h_button5', `#button67`, '#h_button6', `#button77`, '#h_button7', `#button87`, '#h_button8', `#test7`, `7`)
+            `#button57`, '#h_button5', `#button67`, '#h_button6', `#button77`, '#h_button7', `#button87`, '#h_button8', `#test7`, `7`,`.value7`)
         $(`#text8`).on("change", function() {
             calculate2(`#button18`, '#h_button1', `#button28`, '#h_button2', `#button38`, '#h_button3', `#button48`, '#h_button4',
                 `#button58`, '#h_button5', `#button68`, '#h_button6', `#button78`, '#h_button7', `#button88`, '#h_button8', `#text8`, `8`)
@@ -1131,7 +1289,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button710`)
         changeValue(`#button810`)
         calculate(`#button110`, '#h_button1', `#button210`, '#h_button2', `#button310`, '#h_button3', `#button410`, '#h_button4',
-            `#button510`, '#h_button5', `#button610`, '#h_button6', `#button710`, '#h_button7', `#button810`, '#h_button8', `#test10`, `10`)
+            `#button510`, '#h_button5', `#button610`, '#h_button6', `#button710`, '#h_button7', `#button810`, '#h_button8', `#test10`, `10`,`.value10`)
 
         changeValue(`#button111`)
         changeValue(`#button211`)
@@ -1142,7 +1300,7 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
         changeValue(`#button711`)
         changeValue(`#button811`)
         calculate(`#button111`, '#h_button1', `#button211`, '#h_button2', `#button311`, '#h_button3', `#button411`, '#h_button4',
-            `#button511`, '#h_button5', `#button611`, '#h_button6', `#button711`, '#h_button7', `#button811`, '#h_button8', `#test11`, `11`);
+            `#button511`, '#h_button5', `#button611`, '#h_button6', `#button711`, '#h_button7', `#button811`, '#h_button8', `#test11`, `11`,`.value11`);
 
         $(`#text12`).on("change", function() {
             calculate2(`#button112`, '#h_button1', `#button212`, '#h_button2', `#button312`, '#h_button3', `#button412`, '#h_button4',

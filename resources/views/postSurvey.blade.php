@@ -16,16 +16,16 @@
              <div> 
                 <h3 class="my-5">
                     After clicking on the Game section button you'll be directed to <span class="text-danger">game instruction page</span> 
-                    be sure to read the instruction carefully and watch video
-                    on how to play. Be sure to clıck the <span class="text-danger">practice button</span> to learn how to play the game
+                    please try to read the instruction carefully and watch video
+                    on how to play. please try and clıck the <span class="text-danger">practice button</span> to learn how to play the game
                     before you procced to play the game after you're sure you've known how to play.
                 </h3>
                  <h3 class="my-5">
                 </h3>
                  <h3 class="text-danger mb-5">
-                   After the playing the game you'll need to fill the post-questionnaire it is important to fill the 
-                   post-questionnaire to get the <span class="text-success">10% mark </span> that will be awarded to those that partake in this research.
-                   the <span class="text-success">FILL SURVEY BUTTON </span> is at the right side bar at the game page. Be sure to click it to complete the post-questionnaire thanks.
+                   After the playing the game you'll help me fill a post-questionnaire. Please i also need your help with 
+                   the post-questionaire so i can proceed with my study thank you so much for your time and participation.
+                   the <span class="text-success">FILL SURVEY BUTTON </span> will be visible when youre done playing the game thank you.
                  </h3>
 
                 <div>

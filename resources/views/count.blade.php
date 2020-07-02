@@ -11,14 +11,21 @@
                 </div>
              @endif
             <div class="card">
-                <div class="card-header "><h2>{{ __('Login to retake quiz')}}</h2>
+                <div class="card-header "><h2>{{ __('Thanks for participating')}}</h2>
                 <h4><a href="{{route('postlanding')}}" target="_blank" class="text-dark pull-right " style="margin-top:-35px">Please fill survey</a></h4>
                 </div>
 
                 <div class="card-body">
                 <div class="mb-4 text-center">
-                  <h4> YOUR SCORE FOR PREVIOUS QUIZ IS: {{$value*10}}</h4>
+                  <h4> YOUR SCORE FOR PREVIOUS QUIZ IS</h4>
+                  <h3 class="my-4">{{$value*10}}</h3>
+                  <h4>
+                     <br><br> <a href="{{route('quiz',$student->id)}}"><button class="btn btn-primary btn-lg">Retake quiz</button></a>
+                    
+                  </h4>
                 </div>
+                 
+                <!--
                 <form action="{{route('entrance2')}}" method="post">
                  @csrf
                   <div class="form-group row">
@@ -41,7 +48,7 @@
                             </button>
                         </div>
                  </div>
-              </form>
+              </form>-->
             </div>
         </div>
     </div>

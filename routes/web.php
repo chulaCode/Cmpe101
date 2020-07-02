@@ -20,7 +20,8 @@ Auth::routes();
 Route::post('/post','PostController@store');
 Route::get('/profile/create','PostController@create');
 //Route::post('/profile','PostController@store');
-Route::get('/score','ProfileController@score')->name("score");\
+Route::get('/score','ProfileController@score')->name("score");
+Route::post('/loggingout','ProfileController@loggingOut')->name('loggingOut');
 
 Route::get('/pretest','EnrollController@index')->name('pretest');
 Route::get('/consent','EnrollController@survey')->name('survey.show');

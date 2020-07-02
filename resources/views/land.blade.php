@@ -9,29 +9,28 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h2> 
-                   You will be redirected to the game section by click GAME SECTION button at the bottom of the page.
+                   You will be redirected to the game section by clicking GAME SECTION button at the bottom of the page.
                 </h2>
                 <hr>
              </div>
              <div> 
                 <h3 class="my-5">
-                    After clicking on the Game section button you'll be directed to <span class="text-danger">game instruction page</span> 
-                    be sure to read the instruction carefully and watch video
-                    on how to play. Be sure to clıck the <span class="text-danger">practice button</span> to learn how to play the game
-                    before you procced to play the game after you're sure you've known how to play.
+                    After clicking on the Game section button you'll be redirected to <span class="text-danger">game instruction page</span> 
+                    please read the instruction and watch video
+                    on how to play.Clıck the <span class="text-danger">practice game button</span> to learn how to play the game
+                    before you proceed to play the game after you're sure you've known how to play.
                 </h3>
                  <h3 class="my-5">
                  At the game page before starting game you'll be prompted to read <span class="text-danger">"GAME RULE"</span>
-                  before starting game by clicking <span class="text-danger">"start"</span> please ensure you read the rule carefully.
-                  after you're done with the game you can submit your score to score board to see how you rank amidst other gamers
-                  please note you'll need to submit your name  to access the score board 
+                  before starting game.
+                  After you're done with the game you can submit your score to score board to see how you rank among other gamers
+                  please note you will need to submit a nick name  to access the score board 
                   . NOTE your detail will not be used for anything except to identify you among other gamers.
                  </h3>
                  <h3 class="text-danger mb-5">
-                   After the playing the game you'll need to fill the post-questionnaire it is important to fill the 
-                   post-questionnaire to get the <span class="text-success">10% mark </span> that will be awarded to those that partake in this research.
-                   the <span class="text-success">FILL SURVEY BUTTON </span> is at the right side bar at the game page and
-                   <span class="text-success">FILL SURVEY button </span> at the game instruction page. Be sure to click it to complete the post-questionnaire thanks.
+                   After playing the game you will fill a post-questionnaire to enable us carry on with our research.
+                   The <span class="text-success">FILL SURVEY BUTTON </span> will be visible when you're done playing the game.
+                   <span class="text-success">Please we need your help with the survey</span> thank you.
                  </h3>
 
                 <div>

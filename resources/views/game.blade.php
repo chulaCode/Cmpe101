@@ -8,7 +8,7 @@
         <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
            <div class="col-md-2 col-sm-12 bg-secondary h-100 bar">
         
-            <div id="clockdiv" class="my-3 d-sm-none d-md-block">            
+            <div id="clockdiv" class="my-1 d-sm-none d-md-block">            
                     <div class="ml-5 time ">
                             <span id="point" style="background-color:#4a4a4b">00</span>
                             <div class="smalltext">Score</div>
@@ -17,22 +17,22 @@
             
                 <hr class="bg-white">
                 <div class="img ml-lg-5 d-sm-none d-md-block" id="badge"></div>
-                <div class="img_badge my-3 ml-lg-5 pl-4 mb-1 text-white"></div>
-                <div class="mb-3"><button type="button" class="btn btn-dark mt-3 ml-5" data-toggle="modal" data-target="#tutorial">How to win badges</button> </div>
+                <div class="img_badge my-1 ml-lg-5 pl-4 mb-0 text-white"></div>
+                <div class="mb-1"><button type="button" class="btn btn-dark mt-3 ml-5" data-toggle="modal" data-target="#tutorial">How to win badges</button> </div>
         
                 <hr class="bg-white">
-                <div id="clockdiv" class="mt-3 mb-5 d-sm-none d-md-block">            
+                <div id="clockdiv" class="mt-1 mb-1 d-sm-none d-md-block">            
                     <div class="ml-5 time">
                         <span id="timer">00:00</span>
                         <div class="smalltext">Timer</div>
                     </div>
                 </div>
                 <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
-                <br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br><br><br>
             </div>
             <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block" >
                 <div class=" offset-1 ">
-                <div> <a href="/practice"> <button type="button" class="btn btn-primary mt-1">Checkout tutorial </button></a>
+                <div> 
                     <h3 class="pull-right status  text-success" id="message1"></h3>
                     <h3 class="pull-right info  text-info" id="message2"></h3>
                     <h3 class="pull-right status2  text-success" id="message3"></h3>
@@ -43,14 +43,16 @@
                     <h3 class="pull-right status5  text-success" id="message7"></h3>
                     <h3 class="pull-right info4  text-danger" id="message9"></h3>
                 </div>
-                 
-               <hr>
+                
                     <div class="bar ml-4">
-                        <h4 class="text-dark">Game progress bar
+                        <h4 class="text-dark">Game progress bar &nbsp;&nbsp;<i class="fa fa-check text-success" 
+                        aria-hidden="true"></i> [<span id="right"></span>]  &nbsp;&nbsp;<i class="fa fa-times text-danger" 
+                        aria-hidden="true"></i> [<span id="wrong"></span>] 
                           <span class="message text-danger  my-3 ml-2"></span>
                         </h4>
                         <div class="progress">
-                            <div id="dynamic" class="progress-bar progress-bar-secondary progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%, background-color:black;">
+                            <div id="dynamic" class="progress-bar progress-bar-secondary progress-bar-striped active" role="progressbar" 
+                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%, background-color:black;">
                                 <span id="current-progress"></span>
                             </div>
                         </div>
@@ -59,7 +61,7 @@
                 <div class="col-md-8 offset-1">
                  <div class="row">
                    <div class="col-md-10">
-                        <div class="card h-100 ml-3">
+                        <div class="card  ml-2" style="height:500px!important">
                             <div class="card-body">
                                 <div class="game mx-auto">
                                     <form name="game" method="post" action="">
@@ -88,8 +90,7 @@
                     <div class="col-md-2">
                       <div>
                       <input type="button" id="start" class="btn btn-success my-3" value="start game"/>
-                      <input type="button" id="playagain" class="btn btn-primary my-3"
-                       data-toggle="modal" data-target="#login2"value="Play  Again"/>
+                      <input type="button" id="playagain" class="btn btn-primary my-3" value="Play  Again"/>
                       </div>
                         <span class="mt-5 ml-2">Life</span>
                         <div class="lifes mt-2"> </div>
@@ -118,7 +119,7 @@
             
                 <button class="btn btn-dark ml-1" id="scores_submit">Submit score to score board</button>
                 <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-                <button type="button" id="stop" class=" replay btn btn-info" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
+                <button type="button"  class=" replay btn btn-info"  id="stop" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -141,7 +142,7 @@
                
              <button class="btn btn-dark ml-1" id="score_submit">Submit score to score board</button>
              <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-             <button type="button" id="stop" class="replay btn btn-info" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
+             <button type="button" class="replay btn btn-info"  id="stop2" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -164,7 +165,7 @@
             
                 <button class="btn btn-primary" id="s_submit" data-dismiss="modal">Submit score to score board</button>
                 <a href="{{route('score.board')}}" target="_blank"><button class="btn btn-success">View score board</button></a>
-                <button type="button" id="close" class="btn btn-secondary ml-3" data-toggle="modal" data-target="#login2" data-dismiss="modal">Replay</button>
+                <button type="button" class="btn btn-secondary ml-3"  id="close" data-dismiss="modal">Replay</button>
             </div>
             </div>
         </div>
@@ -185,14 +186,13 @@
                 <div class="modal-body">
                     <strong><h4>1)</h4></strong> Please ensure you check tutorial so you can know how to play
                     <strong><h4>2)</h4></strong> Click on "how to win badge" button to know how different badges can be won
-                    <strong><h4>3)</h4></strong> To win game you need to ensure you have at least one life after all game blocks finishes
-                    <strong><h4>4)</h4></strong> To win game with a gold badge you need to clear all 12 game block without failure
-                    <strong><h4>5)</h4></strong> You have a total of 12 game block
-                    
-                    <strong>Enjoy your game.</strong> 
+                    <strong><h4>3)</h4></strong> To win game you need to ensure you have at least one life after all game blocks finishes, you need 
+                    to clear all 12 game block to win game with a gold badge, You have a total of 12 game blocks. <br>
+                
+                    <strong><h4>Enjoy your game.</h4></strong> 
                 </div>
                 <div class="modal-footer">
-                    
+                <a href="/practice"> <button type="button" class="btn btn-primary mt-1">Checkout tutorial </button></a>
                     <button type="button" class="btn btn-primary" id="rule" data-dismiss="modal">Understood</button>
                 </div>
             </div>
