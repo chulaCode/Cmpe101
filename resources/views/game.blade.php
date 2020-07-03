@@ -61,7 +61,7 @@
                 <div class="col-md-8 offset-1">
                  <div class="row">
                    <div class="col-md-10">
-                        <div class="card  ml-2" style="height:500px!important">
+                        <div class="card  ml-0" style="height:500px!important">
                             <div class="card-body">
                                 <div class="game mx-auto">
                                     <form name="game" method="post" action="">
