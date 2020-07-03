@@ -24,7 +24,7 @@
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" 
-                                 required autocomplete="name"placeholder="please enter student name" autofocus>
+                                 required autocomplete="name"placeholder="please enter nick name" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
