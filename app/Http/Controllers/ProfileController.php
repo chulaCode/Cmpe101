@@ -230,7 +230,7 @@ class ProfileController extends Controller
                     $question_result=array($result1=>$res, $result2=>$res2, $result3=>$res3,$result4=>$res4,$result5=>$res,
                     $result6=>$res2,$result7=>$res3,$result8=>$res4,$result9=>$res,$result10=>$res2,$result11=>$res3,$result12=>$res4,$result13=>$res,
                     $result14=>$res2,$result15=>$res3,$result16=>$res4,$result17=>$res,$result18=>$res2,$result19=>$res3,$result20=>$res4,
-                    $result21=>$res1,$result22=>$res2,$result23=>$res3,$result=>$res4);                  
+                    $result21=>$res,$result22=>$res2,$result23=>$res3,$result24=>$res4);                  
                 
                     foreach($question_result as $result=>$value)
                     { 
