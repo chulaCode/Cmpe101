@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header "><h2>{{ __('Score Board') }}</h2>
-                   <a href="{{route('postland')}}"><span class="pull-right text-dark" style="margin-top:-2rem; cursor:pointer;">fill survey</span></a>
+                   <a href="{{route('postland')}}"><span class="pull-right text-dark" style="margin-top:-2rem; cursor:pointer;"><h2>fill survey</h2></span></a>
                 </div>
 
                 <div class="card-body">

@@ -222,7 +222,7 @@ class ProfileController extends Controller
                         $attempt_count->save();
                         // session()->forget('keys');
                         return redirect("/quizCount/{$user->id}")
-                        ->with('status', 'Thanks number of attempts completed check back for your score please help fill survey');
+                        ->with('status', 'Thanks number of attempts completed  PLEASE FILL SURVEY');
                         
                     }
                     
