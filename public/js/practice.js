@@ -118,7 +118,7 @@ function changeValue(value)
 
 
 function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value9,
-    value10,value11,value12,value13,value14,value15,value16,input,role_id)
+    value10,value11,value12,value13,value14,value15,value16,input,role_id,answer)
 {
     let btn1=0,btn2=0,btn3=0,btn4=0,btn5=0,btn6=0,btn7=0,btn8=0,output=0;
     let b1,b2,b3,b4,b5,b6,b7,b8; 
@@ -139,7 +139,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                     values[0] = 0
                 }
                 
-                runCalc(output, values, role_id);
+                //runCalc(output, values, role_id);
             });
             $(value3).click(function() {
                 b2=($(value3).val()); 
@@ -150,7 +150,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[1] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
             $(value5).click(function() {
                 b3=($(value5).val()); 
@@ -161,7 +161,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                    values[2] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
             $(value7).click(function() {
                 
@@ -173,7 +173,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[3] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
             $(value9).click(function() {
                 
@@ -185,7 +185,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[4] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
             $(value11).click(function() {
                 
@@ -197,7 +197,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[5] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
             $(value13).click(function() {
                 
@@ -209,7 +209,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[6]  = 0;
                 }
-                runCalc(output, values, role_id);
+               // runCalc(output, values, role_id);
             });
             $(value15).click(function() {
                 
@@ -221,8 +221,13 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 }else{
                     values[7] = 0;
                 }
-                runCalc(output, values,role_id);
+                //runCalc(output, values,role_id);
             });
+            $(answer).click(function(){
+                runCalc(output, values, isTimeOn, role_id);
+                //console.log(values,"console value")
+                
+            })
      
 }
 function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,value9,
@@ -309,6 +314,8 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
                 <input type="hidden"id="h_button82" value="1"/>
                 </td>
                 <td><input type="button" class="btext" id="text1" value="5" style="" name="text1"/></td>
+                <td><button type="button" id="answer" class="btn btn-success value"><i class="fa fa-play " aria-hidden="true"></i></button></td>
+
             
             </tr> `)
             changeValue('#button12')
@@ -320,7 +327,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
             changeValue('#button72')
             changeValue('#button82')
             calculate('#button12','#h_button12','#button22','#h_button22',`#button32`,'#h_button32',`#button42`,'#h_button42',
-            `#button52`,'#h_button52','#button62','#h_button62',`#button72`,'#h_button72',`#button82`,'#h_button82',`#text1`,`1`)
+            `#button52`,'#h_button52','#button62','#h_button62',`#button72`,'#h_button72',`#button82`,'#h_button82',`#text1`,`1`,`.value`)
     
     
     })
@@ -360,6 +367,7 @@ function calculate2(value1,value2,value3,value4,value5,value6,value7,value8,valu
             <input type="hidden"id="h_button81" value="1" name="btn8"/>
             </td>
             <td><input type="text" class="btext" id="text2" style="" name="text"/></td>
+            
         </tr>`)
         
     $(`#text2`).on("input", function(e) {

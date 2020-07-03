@@ -179,9 +179,9 @@ background-color:#0275d8;color:white;width:55px; margin-top:-2px;height:45px;lin
                 </td>
                 <td><input type="text" class="btext" id=text3 style="" name="text3"/></td>
                 <td>
-                <i class="fa fa-arrow-left" aria-hidden="true"></i> Enter answer
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
                 </td>
-                
+                <td>Enter answer</td>
                 </tr>`
 
 

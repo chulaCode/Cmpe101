@@ -21,11 +21,9 @@
                     before you proceed to play the game after you're sure you've known how to play.
                 </h3>
                  <h3 class="my-5">
-                 At the game page before starting game you'll be prompted to read <span class="text-danger">"GAME RULE"</span>
-                  before starting game.
                   After you're done with the game you can submit your score to score board to see how you rank among other gamers
-                  please note you will need to submit a nick name  to access the score board 
-                  . NOTE your detail will not be used for anything except to identify you among other gamers.
+                  please note you will need to submit a nick name  to access the score board.
+                 
                  </h3>
                  <h3 class="text-danger mb-5">
                    After playing the game you will fill a post-questionnaire to enable us carry on with our research.

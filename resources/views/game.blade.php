@@ -248,8 +248,8 @@
                   <div class="row">
                       <div class="col-4">
                           <img src="{{asset('images/bronze.png')}}" alt="" class="w-50" style="">
-                          <p>To win a bronze badge you need to clear the first 3 game blocks.
-                            Clearing means you need to get the answers right.</p>
+                          <p>To win a bronze badge you need to get 30 points.
+                            </p>
                         </div>
                       <div class="col-4">
                          <img src="{{asset('images/silver1.png')}}" alt="" class="w-50" style="">
