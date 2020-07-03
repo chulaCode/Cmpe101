@@ -57,14 +57,21 @@
           <div class="row justify-content-center">
              <div class="col-md-8 col-sm-12 ">
                  <h1 class="text-secondary my-5" style="font-size:40px;"></h1>
-                 <div class="d-none d-md-block d-lg-block d-lg-none">
+                 <div class="d-none d-lg-block d-lg-none">
                    <img src="{{asset('images/research_guide.jpg')}}" alt="" class="" style="">
                  </div>
+                 
                  <div class="text-secondary text-center d-block d-sm-none">
                     <h1>Guide</h1>
-                    <h2>1. pre-survey</h2>
-                    <h2>2. Use system</h2>
-                    <h2>3. post-survey</h2>
+                    <h2>1. Fill pre-survey</h2>
+                    <h2>2. Use the system</h2>
+                    <h2>3. Fill post-survey</h2>
+                 </div>
+                 <div class="text-secondary text-center d-none d-md-block d-lg-none">
+                    <h1>Guide</h1>
+                    <h2>1. Fill pre-survey</h2>
+                    <h2>2. Use the system</h2>
+                    <h2>3. Fill post-survey</h2>
                  </div>
                  <p class="text-secondary my-5" style="font-size:23px;">
                  If you have any questions, please contact: <a href="https://mail.google.com" target="_blank">ochulaobariEmmanuel@gmail.com</a>
