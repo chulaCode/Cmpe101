@@ -88,6 +88,9 @@
             //alert(id)
             $(".display").html("That's it!! You got it right");
         }
+        else{
+            $(".display").html("Nope is not correct");
+        }
        
 }
 
