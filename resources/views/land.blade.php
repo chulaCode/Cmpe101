@@ -17,7 +17,7 @@
                 <h3 class="my-5">
                     After clicking on the Game section button you'll be redirected to <span class="text-danger">game instruction page</span> 
                     please read the instruction and watch video
-                    on how to play.Clıck the <span class="text-danger">practice game button</span> to learn how to play the game
+                    on how to play. Click the <span class="text-danger">practice game button</span> to learn how to play the game
                     before you proceed to play the game after you're sure you've known how to play.
                 </h3>
                  <h3 class="my-5">

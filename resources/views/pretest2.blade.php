@@ -9,7 +9,7 @@
               <div class="text-center text-capitalize my-5">
                 <hr>
                 <h3> 
-                   You will be directed to the pre-questionnaire on Google forms by clicking on "TAKE-SURVEY" button at the bottom of this page.
+                   You will be redirected to the pre-questionnaire on Google forms by clicking on "TAKE-SURVEY" button at the bottom of this page.
                 </h3>
                 <hr>
              </div>

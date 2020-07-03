@@ -47,7 +47,7 @@
                             <fieldset>
                                 <div class="form-card">
                                 <h4 class="text-dark">One of the question requires you to convert a binary number to decimal e.g 000000011 = 3 in decimal </h4>
-                                <h4 class="text-dark">The second type of question requires conversion from decimal to binary you to convert a binary e.g 4 = 00000100 in binary </h4>
+                                <h4 class="text-dark">The second type of question requires conversion from decimal to binary  e.g 4 = 00000100 in binary </h4>
                                 
                                 </div> <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> <input type="button" name="next" class="next action-button" value="Next" />
                             </fieldset>
@@ -55,8 +55,8 @@
                                 <div class="form-card">
                                 <h4 class="text-dark">You have 50 seconds for each question when the time elapses a new question comes up</h4>
                                 <h4 class="text-dark">When the number of attempts is over you'll be redirected to a page where you can check your score 
-                                and a <span class="text-danger">FILL SURVEY</span> link will be visibl <span class="text-success">PLEASE HELP ME FILL THE SURVEY THANK YOU.</span>
-                                your feedback is important for my research </h4>
+                                and a <span class="text-danger">FILL SURVEY</span> link will be visible <span class="text-success">PLEASE HELP US FILL THE SURVEY THANK YOU.</span>
+                                Your feedback is important for our research thanks. </h4>
                                 </div><input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                  <input type="button" id="next2" name="next" class="next action-button" value="Next" />
                             </fieldset>

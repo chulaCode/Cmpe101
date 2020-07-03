@@ -34,8 +34,8 @@
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                     </div>
                 @endif
-                <div> <h4>You got 12 attempts when it elapses you'll be redirected to a score page to check your score. Link to survey is on the page 
-                Please help fill the survey thanks.</h4></div>
+                <div> <h4>You got 12 attempts when it elapses you'll be redirected to a score page to check your score. Link to survey is on 
+                the score page. Please help fill the survey thanks.</h4></div>
                 <div class="row ml-md-5"> 
                      <div class="col-3 col-lg-3 "> 
                          <div class="text-dark wr mx-1">

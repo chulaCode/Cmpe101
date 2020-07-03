@@ -27,10 +27,10 @@
                         1. Demographic Information <br>
                         2. Information on your engagement why learning <br>
                         3. Information on Motivation <br>
-                        4. Knowledge <br>
+            
                      </h4>
                      <h4 class="my-5">
-                        The questionnaire will take 4 - 8 minutes to complete.
+                        The questionnaire will take 3 - 6 minutes to complete.
                      </h4>
                      <h4 class="my-5 text-danger">
                          Thank you for accepting to paricipate in this research i'm so grateful, please be aware that you will need to enter your 

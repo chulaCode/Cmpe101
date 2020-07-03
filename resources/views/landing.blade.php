@@ -27,7 +27,7 @@
             <section class="mb-5">
             <div> 
                 <h3 class="my-5">
-                    After clicking on the quiz section button you'll be directed to <span class="text-danger">quiz instruction page</span> 
+                    After clicking on the quiz section button you'll be redirected to <span class="text-danger">quiz instruction page</span> 
                     please try and read the instruction so you familiarize yourself with the application.
                 </h3>
                  <h3 class="my-5">
