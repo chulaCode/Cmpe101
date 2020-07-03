@@ -169,6 +169,9 @@ canvas{
 .bar{
   display:none;
 }
+.tutorial{
+  margin-bottom:5px!important
+}
 
      
    }

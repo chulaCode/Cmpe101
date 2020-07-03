@@ -6,22 +6,24 @@
     <div class="container-fluid">
         <div class="row">
         <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
-           <div class="col-md-2 col-sm-12 bg-secondary h-100 bar">
+        <div class=" ml-4 text-dark mt-5 d-none d-md-block  d-lg-none"><h3>Please view on your computer</h3></div>
         
-            <div id="clockdiv" class="my-1 d-sm-none d-md-block">            
+           <div class="col-md-2 col-sm-12 bg-secondary h-100 bar d-none d-lg-block d-lg-none">
+        
+            <div id="clockdiv" class="my-1 d-none  d-lg-block d-lg-none">            
                     <div class="ml-5 time ">
                             <span id="point" style="background-color:#4a4a4b">00</span>
                             <div class="smalltext">Score</div>
                     </div>
                 </div>
             
-                <hr class="bg-white">
-                <div class="img ml-lg-5 d-sm-none d-md-block" id="badge"></div>
+                <hr class="bg-white d-none  d-lg-block d-lg-none">
+                <div class="img ml-lg-5 d-none d-lg-block d-lg-none" id="badge"></div>
                 <div class="img_badge my-1 ml-lg-5 pl-4 mb-0 text-white"></div>
-                <div class="mb-1"><button type="button" class="btn btn-dark mt-3 ml-5" data-toggle="modal" data-target="#tutorial">How to win badges</button> </div>
+                <div class="mb-1"><button type="button" class="btn btn-dark mt-3 ml-5 d-none d-lg-block d-lg-none" data-toggle="modal" data-target="#tutorial">How to win badges</button> </div>
         
-                <hr class="bg-white">
-                <div id="clockdiv" class="mt-1 mb-1 d-sm-none d-md-block">            
+                <hr class="bg-white d-none d-lg-block d-lg-none">
+                <div id="clockdiv" class="mt-1 mb-1 d-none  d-lg-block d-lg-none">            
                     <div class="ml-5 time">
                         <span id="timer">00:00</span>
                         <div class="smalltext">Timer</div>
@@ -30,7 +32,7 @@
                 <!--<a href="{{route('profile.show')}}"><button class="btn btn-dark my-4 ml-lg-5">Back to Profile</button></a>-->
                 <br><br><br><br><br><br><br><br><br><br><br>
             </div>
-            <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block" >
+            <div class="col-md-10 mt-2 col-sm-12 d-none d-lg-block d-lg-none" >
                 <div class=" offset-1 ">
                 <div> 
                     <h3 class="pull-right status  text-success" id="message1"></h3>

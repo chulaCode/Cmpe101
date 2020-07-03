@@ -5,9 +5,10 @@
         
     <div class="container-fluid">
         <div class="row">
-        <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
-      
-          <div class="col-md-2 col-sm-12 bg-secondary sidebar d-sm-none d-md-block">
+          <div class=" ml-4 text-dark mt-5 d-block d-sm-none"><h3>Please view on your computer</h3></div>
+          <div class="text-dark ml-5 mt-5 d-none d-md-block  d-lg-none"><h3>Please view on your computer</h3></div>
+                
+          <div class="col-md-2 col-sm-12 bg-secondary sidebar d-none d-lg-block d-lg-none">
 
                 <br> <a href="{{route('profile.display',$user->id)}}"><button class="btn btn-dark my-3 ml-lg-4">Go Back to Profile</button></a>
             
@@ -27,7 +28,7 @@
                 
          </div>
             <!--right -->
-         <div class="col-md-9 offset-lg-3 mt-2 d-sm-none d-md-block">
+         <div class="col-md-9 offset-lg-3 mt-2 d-none d-lg-block d-lg-none">
                 @if (session('status'))
                     <div class="alert alert-info">
                         {{ session('status') }}

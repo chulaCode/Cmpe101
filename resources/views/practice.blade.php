@@ -19,7 +19,7 @@
         <div class="container-fluid" id="grad1">
     <div class="row justify-content-center mt-0">
         <div class="col-11 col-sm-9 col-md-7 col-lg-9 text-center p-0 mt-3 mb-2">
-        <a href="{{route('profile.show')}}"><button class="btn btn-primary mx-5">Go Back to Profile</button></a>
+        <a href="{{route('profile.show')}}"><button class="btn btn-primary mx-5 tutorial">Go Back to Profile</button></a>
         <a href="/game"><button class="btn btn-primary mx-5">Go to main Game page</button></a>
                
             <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
@@ -41,8 +41,11 @@
                                    
                                   <div id="remove1">
         
-                                           
-                                    <div class="text-dark mb-4">
+                                  <div class="text-dark  d-block d-sm-none"><h3>Please view on your computer</h3></div>
+                                  <div class="text-dark d-none d-md-block  d-lg-none"><h3>Please view on your computer</h3></div>
+                
+                                    <div class="text-dark mb-4 d-none d-lg-block d-lg-none">
+                                       
                                         <h3>
                                         The first type of game question you'll have a decimal number e.g "5" in the blue box and 
                                         you need to calculate the bit number with 1's for example  4+1 which is bit with blue borders total 5
@@ -52,10 +55,10 @@
                                         <hr>
                                     </div>
         
-                                        <div class="game mx-auto">
+                                        <div class="game mx-auto d-none  d-lg-block d-lg-none">
 
                                                 <form name="game" method="post" action="">
-                                                <table class=" t-game" id="">
+                                                <table class=" t-game " id="">
                                                     <tr id="tr1" class="mt-3">
                                                         <td><input type="button"id="button1" value="0"class="b_game" name="btn1"  /></td>
                                                         <td><input type="button" id="button2" value="0"class="b_game" name="btn2" /></td>
@@ -91,8 +94,11 @@
                             </fieldset>
                             <fieldset>
                                 <div class="form-card">
-                               
-                                    <div class="text-dark mb-4">
+                                <div class="text-dark  d-block d-sm-none"><h3>Please view on your computer</h3></div>
+                                    <div class="text-dark d-none d-md-block  d-lg-none"><h3>Please view on your computer</h3></div>
+             
+                                    <div class="text-dark mb-4 d-none d-lg-block d-lg-none">
+                                        
                                     <h3>
                                         Click on the button with blue borders to change it from 0 to 1 which is 4+1 that totals 5 
                                         it'll clear that game block because the selected answer matches the hex value of 5 
@@ -100,7 +106,7 @@
                                         <hr>
                                     </div>
 
-                                        <div class="game mx-auto">
+                                        <div class="game mx-auto d-none d-lg-block d-lg-none">
                                        
                                                 <table class="t-game" id="myTable">
                                                     
@@ -126,8 +132,11 @@
                             <fieldset>
                                 <div class="form-card">
                                 <div id="remove1">
-                                         
-                                    <div class="text-dark mb-4">
+                                    <div class="text-dark  d-block d-sm-none"><h3>Please view on your computer</h3></div>
+                                    <div class="text-dark d-none d-md-block  d-lg-none"><h3>Please view on your computer</h3></div>
+            
+                                    <div class="text-dark mb-4 d-none d-lg-block d-lg-none">
+                                       
                                         <h3>
                                         The second game type you'll be given binary number e.g "0 0 0 0 0 0 1 1" and you'r eexpected to find the 
                                         the hexidecimal equivalent by adding up it's bit numbers the bits with 1's for this game block the answer is 2+1 which is 3
@@ -137,7 +146,7 @@
                                         <hr>
                                     </div>
 
-                                        <div class="game mx-auto">
+                                        <div class="game mx-auto d-none d-lg-block d-lg-none">
 
                                                 <form name="game" method="post" action="">
                                                 <table class=" t-game" id="">

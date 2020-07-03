@@ -18,7 +18,7 @@
                 <div class="card-body">
                 <div class="mb-4 text-center">
                   <h4> YOUR SCORE FOR PREVIOUS QUIZ IS</h4>
-                  <h3 class="my-4">{{$value*10}}</h3>
+                  <h3 class="my-4">{{$value*10}}/120</h3>
                   <h4>
                      <br><br> <a href="{{route('quiz',$student->id)}}"><button class="btn btn-primary btn-lg">Retake quiz</button></a>
                     

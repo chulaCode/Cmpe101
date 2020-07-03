@@ -3,7 +3,7 @@
 
 <div class="container my-4">
     <div class="row justify-content-center">
-        <div class="col-md-10">
+        <div class="col-md-10 col-sm-12">
         @if(Session::has('message'))
               <div class="alert alert-danger text-center">
               {{Session::get('message')}}
@@ -30,20 +30,24 @@
                 </div>
 
                 <div class="card-body">
-                <div class=" text-dark d-block d-sm-none"><h3>Please view on your computer</h3></div>
-      
+               
                     <table class="table table-striped d-sm-none d-md-block">
                         <tbody>
                             <tr>
-                               <td><h4>Check out video on how to play the game</h4></td>
+                               <td><h4>Check out video on how to play the game</h4>
+                                  <div class="d-block d-sm-none">
+                                      <a href="https://youtu.be/7AJaPBpmzSo"><h4>Video link</h4></a>
+                                   </div>
+                               </td>
                             </tr>
-                             <tr><th> <iframe width="850" height="380"
+                             <tr class="d-none d-lg-block d-lg-none"><th> <iframe width="850" height="380"
                                 src="https://www.youtube.com/embed/7AJaPBpmzSo">
                              </iframe></th></tr>
+                             
                              <tr><td><h4>Please help fill survey after playing game. Link to survey wıll appear when your done playıng the game.
                              another link to survey is on  the scoreboard page thanks.</h4></td></tr>
                              <tr>
-                               <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
+                               <a href="/practice"><button class="btn btn-secondary btn-lg mr-lg-4 my-sm-2">Practice game</button></a>
                                <a href="{{route('profile.game')}}"><button class="btn btn-secondary btn-lg">Play game</button></a>
                                
                             </tr>
