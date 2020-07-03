@@ -224,7 +224,7 @@ function calculate(value1,value2,value3,value4,value5,value6,value7,value8,value
                 //runCalc(output, values,role_id);
             });
             $(answer).click(function(){
-                runCalc(output, values, isTimeOn, role_id);
+                runCalc(output, values, role_id);
                 //console.log(values,"console value")
                 
             })

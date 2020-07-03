@@ -42,10 +42,10 @@
                              </iframe></th></tr>
                              <tr><td><h4>Please help fill survey after playing game. Link to survey wıll appear when your done playıng the game.
                              another link to survey is on  the scoreboard page thanks.</h4></td></tr>
-                             <tr></td>
+                             <tr>
                                <a href="/practice"><button class="btn btn-secondary btn-lg mr-4">Practice game</button></a>
-                              <a href="{{route('profile.game')}}"><button class="btn btn-secondary btn-lg">Play game</button></a>
-                               </td>
+                               <a href="{{route('profile.game')}}"><button class="btn btn-secondary btn-lg">Play game</button></a>
+                               
                             </tr>
                         </tbody>
                      </table>

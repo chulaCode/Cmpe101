@@ -19,7 +19,7 @@
             <section class="mb-5">
                 <h3 class="my-5">
                     <span class="text-success">Thank you for choosing to participate.</span>
-                     You will be directed to the post-questionnaire on Google forms by clicking on "POST SURVEY" button.
+                     You will be redirected to the post-questionnaire on Google forms by clicking on "POST SURVEY" button.
                 </h3>
                  <h3 class="my-5">
                     Please provide consistent and realistic answers to questions in the post-questionnaire. 
