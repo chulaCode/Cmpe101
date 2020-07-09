@@ -18,18 +18,19 @@
                     Please provide <span class="text-danger">consistent and realistic answers</span> to questions in the pre-questionnaire. You can make changes 
                     to your responses until you complete the questionnaire. Please fill the survey<span class="text-danger"> only once thank you.</span>.
                 </h4>
-                 <h1 class="my-5">
-                 At the end of the survey, a link will be given to you to reach the <span class="text-danger">"GAME SECTION"</span>.
-                   Please don't forget to click <span class="text-danger">"The "LINK" that is underlined and enclosed in [ ]</span>  BEFORE clicking on "SUBMIT" button. because when you 
-                   click on submit button you cannot access that last survey page again.
-                 </h1>
+                <h2 class="my-5">
+                   When you submit the survey a link will be given to you to reach the <span class="text-danger">"INTERACTIVE QUIZ"</span>.
+                   Please click on <span class="text-danger">"The "LINK" that is underlined and enclosed in [ ]</span> to go to the interactive quiz 
+                   section thank you.
+                   
+                 </h2>
 
-                 <h3 class=" d-none d-lg-block my-5 mr-5 font-weight-bold text-center ">Sample view at the end of Pre-Questionnaire</h3>
-                 <div class="d-none d-lg-block"><img src="{{asset('images/preQues.jpg')}}" alt="" class="" style="margin-left:150px"></div>
+                 <h3 class=" d-none d-lg-block my-5 mr-5 font-weight-bold text-center ">Sample view after submission</h3>
+                 <div class="d-none d-lg-block"><img src="{{asset('images/questionnaire.png')}}" alt="" class="" style="margin-left:150px"></div>
                 <div>
-             
+                      
                    <div class="col-md-12 ">   
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3a2rNANxLgCmAl11SF-gDZnhrLcbPlgjPIW8vikRctbz1Mw/viewform?vc=0&c=0&w=1" 
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3a2rNANxLgCmAl11SF-gDZnhrLcbPlgjPIW8vikRctbz1Mw/viewform?embedded=true" 
                         class="float-right" target="_blank"><button type="submit" class="btn btn-secondary  btn-lg px-5">
                             <span style="font-size:18px;">TAKE SURVEY</span></button></a>
                     </div>

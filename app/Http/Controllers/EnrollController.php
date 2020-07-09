@@ -137,23 +137,23 @@ class EnrollController extends Controller
    
    public function land(Request $request)
    {
-    if ($request->session()->exists('user')) {
+   // if ($request->session()->exists('user')) {
         return view("land");
-    }
+   /* }
     else
-      return redirect("/");
+      return redirect("/");*/
        
    }
    public function landing(Request $request)
    {
-    if ($request->session()->exists('user')) {
+   /* if ($request->session()->exists('user')) {
         $std=session()->get('user');
         $value=students::where('studentNo',$std)->first();
         //dd($value);
         return view("landing",compact('value'));
     }
     else
-      return redirect("/");
+      return redirect("/");*/
     
    }
    public function postland(Request $request)
